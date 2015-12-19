@@ -28,19 +28,7 @@
     @yield('pagelevelscripts')
     <!-- END PAGE LEVEL SCRIPTS -->
 
-    <script>
-    $(function() {
-    $('#submit-form').click(function(e){
-        e.preventDefault();
-        var l = Ladda.create(this);
-        l.start();
-        setTimeout(function () {
-            window.location.href = "index.html";
-        }, 2000);
-
-    });
-});
-    </script>
+    @yield('scripts')
 </body>
 
 </html>
