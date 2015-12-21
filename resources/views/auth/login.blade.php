@@ -6,24 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="" name="description" />
   <meta content="themes-lab" name="author" />
-  <link rel="shortcut icon" href="//desamembangun.web.id/assets/img/favicon.png">
+  <link rel="shortcut icon" href="http://desamembangun.web.id/assets/img/favicon.png">
 @endsection
 
 @section('mandatorystyle')
-  <link href="//desamembangun.web.id/assets/css/icons/icons.min.css" rel="stylesheet">
-  <link href="//desamembangun.web.id/assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="//desamembangun.web.id/assets/css/plugins.min.css" rel="stylesheet">
-  <link href="//desamembangun.web.id/assets/plugins/bootstrap-loading/lada.min.css" rel="stylesheet">
-  <link href="//desamembangun.web.id/assets/css/style.min.css" rel="stylesheet">
+  <link href="http://desamembangun.web.id/assets/css/icons/icons.min.css" rel="stylesheet">
+  <link href="http://desamembangun.web.id/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://desamembangun.web.id/assets/css/plugins.min.css" rel="stylesheet">
+  <link href="http://desamembangun.web.id/assets/plugins/bootstrap-loading/lada.min.css" rel="stylesheet">
+  <link href="http://desamembangun.web.id/assets/css/style.min.css" rel="stylesheet">
   <link href="#" rel="stylesheet" id="theme-color">
 @endsection
 
 @section('pagelevelstyle')
-  <link href="//desamembangun.web.id/assets/css/animate-custom.css" rel="stylesheet">
+  <link href="http://desamembangun.web.id/assets/css/animate-custom.css" rel="stylesheet">
 @endsection
 
 @section('modernizr')
-  <script src="//desamembangun.web.id/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="http://desamembangun.web.id/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 @endsection
 
 @section('loginbox')
@@ -32,11 +32,11 @@
         <div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
             <div class="login-box clearfix animated flipInY">
                 <div class="page-icon animated bounceInDown">
-                    <img src="//desamembangun.web.id/assets/img/account/user-icon.png" alt="Key icon">
+                    <img src="http://desamembangun.web.id/assets/img/account/user-icon.png" alt="Key icon">
                 </div>
                 <div class="login-logo">
                     <a href="#?login-theme-3">
-                        <img src="//desamembangun.web.id/assets/img/account/login-logo.png" alt="Desa2.0 Logo">
+                        <img src="http://desamembangun.web.id/assets/img/account/login-logo.png" alt="Desa2.0 Logo">
                     </a>
                 </div>
                 <hr>
@@ -74,18 +74,18 @@
 @endsection
 
 @section('mandatoryscripts')
-  <script src="//desamembangun.web.id/assets/plugins/jquery-1.11.js"></script>
-  <script src="//desamembangun.web.id/assets/plugins/jquery-migrate-1.2.1.js"></script>
-  <script src="//desamembangun.web.id/assets/plugins/jquery-ui/jquery-ui-1.10.4.min.js"></script>
-  <script src="//desamembangun.web.id/assets/plugins/jquery-mobile/jquery.mobile-1.4.2.js"></script>
-  <script src="//desamembangun.web.id/assets/plugins/bootstrap/bootstrap.min.js"></script>
-  <script src="//desamembangun.web.id/assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
+  <script src="http://desamembangun.web.id/assets/plugins/jquery-1.11.js"></script>
+  <script src="http://desamembangun.web.id/assets/plugins/jquery-migrate-1.2.1.js"></script>
+  <script src="http://desamembangun.web.id/assets/plugins/jquery-ui/jquery-ui-1.10.4.min.js"></script>
+  <script src="http://desamembangun.web.id/assets/plugins/jquery-mobile/jquery.mobile-1.4.2.js"></script>
+  <script src="http://desamembangun.web.id/assets/plugins/bootstrap/bootstrap.min.js"></script>
+  <script src="http://desamembangun.web.id/assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
 @endsection
 
 @section('pagelevelscripts')
-<script src="//desamembangun.web.id/assets/plugins/backstretch/backstretch.min.js"></script>
-<script src="//desamembangun.web.id/assets/plugins/bootstrap-loading/lada.min.js"></script>
-<script src="//desamembangun.web.id/assets/js/account.js"></script>
+<script src="http://desamembangun.web.id/assets/plugins/backstretch/backstretch.min.js"></script>
+<script src="http://desamembangun.web.id/assets/plugins/bootstrap-loading/lada.min.js"></script>
+<script src="http://desamembangun.web.id/assets/js/account.js"></script>
 @endsection
 
 @section('scripts')

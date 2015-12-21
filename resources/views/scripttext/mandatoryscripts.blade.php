@@ -1,1 +1,1 @@
-<script src="//desamembangun.web.id/assets/plugins/mandatoryJs.min.js"></script>
+<script src="http://desamembangun.web.id/assets/plugins/mandatoryJs.min.js"></script>

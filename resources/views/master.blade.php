@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="" name="description" />
     <meta content="themes-lab" name="author" />
-    <link rel="shortcut icon" href="//desamembangun.web.id/assets/img/favicon.png">
+    <link rel="shortcut icon" href="http://desamembangun.web.id/assets/img/favicon.png">
     <!-- END META SECTION -->
     <!-- BEGIN MANDATORY STYLE -->
     @include('scripttext.mandatorystyle')
@@ -46,7 +46,7 @@
                     @include('scripttext.notificationdropdown')
                     <!-- END NOTIFICATION DROPDOWN -->
                     <!-- BEGIN MESSAGES DROPDOWN -->
-                    @include('scripttext.beginmessagedropdown')
+                    @include('scripttext.beginmessageddropdown')
                     <!-- END MESSAGES DROPDOWN -->
                     <!-- BEGIN USER DROPDOWN -->
                     @include('scripttext.userdropdown')
