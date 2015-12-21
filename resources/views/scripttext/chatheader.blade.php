@@ -9,7 +9,7 @@
             <div>
                 <div class="clearfix w-600">
                     <img src="{{ asset('/assets/img/avatars/avatar3.png') }}" alt="avatar 3" width="30" class="pull-left img-circle p-r-5">Alexa Johnson</div>
-                <div class="message m-t-5">Hey you there sweety?</div>
+                <div class="message m-t-5">Hey you there?</div>
             </div>
         </div>
     </div>

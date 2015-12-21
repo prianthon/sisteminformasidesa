@@ -21,15 +21,15 @@
             </a>
         </li>
         <li class="dropdown-footer clearfix">
-            <a href="javascript:;" class="toggle_fullscreen" title="Fullscreen">
-                <i class="glyph-icon flaticon-fullscreen3"></i>
-            </a>
-            <a href="lockscreen.html" title="Lock Screen">
-                <i class="glyph-icon flaticon-padlock23"></i>
-            </a>
-            <a href="login.html" title="Logout">
-                <i class="fa fa-power-off"></i>
-            </a>
+          <a href="javascript:;" class="toggle_fullscreen" title="Fullscreen">
+            <i class="glyph-icon flaticon-fullscreen3"></i>
+          </a>
+          <a href="lockscreen.html" title="Lock Screen">
+            <i class="glyph-icon flaticon-padlock23"></i>
+          </a>
+          <a href="login.html" title="Logout">
+            <i class="fa fa-power-off"></i>
+          </a>
         </li>
     </ul>
 </li>

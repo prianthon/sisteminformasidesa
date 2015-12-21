@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js sidebar-large lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js sidebar-large lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js sidebar-large lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"><!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js sidebar-large"> <!--<![endif]-->
 
 <head>
     <!-- BEGIN META SECTION -->
@@ -16,13 +16,10 @@
     <!-- BEGIN MANDATORY STYLE -->
     @include('scripttext.mandatorystyle')
     <!-- END  MANDATORY STYLE -->
-    <!-- BEGIN PAGE LEVEL STYLE -->
-    @include('scripttext.pagelevelstyle')
-    <!-- END PAGE LEVEL STYLE -->
-    @yield('modernizr')
+    <script src="{{ asset('/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 </head>
 
-@yield('body')
+<body data-page="blank_page">
     <!-- BEGIN TOP MENU -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
@@ -38,7 +35,7 @@
                 </a>
                 <a class="navbar-brand" href="index.html"></a>
             </div>
-            @yield('namaatas')
+            @yield('navbar-center')
             <div class="navbar-collapse collapse">
                 <!-- BEGIN TOP NAVIGATION MENU -->
                 <ul class="nav navbar-nav pull-right header-menu">
@@ -46,11 +43,12 @@
                     @include('scripttext.notificationdropdown')
                     <!-- END NOTIFICATION DROPDOWN -->
                     <!-- BEGIN MESSAGES DROPDOWN -->
-                    @include('scripttext.beginmessageddropdown')
+                    @include('scripttext.messagesdropdown')
                     <!-- END MESSAGES DROPDOWN -->
                     <!-- BEGIN USER DROPDOWN -->
                     @include('scripttext.userdropdown')
                     <!-- END USER DROPDOWN -->
+
                     <!-- BEGIN CHAT HEADER -->
                     @include('scripttext.chatheader')
                     <!-- END CHAT HEADER -->
@@ -65,12 +63,9 @@
         <!-- BEGIN MAIN SIDEBAR -->
         @yield('mainsidebar')
         <!-- END MAIN SIDEBAR -->
-
-
         <!-- BEGIN MAIN CONTENT -->
-        @include('scripttext.maincontent')
+        @yield('maincontent')
         <!-- END MAIN CONTENT -->
-
     </div>
     <!-- END WRAPPER -->
     <!-- BEGIN CHAT MENU -->
@@ -79,10 +74,6 @@
     <!-- BEGIN MANDATORY SCRIPTS -->
     @include('scripttext.mandatoryscripts')
     <!-- END MANDATORY SCRIPTS -->
-    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    @include('scripttext.pagelevelscripts')
-    <!-- END  PAGE LEVEL SCRIPTS -->
-    @yield('js')
+    <script src="{{ asset('/assets/js/application.js') }}"></script>
 </body>
-
 </html>

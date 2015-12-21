@@ -4,15 +4,7 @@
   <title>Dashboard</title>
 @endsection
 
-@section('modernizr')
-  <script src="{{ asset('/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
-@endsection
-
-@section('body')
-  <body data-page="dashboard">
-@endsection
-
-@section('namaatas')
+@section('navbar-center')
   <div class="navbar-center">Dashboard</div>
 @endsection
 
@@ -20,11 +12,11 @@
 <nav id="sidebar">
     <div id="main-menu">
         <ul class="sidebar-nav">
-            <li class="current">
+            <li  class="current">
                 <a href="index.html"><i class="fa fa-dashboard"></i><span class="sidebar-text">Dashboard</span></a>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-shopping80"></i><span class="sidebar-text">eCommerce</span>
+                <a href="#"><i class="glyph-icon flaticon-shopping80"></i><span class="sidebar-text">Keluarga</span>
                 <span class="fa arrow"></span><span class="label label-danger pull-right m-r-20 w-300">New</span></a>
                 <ul class="submenu collapse">
                     <li>
@@ -54,7 +46,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="fa fa-edit"></i><span class="sidebar-text">Blogging</span><span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-edit"></i><span class="sidebar-text">Penduduk</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="blog_dashboard.html"><span class="sidebar-text">Dashboard<span class="label label-dark pull-right">Hot</span></span></a>
@@ -80,10 +72,10 @@
                 </ul>
             </li>
             <li>
-                <a href="../frontend/index.html" target="_blank"><i class="glyph-icon flaticon-frontend"></i><span class="sidebar-text">Frontend</span></a>
+                <a href="../frontend/index.html" target="_blank"><i class="glyph-icon flaticon-frontend"></i><span class="sidebar-text">Pelayanan</span></a>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-star105"></i><span class="sidebar-text">Extra</span>
+                <a href="#"><i class="glyph-icon flaticon-star105"></i><span class="sidebar-text">Peristiwa</span>
                 <span class="fa arrow"></span><span class="label label-primary pull-right m-r-20 w-300">Hot</span></a>
                 <ul class="submenu collapse">
                     <li>
@@ -107,9 +99,9 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="fa fa-pencil"></i><span class="sidebar-text">Colors Options</span>
+                <a href="#"><i class="fa fa-pencil"></i><span class="sidebar-text">Kemiskinan</span>
                     <span class="fa arrow"></span></a>
-                    <ul class="submenu collapse">
+                <ul class="submenu collapse">
                     <li>
                         <a href="#" data-style="dark" class="theme-color"><span class="sidebar-text">Dark Skin</span></a>
                     </li>
@@ -131,8 +123,8 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-email"></i><span class="sidebar-text">Email</span><span class="fa arrow"></span></a>
-                 <ul class="submenu collapse">
+                <a href="#"><i class="glyph-icon flaticon-email"></i><span class="sidebar-text">Pertanahan</span><span class="fa arrow"></span></a>
+                <ul class="submenu collapse">
                     <li>
                         <a href="mailbox.html"><span class="sidebar-text">Inbox</span></a>
                     </li>
@@ -142,7 +134,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-forms"></i><span class="sidebar-text">Forms</span><span class="fa arrow"></span></a>
+                <a href="#"><i class="glyph-icon flaticon-forms"></i><span class="sidebar-text">Perkantoran</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="forms.html"><span class="sidebar-text">Form Elements</span></a>
@@ -165,7 +157,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-ui-elements2"></i><span class="sidebar-text">UI Elements</span><span class="fa arrow"></span></a>
+                <a href="#"><i class="glyph-icon flaticon-ui-elements2"></i><span class="sidebar-text">Inventaris</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="components.html"><span class="sidebar-text">Components</span></a>
@@ -194,13 +186,13 @@
                     <li>
                         <a href="nestable-list.html"><span class="sidebar-text">Nestable &amp; Sortable lists</span></a>
                     </li>
-                     <li>
+                    <li>
                         <a href="tree.html"><span class="sidebar-text">Tree View</span></a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-pages"></i><span class="sidebar-text">Pages</span><span class="fa arrow"></span>
+                <a href="#"><i class="glyph-icon flaticon-pages"></i><span class="sidebar-text">Statistik</span><span class="fa arrow"></span>
                     <span class="label label-danger pull-right m-r-20 w-300">New</span>
                 </a>
                 <ul class="submenu collapse">
@@ -237,8 +229,8 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-panels"></i><span class="sidebar-text">Panels</span><span class="fa arrow"></span></a>
-                  <ul class="submenu collapse">
+                <a href="#"><i class="glyph-icon flaticon-panels"></i><span class="sidebar-text">Keuangan</span><span class="fa arrow"></span></a>
+                <ul class="submenu collapse">
                     <li>
                         <a href="panels.html"><span class="sidebar-text">Custom Panels</span></a>
                     </li>
@@ -248,7 +240,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="fa fa-table"></i><span class="sidebar-text">Tables</span><span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-table"></i><span class="sidebar-text">Laporan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="tables.html"><span class="sidebar-text">Style Tables</span></a>
@@ -262,8 +254,8 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Account</span><span class="fa arrow"></span></a>
-                  <ul class="submenu collapse">
+                <a href="#"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">Pustaka</span><span class="fa arrow"></span></a>
+                <ul class="submenu collapse">
                     <li>
                         <a href="profil.html"><span class="sidebar-text">User Profile</span></a>
                     </li>
@@ -288,8 +280,8 @@
                 </ul>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-gallery"></i><span class="sidebar-text">Images Manager</span><span class="fa arrow"></span></a>
-                 <ul class="submenu collapse">
+                <a href="#"><i class="glyph-icon flaticon-gallery"></i><span class="sidebar-text">Pengguna</span><span class="fa arrow"></span></a>
+                <ul class="submenu collapse">
                     <li>
                         <a href="gallery.html"><span class="sidebar-text">Gallery</span></a>
                     </li>
@@ -302,9 +294,8 @@
                 </ul>
             </li>
             <li class="m-b-245">
-                <a href="charts.html"><i class="glyph-icon flaticon-charts2"></i><span class="sidebar-text">Charts</span><span class="pull-right label label-primary">6</span></a>
+                <a href="charts.html"><i class="glyph-icon flaticon-charts2"></i><span class="sidebar-text">Pengaturan</span><span class="pull-right label label-primary">6</span></a>
             </li>
-
         </ul>
     </div>
     <div class="footer-widget">
@@ -350,6 +341,13 @@
 </nav>
 @endsection
 
-@section('js')
-  <script src="{{ asset('/assets/js/application.js') }}"></script>
+@section('maincontent')
+<div id="main-content">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Blank Page <small>Blank Page</small></h1>
+            <br><br><br>
+        </div>
+    </div>
+</div>
 @endsection
