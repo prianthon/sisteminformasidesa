@@ -5,7 +5,7 @@
 @endsection
 
 @section('modernizr')
-  <script src="http://desamembangun.web.id/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="{{ asset('/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 @endsection
 
 @section('body')
@@ -351,5 +351,5 @@
 @endsection
 
 @section('js')
-  <script src="http://desamembangun.web.id/assets/js/application.js"></script>
+  <script src="{{ asset('/assets/js/application.js') }}"></script>
 @endsection

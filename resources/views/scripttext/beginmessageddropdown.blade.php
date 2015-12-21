@@ -15,7 +15,7 @@
             <ul class="dropdown-menu-list withScroll" data-height="220">
                 <li class="clearfix">
                     <span class="pull-left p-r-5">
-                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar3.png" alt="avatar 3">
+                        <img src="{{ asset('/assets/img/avatars/avatar3.png') }}" alt="avatar 3">
                     </span>
                     <div class="clearfix">
                         <div>
@@ -29,7 +29,7 @@
                 </li>
                 <li class="clearfix">
                     <span class="pull-left p-r-5">
-                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar4.png" alt="avatar 4">
+                        <img src="{{ asset('/assets/img/avatars/avatar4.png') }}" alt="avatar 4">
                     </span>
                     <div class="clearfix">
                         <div>
@@ -43,7 +43,7 @@
                 </li>
                 <li class="clearfix">
                     <span class="pull-left p-r-5">
-                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar5.png" alt="avatar 5">
+                        <img src="{{ asset('/assets/img/avatars/avatar5.png') }}" alt="avatar 5">
                     </span>
                     <div class="clearfix">
                         <div>
@@ -57,7 +57,7 @@
                 </li>
                 <li class="clearfix">
                     <span class="pull-left p-r-5">
-                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar6.png" alt="avatar 6">
+                        <img src="{{ asset('/assets/img/avatars/avatar6.png') }}" alt="avatar 6">
                     </span>
                     <div class="clearfix">
                         <div>

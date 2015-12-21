@@ -305,7 +305,7 @@
                             <div class="withScroll" data-height="320">
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar1.png" alt="avatar 1" width="35" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar1.png') }}" alt="avatar 1" width="35" class="pull-left">
                                         <div class="media-body">
                                             <div class="pull-left">
                                                 <p class="c-dark m-0"><strong>John Snow</strong>
@@ -322,7 +322,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar2.png" alt="avatar 2" width="35" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar2.png') }}" alt="avatar 2" width="35" class="pull-left">
                                         <div class="media-body">
                                             <div class="pull-left">
                                                 <p class="c-dark m-0"><strong>Jerry Smith</strong>
@@ -339,7 +339,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar3.png" alt="avatar 3" width="35" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar3.png') }}" alt="avatar 3" width="35" class="pull-left">
                                         <div class="media-body">
                                             <div class="pull-left">
                                                 <p class="c-dark m-0"><strong>John Snow</strong>
@@ -356,7 +356,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar4.png" alt="avatar 4" width="35" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar4.png') }}" alt="avatar 4" width="35" class="pull-left">
                                         <div class="media-body">
                                             <div class="pull-left">
                                                 <p class="c-dark m-0"><strong>Jerry Smith</strong>
@@ -373,7 +373,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar5.png" alt="avatar 5" width="35" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar5.png') }}" alt="avatar 5" width="35" class="pull-left">
                                         <div class="media-body">
                                             <div class="pull-left">
                                                 <p class="c-dark m-0"><strong>John Snow</strong>
@@ -390,7 +390,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar6.png" alt="avatar 6" width="35" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar6.png') }}" alt="avatar 6" width="35" class="pull-left">
                                         <div class="media-body">
                                             <div class="pull-left">
                                                 <p class="c-dark m-0"><strong>Jerry Smith</strong>
@@ -444,7 +444,7 @@
                             <div class="withScroll" data-height="480">
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar13_big.png" alt="avatar 13" width="50" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar13_big.png') }}" alt="avatar 13" width="50" class="pull-left">
                                         <div class="media-body">
                                             <small class="pull-right">23 Sept</small>
                                             <h5 class="c-dark"><strong>John Snow</strong></h5>
@@ -455,7 +455,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar12_big.png" alt="avatar 12" width="50" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar12_big.png') }}" alt="avatar 12" width="50" class="pull-left">
                                         <div class="media-body">
                                             <small class="pull-right">23 Sept</small>
                                             <h5 class="c-dark"><strong>Jerry Smith</strong></h5>
@@ -466,7 +466,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar11_big.png" alt="avatar 11" width="50" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar11_big.png') }}" alt="avatar 11" width="50" class="pull-left">
                                         <div class="media-body">
                                             <small class="pull-right">23 Sept</small>
                                             <h5 class="c-dark"><strong>John Snow</strong></h5>
@@ -477,7 +477,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar10_big.png" alt="avatar 10" width="50" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar10_big.png') }}" alt="avatar 10" width="50" class="pull-left">
                                         <div class="media-body">
                                             <small class="pull-right">23 Sept</small>
                                             <h5 class="c-dark"><strong>Jerry Smith</strong></h5>
@@ -488,7 +488,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar9_big.png" alt="avatar 9" width="50" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar9_big.png') }}" alt="avatar 9" width="50" class="pull-left">
                                         <div class="media-body">
                                             <small class="pull-right">23 Sept</small>
                                             <h5 class="c-dark"><strong>John Snow</strong></h5>
@@ -499,7 +499,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar8_big.png" alt="avatar 8" width="50" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar8_big.png') }}" alt="avatar 8" width="50" class="pull-left">
                                         <div class="media-body">
                                             <small class="pull-right">23 Sept</small>
                                             <h5 class="c-dark"><strong>Jerry Smith</strong></h5>
@@ -510,7 +510,7 @@
                                 </a>
                                 <a href="#" class="message-item media">
                                     <div class="media">
-                                        <img src="http://desamembangun.web.id/assets/img/avatars/avatar7_big.png" alt="avatar 7" width="50" class="pull-left">
+                                        <img src="{{ asset('/assets/img/avatars/avatar7_big.png') }}" alt="avatar 7" width="50" class="pull-left">
                                         <div class="media-body">
                                             <small class="pull-right">23 Sept</small>
                                             <h5 class="c-dark"><strong>John Snow</strong></h5>
