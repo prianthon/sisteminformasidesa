@@ -36,7 +36,7 @@
                 </div>
                 <div class="login-logo">
                     <a href="#?login-theme-3">
-                        <img src="//desamembangun.web.id/assets/img/account/login-logo.png" alt="Company Logo">
+                        <img src="//desamembangun.web.id/assets/img/account/login-logo.png" alt="Desa2.0 Logo">
                     </a>
                 </div>
                 <hr>
@@ -49,25 +49,25 @@
                     </div>
                     <!-- END ERROR BOX -->
                     <form action="#" method="post">
-                        <input type="text" placeholder="Username" class="input-field form-control user" />
-                        <input type="password" placeholder="Password" class="input-field form-control password" />
-                        <button id="submit-form" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">login</span></button>
+                        <input type="text" placeholder="Alamat E-Mail" class="input-field form-control user" />
+                        <input type="password" placeholder="Katasandi" class="input-field form-control password" />
+                        <button id="submit-form" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">Masuk</span></button>
                     </form>
-                    <div class="login-links">
+                    <!--<div class="login-links">
                         <a href="password_forgot.html">Forgot password?</a>
                         <br>
                         <a href="signup.html">Don't have an account? <strong>Sign Up</strong></a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
-            <div class="social-login row">
+            <!--<div class="social-login row">
                 <div class="fb-login col-lg-6 col-md-12 animated flipInX">
                     <a href="#" class="btn btn-facebook btn-block">Connect with <strong>Facebook</strong></a>
                 </div>
                 <div class="twit-login col-lg-6 col-md-12 animated flipInX">
                     <a href="#" class="btn btn-twitter btn-block">Connect with <strong>Twitter</strong></a>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>
