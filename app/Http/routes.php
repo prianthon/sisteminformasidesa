@@ -23,6 +23,15 @@ $router->group([
       get('datapublik','DataPublikController@index');
       //menu program pemerintah
       get('programpemerintah','ProgramPemerintahController@index');
+      ////menu peristiwa////
+      //menu kelahiran
+      get('kelahiran','Peristiwa\KelahiranController@index');
+      //menu kematian
+      get('kematian','Peristiwa\KematianController@index');
+      //menu pindah
+      get('pindah','Peristiwa\PindahController@index');
+      //menu migrasi tenaga kerja
+      get('migrasitenagakerja','Peristiwa\MigrasiController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });

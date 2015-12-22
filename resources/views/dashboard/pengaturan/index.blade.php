@@ -44,16 +44,16 @@
                 <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="widgets.html"><span class="sidebar-text">Kelahiran</span></a>
+                        <a href="{{ URL::to('/kelahiran') }}"><span class="sidebar-text">Kelahiran</span></a>
                     </li>
                     <li>
-                        <a href="intro.html"><span class="sidebar-text">Kematian</span></a>
+                        <a href="{{ URL::to('/kematian') }}"><span class="sidebar-text">Kematian</span></a>
                     </li>
                     <li>
-                        <a href="coming_soon.html"><span class="sidebar-text">Pindah</span></a>
+                        <a href="{{ URL::to('/pindah') }}"><span class="sidebar-text">Pindah</span></a>
                     </li>
                     <li>
-                        <a href="notes.html"><span class="sidebar-text">Migrasi Tenaga Kerja</span></a>
+                        <a href="{{ URL::to('/migrasitenagakerja') }}"><span class="sidebar-text">Migrasi Tenaga Kerja</span></a>
                     </li>
                 </ul>
             </li>
