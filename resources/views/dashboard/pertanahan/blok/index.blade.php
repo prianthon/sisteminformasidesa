@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Daftar Pelayanan</title>
+  <title>Desa2.0 - Pertanahan</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Daftar Pelayanan</div>
+  <div class="navbar-center">Blok</div>
 @endsection
 
 @section('mainsidebar')
@@ -21,11 +21,11 @@
             <li>
                 <a href="{{ URL::to('/penduduk') }}"><i class="fa fa-edit"></i><span class="sidebar-text">Penduduk</span></span></a>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-rocket"></i><span class="sidebar-text">Pelayanan</span>
                 <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/pelayanan') }}"><span class="sidebar-text">Surat</span></a>
                     </li>
                     <li>
@@ -69,10 +69,10 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-square"></i><span class="sidebar-text">Pertanahan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/blok') }}"><span class="sidebar-text">Blok</span></a>
                     </li>
                     <li>

@@ -62,10 +62,10 @@
                     <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="#" data-style="dark" class="theme-color"><span class="sidebar-text">Audit Kemiskinan</span></a>
+                        <a href="{{ URL::to('/auditkemiskinan') }}"><span class="sidebar-text">Audit Kemiskinan</span></a>
                     </li>
                     <li>
-                        <a href="#" data-style="light" class="theme-color"><span class="sidebar-text">Survei Kemiskinan</span></a>
+                        <a href="{{ URL::to('/surveikemiskinan') }}"><span class="sidebar-text">Survei Kemiskinan</span></a>
                     </li>
                 </ul>
             </li>
@@ -73,13 +73,13 @@
                 <a href="#"><i class="fa fa-square"></i><span class="sidebar-text">Pertanahan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="mailbox.html"><span class="sidebar-text">Blok</span></a>
+                        <a href="{{ URL::to('/blok') }}"><span class="sidebar-text">Blok</span></a>
                     </li>
                     <li>
-                        <a href="email_compose.html"><span class="sidebar-text">Persil</span></a>
+                        <a href="{{ URL::to('/persil') }}"><span class="sidebar-text">Persil</span></a>
                     </li>
                     <li>
-                        <a href="email_compose.html"><span class="sidebar-text">Peta</span></a>
+                        <a href="{{ URL::to('/peta') }}"><span class="sidebar-text">Peta</span></a>
                     </li>
                 </ul>
             </li>

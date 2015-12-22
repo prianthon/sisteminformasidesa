@@ -32,6 +32,18 @@ $router->group([
       get('pindah','Peristiwa\PindahController@index');
       //menu migrasi tenaga kerja
       get('migrasitenagakerja','Peristiwa\MigrasiController@index');
+      ////menu kemiskinan////
+      //audit kemsikinan
+      get('auditkemiskinan','Kemiskinan\AuditController@index');
+      //survei kemiskinan
+      get('surveikemiskinan','Kemiskinan\SurveiController@index');
+      ////menu pertanahan////
+      //menu blok
+      get('blok','Pertanahan\BlokController@index');
+      //menu persil
+      get('persil','Pertanahan\PersilController@index');
+      //menu peta
+      get('peta','Pertanahan\PetaController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
