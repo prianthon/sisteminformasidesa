@@ -27,7 +27,7 @@
           <a href="lockscreen.html" title="Lock Screen">
             <i class="glyph-icon flaticon-padlock23"></i>
           </a>
-          <a href="login.html" title="Logout">
+          <a href="{{ URL::to('/auth/logout') }}" title="Keluar">
             <i class="fa fa-power-off"></i>
           </a>
         </li>
