@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Pengaturan Umum</title>
+  <title>Desa2.0 - Daftar Pelayanan</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Pengaturan Umum</div>
+  <div class="navbar-center">Persyaratan Dokumen</div>
 @endsection
 
 @section('mainsidebar')
@@ -21,14 +21,14 @@
             <li>
                 <a href="{{ URL::to('/penduduk') }}"><i class="fa fa-edit"></i><span class="sidebar-text">Penduduk</span></span></a>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-rocket"></i><span class="sidebar-text">Pelayanan</span>
                 <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/pelayanan') }}"><span class="sidebar-text">Surat</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/persyaratandokumen') }}"><span class="sidebar-text">Persyaratan Dokumen</span></a>
                     </li>
                     <li>
@@ -227,7 +227,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="m-b-245 current">
+            <li class="m-b-245">
                 <a href="{{ URL::to('/pengaturan/umum') }}"><i class="fa fa-wrench"></i><span class="sidebar-text">Pengaturan</span></a>
             </li>
         </ul>

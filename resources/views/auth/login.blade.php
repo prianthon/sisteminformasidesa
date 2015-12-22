@@ -50,6 +50,11 @@
                         <input type="password" placeholder="Katasandi" class="input-field form-control password" name="password"/>
                         <button type="submit" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">Masuk</span></button>
                     </form>
+                    <div class="login-links">
+                        <a href="password_forgot.html">Lupa Kata sandi?</a>
+                        <br/>
+                        <h5>Dikembangkan oleh<a href="http://gedhe.or.id/">Gedhe Foundation</a></h5>
+                    </div>
                     <!--<div class="login-links">
                         <a href="password_forgot.html">Forgot password?</a>
                         <br>

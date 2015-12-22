@@ -16,26 +16,26 @@
                 <a href="{{ URL::to('/dashboard') }}"><i class="fa fa-dashboard"></i><span class="sidebar-text">Dashboard</span></a>
             </li>
             <li>
-                <a href="#"><i class="glyph-icon flaticon-shopping80"></i><span class="sidebar-text">Keluarga</a>
+                <a href="{{ URL::to('/keluarga') }}"><i class="glyph-icon flaticon-shopping80"></i><span class="sidebar-text">Keluarga</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-edit"></i><span class="sidebar-text">Penduduk</span></span></a>
+                <a href="{{ URL::to('/penduduk') }}"><i class="fa fa-edit"></i><span class="sidebar-text">Penduduk</span></span></a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-rocket"></i><span class="sidebar-text">Pelayanan</span>
                 <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="widgets.html"><span class="sidebar-text">Surat</span></a>
+                        <a href="{{ URL::to('/pelayanan') }}"><span class="sidebar-text">Surat</span></a>
                     </li>
                     <li>
-                        <a href="intro.html"><span class="sidebar-text">Persyaratan Dokumen</span></a>
+                        <a href="{{ URL::to('/persyaratandokumen') }}"><span class="sidebar-text">Persyaratan Dokumen</span></a>
                     </li>
                     <li>
-                        <a href="coming_soon.html"><span class="sidebar-text">Data Publik</span></a>
+                        <a href="{{ URL::to('/datapublik') }}"><span class="sidebar-text">Data Publik</span></a>
                     </li>
                     <li>
-                        <a href="notes.html"><span class="sidebar-text">Program Pemerintah</span></a>
+                        <a href="{{ URL::to('/programpemerintah') }}"><span class="sidebar-text">Program Pemerintah</span></a>
                     </li>
                 </ul>
             </li>
