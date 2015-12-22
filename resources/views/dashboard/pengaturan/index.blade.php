@@ -1,18 +1,18 @@
 @extends('master')
 
 @section('title')
-  <title>Dashboard</title>
+  <title>Pengaturan Umum</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Dashboard</div>
+  <div class="navbar-center">Pengaturan Umum</div>
 @endsection
 
 @section('mainsidebar')
 <nav id="sidebar">
     <div id="main-menu">
         <ul class="sidebar-nav">
-            <li  class="current">
+            <li>
                 <a href="{{ URL::to('/dashboard') }}"><i class="fa fa-dashboard"></i><span class="sidebar-text">Dashboard</span></a>
             </li>
             <li>
@@ -227,7 +227,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="m-b-245">
+            <li class="m-b-245 current">
                 <a href="{{ URL::to('/pengaturan/umum') }}"><i class="fa fa-wrench"></i><span class="sidebar-text">Pengaturan</span></a>
             </li>
         </ul>

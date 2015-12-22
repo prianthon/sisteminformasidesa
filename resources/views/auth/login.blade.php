@@ -42,16 +42,13 @@
                 <hr>
                 <div class="login-form">
                     <!-- BEGIN ERROR BOX -->
-                    <div class="alert alert-danger hide">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <h4>Error!</h4>
-                        Your Error Message goes here
-                    </div>
+                    @include('auth.partials.errors')
                     <!-- END ERROR BOX -->
-                    <form action="#" method="post">
-                        <input type="text" placeholder="Alamat E-Mail" class="input-field form-control user" />
-                        <input type="password" placeholder="Katasandi" class="input-field form-control password" />
-                        <button id="submit-form" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">Masuk</span></button>
+                    <form role="form" method="POST" action="{{ url('/auth/login') }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="email" placeholder="Alamat E-Mail" class="input-field form-control user" name="email" value="{{ old('email') }}" autofocus/>
+                        <input type="password" placeholder="Katasandi" class="input-field form-control password" name="password"/>
+                        <button type="submit" class="btn btn-login ladda-button" data-style="expand-left"><span class="ladda-label">Masuk</span></button>
                     </form>
                     <!--<div class="login-links">
                         <a href="password_forgot.html">Forgot password?</a>
