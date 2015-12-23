@@ -99,6 +99,9 @@ $router->group([
       get('laporan/menurutwilayah','Laporan\WilayahController@index');
       //menu wajib ktp
       get('laporan/wajibktp','Laporan\WajibController@index');
+      ////menu pustaka////
+      //menu agama
+      resource('agama','Lib\AgamaController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });

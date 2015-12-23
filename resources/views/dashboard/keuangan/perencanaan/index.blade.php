@@ -188,7 +188,7 @@
                 <a href="#"><i class="fa fa-book"></i><span class="sidebar-text">Pustaka</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="profil.html"><span class="sidebar-text">Agama</span></a>
+                        <a href="{{ URL::to('/agama') }}"><span class="sidebar-text">Agama</span></a>
                     </li>
                     <li>
                         <a href="profil_edit.html"><span class="sidebar-text">Hubungan</span></a>

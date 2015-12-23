@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Daftar Pelayanan</title>
+  <title>Desa2.0 - Pustaka</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Program Pemerintah</div>
+  <div class="navbar-center">Agama</div>
 @endsection
 
 @section('mainsidebar')
@@ -21,7 +21,7 @@
             <li>
                 <a href="{{ URL::to('/penduduk') }}"><i class="fa fa-edit"></i><span class="sidebar-text">Penduduk</span></span></a>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-rocket"></i><span class="sidebar-text">Pelayanan</span>
                 <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
@@ -34,7 +34,7 @@
                     <li>
                         <a href="{{ URL::to('/datapublik') }}"><span class="sidebar-text">Data Publik</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/programpemerintah') }}"><span class="sidebar-text">Program Pemerintah</span></a>
                     </li>
                 </ul>
@@ -184,10 +184,10 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-book"></i><span class="sidebar-text">Pustaka</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/agama') }}"><span class="sidebar-text">Agama</span></a>
                     </li>
                     <li>
