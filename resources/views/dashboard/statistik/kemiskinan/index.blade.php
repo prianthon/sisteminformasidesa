@@ -203,7 +203,7 @@
                         <a href="{{ URL::to('/penyalur/tki') }}"><span class="sidebar-text">Penyalur TKI</span></a>
                     </li>
                     <li>
-                        <a href="lockscreen.html"><span class="sidebar-text">Status Kawin</span></a>
+                        <a href="{{ URL::to('/status/kawin') }}"><span class="sidebar-text">Status Kawin</span></a>
                     </li>
                     <li>
                         <a href="session_timeout.html"><span class="sidebar-text">Status Tinggal</span></a>

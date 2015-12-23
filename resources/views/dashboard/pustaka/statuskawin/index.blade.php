@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Daftar Peristiwa</title>
+  <title>Desa2.0 - Pustaka</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Peristiwa Kematian</div>
+  <div class="navbar-center">Status Kawin</div>
 @endsection
 
 @section('mainsidebar')
@@ -39,14 +39,14 @@
                     </li>
                 </ul>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-spinner"></i><span class="sidebar-text">Peristiwa</span>
                 <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/kelahiran') }}"><span class="sidebar-text">Kelahiran</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/kematian') }}"><span class="sidebar-text">Kematian</span></a>
                     </li>
                     <li>
@@ -184,7 +184,7 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-book"></i><span class="sidebar-text">Pustaka</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
@@ -202,7 +202,7 @@
                     <li>
                         <a href="{{ URL::to('/penyalur/tki') }}"><span class="sidebar-text">Penyalur TKI</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/status/kawin') }}"><span class="sidebar-text">Status Kawin</span></a>
                     </li>
                     <li>

@@ -110,6 +110,8 @@ $router->group([
       resource('pendidikan','Lib\PendidikanController');
       //menu penyalur tki
       resource('penyalur/tki','Lib\PenyalurTkiController');
+      //menu status kawin
+      resource('status/kawin','Lib\StatusKawinController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
