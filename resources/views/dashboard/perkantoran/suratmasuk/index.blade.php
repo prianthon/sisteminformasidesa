@@ -197,7 +197,7 @@
                         <a href="{{ URL::to('/pekerjaan') }}"><span class="sidebar-text">Pekerjaan</span></a>
                     </li>
                     <li>
-                        <a href="signup.html"><span class="sidebar-text">Pendidikan</span></a>
+                        <a href="{{ URL::to('/pendidikan') }}"><span class="sidebar-text">Pendidikan</span></a>
                     </li>
                     <li>
                         <a href="password_forgot.html"><span class="sidebar-text">Penyalur TKI</span></a>

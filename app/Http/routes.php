@@ -106,6 +106,8 @@ $router->group([
       resource('hubungan','Lib\HubunganController');
       //menu pekerjaan
       resource('pekerjaan','Lib\PekerjaanController');
+      //menu pendidikan
+      resource('pendidikan','Lib\PendidikanController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
