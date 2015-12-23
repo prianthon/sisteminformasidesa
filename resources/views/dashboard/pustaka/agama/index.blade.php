@@ -277,11 +277,31 @@
 
 @section('maincontent')
 <div id="main-content">
+  <div class="panel-body">
     <div class="row">
-        <div class="col-lg-12">
-            <h1>Blank Page <small>Blank Page</small></h1>
-            <br><br><br>
+        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+            <h1>Kelola <small>Agama</small></h1>
+            <br>
+            {!! link_to('agama/create','Tambah Agama',['class'=>'btn btn-primary']) !!}
+            <table class="table table-striped table-hover">
+              <thead class="no-bd">
+                <tr>
+                  <th><strong>ID Agama</strong></th>
+                  <th><strong>Agama</strong></th>
+                  <th><strong>Aksi</strong></th>
+                </tr>
+              </thead>
+              <tbody class="no-bd-y">
+                @foreach($agama as $a)
+                <tr>
+                  <td>{{ $a->id }}</td>
+                  <td>{{ $a->agama }}</td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
         </div>
     </div>
+  </div>
 </div>
 @endsection

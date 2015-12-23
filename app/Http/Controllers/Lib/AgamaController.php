@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Agama;
 
 class AgamaController extends Controller
 {
@@ -16,7 +17,8 @@ class AgamaController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.agama.index');
+        $agama = Agama::all();
+        return view('dashboard.pustaka.agama.index', compact('agama'));
     }
 
     /**
