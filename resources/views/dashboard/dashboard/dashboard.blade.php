@@ -137,13 +137,13 @@
                         <a href="{{ URL::to('/statistik/pekerjaan') }}"><span class="sidebar-text">Pekerjaan</span></a>
                     </li>
                     <li>
-                        <a href="404.html"><span class="sidebar-text">Status Tinggal</span></a>
+                        <a href="{{ URL::to('/statistik/statustinggal') }}"><span class="sidebar-text">Status Tinggal</span></a>
                     </li>
                     <li>
-                        <a href="500.html"><span class="sidebar-text">Kemiskinan</span></a>
+                        <a href="{{ URL::to('/statistik/kemiskinan') }}"><span class="sidebar-text">Kemiskinan</span></a>
                     </li>
                     <li>
-                        <a href="blank_page.html"><span class="sidebar-text">Jenis Lahan</span></a>
+                        <a href="{{ URL::to('/statistik/jenislahan') }}"><span class="sidebar-text">Jenis Lahan</span></a>
                     </li>
                 </ul>
             </li>

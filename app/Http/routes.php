@@ -73,6 +73,12 @@ $router->group([
       get('statistik/pendidikan','Statistik\PendidikanController@index');
       //menu pekerjaan
       get('statistik/pekerjaan','Statistik\PekerjaanController@index');
+      //menu status tinggal
+      get('statistik/statustinggal','Statistik\StatusController@index');
+      //menu kemiskinan
+      get('statistik/kemiskinan','Statistik\KemiskinanController@index');
+      //menu jenis lahan
+      get('statistik/jenislahan','Statistik\JenisController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
