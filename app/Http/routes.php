@@ -79,6 +79,13 @@ $router->group([
       get('statistik/kemiskinan','Statistik\KemiskinanController@index');
       //menu jenis lahan
       get('statistik/jenislahan','Statistik\JenisController@index');
+      ////menu keuangan////
+      //menu perencanaan
+      get('keuangan/perencanaan','Keuangan\PerencanaanController@index');
+      //menu penganggaran
+      get('keuangan/penganggaran','Keuangan\PenganggaranController@index');
+      //menu realisasi
+      get('keuangan/realisasi','Keuangan\RealisasiController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });

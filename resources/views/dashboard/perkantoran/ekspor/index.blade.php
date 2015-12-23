@@ -151,13 +151,13 @@
                 <a href="#"><i class="fa fa-money"></i><span class="sidebar-text">Keuangan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="panels.html"><span class="sidebar-text">Perencanaan</span></a>
+                        <a href="{{ URL::to('/keuangan/perencanaan') }}"><span class="sidebar-text">Perencanaan</span></a>
                     </li>
                     <li>
-                        <a href="panels_draggable.html"><span class="sidebar-text">Penganggaran</span></a>
+                        <a href="{{ URL::to('/keuangan/penganggaran') }}"><span class="sidebar-text">Penganggaran</span></a>
                     </li>
                     <li>
-                        <a href="panels_draggable.html"><span class="sidebar-text">Realisasi</span></a>
+                        <a href="{{ URL::to('/keuangan/realisasi') }}"><span class="sidebar-text">Realisasi</span></a>
                     </li>
                     <li>
                         <a href="panels_draggable.html"><span class="sidebar-text">Kodifikasi Akun</span></a>
