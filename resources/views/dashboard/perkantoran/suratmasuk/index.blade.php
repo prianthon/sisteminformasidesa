@@ -191,7 +191,7 @@
                         <a href="{{ URL::to('/agama') }}"><span class="sidebar-text">Agama</span></a>
                     </li>
                     <li>
-                        <a href="profil_edit.html"><span class="sidebar-text">Hubungan</span></a>
+                        <a href="{{ URL::to('/hubungan') }}"><span class="sidebar-text">Hubungan</span></a>
                     </li>
                     <li>
                         <a href="login.html"><span class="sidebar-text">Pekerjaan</span></a>

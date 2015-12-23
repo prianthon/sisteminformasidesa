@@ -102,6 +102,8 @@ $router->group([
       ////menu pustaka////
       //menu agama
       resource('agama','Lib\AgamaController');
+      //menu hubungan
+      resource('hubungan','Lib\HubunganController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
