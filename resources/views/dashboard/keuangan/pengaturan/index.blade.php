@@ -5,7 +5,7 @@
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Pustaka Satuan</div>
+  <div class="navbar-center">Pengaturan</div>
 @endsection
 
 @section('mainsidebar')
@@ -165,11 +165,11 @@
                     <li>
                         <a href="{{ URL::to('/keuangan/sumberdana') }}"><span class="sidebar-text">Sumberdana</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/keuangan/pustakasatuan') }}"><span class="sidebar-text">Pustaka Satuan</span></a>
                     </li>
-                    <li>
-                        <a href="panels_draggable.html"><span class="sidebar-text">Pengaturan</span></a>
+                    <li class="current">
+                        <a href="{{ URL::to('/keuangan/pengaturan') }}"><span class="sidebar-text">Pengaturan</span></a>
                     </li>
                 </ul>
             </li>
@@ -177,7 +177,7 @@
                 <a href="#"><i class="fa fa-archive"></i><span class="sidebar-text">Laporan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="tables.html"><span class="sidebar-text">Menurut Wilayah</span></a>
+                        <a href="{{ URL::to('/laporan/menurutwilayah') }}"><span class="sidebar-text">Menurut Wilayah</span></a>
                     </li>
                     <li>
                         <a href="tables_editable.html"><span class="sidebar-text">Wajib KTP</span></a>

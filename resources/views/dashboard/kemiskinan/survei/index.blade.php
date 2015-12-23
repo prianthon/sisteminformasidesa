@@ -169,7 +169,7 @@
                         <a href="{{ URL::to('/keuangan/pustakasatuan') }}"><span class="sidebar-text">Pustaka Satuan</span></a>
                     </li>
                     <li>
-                        <a href="panels_draggable.html"><span class="sidebar-text">Pengaturan</span></a>
+                        <a href="{{ URL::to('/keuangan/pengaturan') }}"><span class="sidebar-text">Pengaturan</span></a>
                     </li>
                 </ul>
             </li>
@@ -177,7 +177,7 @@
                 <a href="#"><i class="fa fa-archive"></i><span class="sidebar-text">Laporan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="tables.html"><span class="sidebar-text">Menurut Wilayah</span></a>
+                        <a href="{{ URL::to('/laporan/menurutwilayah') }}"><span class="sidebar-text">Menurut Wilayah</span></a>
                     </li>
                     <li>
                         <a href="tables_editable.html"><span class="sidebar-text">Wajib KTP</span></a>

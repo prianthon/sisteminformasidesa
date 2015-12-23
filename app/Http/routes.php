@@ -94,6 +94,11 @@ $router->group([
       get('keuangan/pustakasatuan','Keuangan\PustakaController@index');
       //menu pengaturan
       get('keuangan/pengaturan','Keuangan\PengaturanController@index');
+      ////menu laporan////
+      //menu menurut wilayah
+      get('laporan/menurutwilayah','Laporan\WilayahController@index');
+      //menu wajib ktp
+      get('laporan/wajibktp','Laporan\WajibController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });

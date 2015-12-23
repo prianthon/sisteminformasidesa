@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Inventaris</title>
+  <title>Desa2.0 - Laporan</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Jenis Inventaris</div>
+  <div class="navbar-center">Menurut Wilayah</div>
 @endsection
 
 @section('mainsidebar')
@@ -100,13 +100,13 @@
                     </li>
                 </ul>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-check"></i><span class="sidebar-text">Inventaris</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/inventaris') }}"><span class="sidebar-text">Inventaris</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/jenis/inventaris') }}"><span class="sidebar-text">Jenis Inventaris</span></a>
                     </li>
                 </ul>
@@ -173,14 +173,14 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-archive"></i><span class="sidebar-text">Laporan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/laporan/menurutwilayah') }}"><span class="sidebar-text">Menurut Wilayah</span></a>
                     </li>
                     <li>
-                        <a href="tables_editable.html"><span class="sidebar-text">Wajib KTP</span></a>
+                        <a href="{{ URL::to('/laporan/wajibktp') }}"><span class="sidebar-text">Wajib KTP</span></a>
                     </li>
                 </ul>
             </li>
