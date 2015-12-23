@@ -87,16 +87,16 @@
                 <a href="#"><i class="fa fa-briefcase"></i><span class="sidebar-text">Perkantoran</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="forms.html"><span class="sidebar-text">Surat Masuk</span></a>
+                        <a href="{{ URL::to('/surat/masuk') }}"><span class="sidebar-text">Surat Masuk</span></a>
                     </li>
                     <li>
-                        <a href="form_validation.html"><span class="sidebar-text">Surat Keluar</span></a>
+                        <a href="{{ URL::to('/surat/keluar') }}"><span class="sidebar-text">Surat Keluar</span></a>
                     </li>
                     <li>
-                        <a href="form_wizards.html"><span class="sidebar-text">Ekspor</span></a>
+                        <a href="{{ URL::to('/ekspor') }}"><span class="sidebar-text">Ekspor</span></a>
                     </li>
                     <li>
-                        <a href="sliders.html"><span class="sidebar-text">Aset Desa</span></a>
+                        <a href="{{ URL::to('/aset/desa') }}"><span class="sidebar-text">Aset Desa</span></a>
                     </li>
                 </ul>
             </li>

@@ -44,6 +44,15 @@ $router->group([
       get('persil','Pertanahan\PersilController@index');
       //menu peta
       get('peta','Pertanahan\PetaController@index');
+      ////menu perkantoran////
+      //menu Surat Masuk
+      get('surat/masuk','Perkantoran\MasukController@index');
+      //menu surat keluar
+      get('surat/keluar','Perkantoran\KeluarController@index');
+      //menu ekspor
+      get('ekspor','Perkantoran\EksporController@index');
+      //menu aset desa
+      get('aset/desa','Perkantoran\AsetController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });

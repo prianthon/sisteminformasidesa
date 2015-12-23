@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Pertanahan</title>
+  <title>Desa2.0 - Perkantoran</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Peta</div>
+  <div class="navbar-center">Surat Keluar</div>
 @endsection
 
 @section('mainsidebar')
@@ -69,7 +69,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-square"></i><span class="sidebar-text">Pertanahan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
@@ -78,18 +78,18 @@
                     <li>
                         <a href="{{ URL::to('/persil') }}"><span class="sidebar-text">Persil</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/peta') }}"><span class="sidebar-text">Peta</span></a>
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-briefcase"></i><span class="sidebar-text">Perkantoran</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/surat/masuk') }}"><span class="sidebar-text">Surat Masuk</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/surat/keluar') }}"><span class="sidebar-text">Surat Keluar</span></a>
                     </li>
                     <li>
