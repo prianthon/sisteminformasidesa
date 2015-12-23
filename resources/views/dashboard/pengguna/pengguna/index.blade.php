@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Daftar Keluarga</title>
+  <title>Desa2.0 - Pustaka</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Daftar Keluarga</div>
+  <div class="navbar-center">Pengguna</div>
 @endsection
 
 @section('mainsidebar')
@@ -15,7 +15,7 @@
             <li>
                 <a href="{{ URL::to('/dashboard') }}"><i class="fa fa-dashboard"></i><span class="sidebar-text">Dashboard</span></a>
             </li>
-            <li class="current">
+            <li>
                 <a href="{{ URL::to('/keluarga') }}"><i class="glyph-icon flaticon-shopping80"></i><span class="sidebar-text">Keluarga</a>
             </li>
             <li>
@@ -216,10 +216,10 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-group"></i><span class="sidebar-text">Pengguna</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/pengguna') }}"><span class="sidebar-text">Pengguna</span></a>
                     </li>
                     <li>

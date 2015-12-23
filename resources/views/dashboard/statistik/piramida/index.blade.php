@@ -220,7 +220,7 @@
                 <a href="#"><i class="fa fa-group"></i><span class="sidebar-text">Pengguna</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="gallery.html"><span class="sidebar-text">Pengguna</span></a>
+                        <a href="{{ URL::to('/pengguna') }}"><span class="sidebar-text">Pengguna</span></a>
                     </li>
                     <li>
                         <a href="medias.html"><span class="sidebar-text">Hak akses</span></a>
