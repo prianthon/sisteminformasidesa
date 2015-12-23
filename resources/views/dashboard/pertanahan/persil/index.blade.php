@@ -223,7 +223,7 @@
                         <a href="{{ URL::to('/pengguna') }}"><span class="sidebar-text">Pengguna</span></a>
                     </li>
                     <li>
-                        <a href="medias.html"><span class="sidebar-text">Hak akses</span></a>
+                        <a href="{{ URL::to('/hak/akses') }}"><span class="sidebar-text">Hak akses</span></a>
                     </li>
                 </ul>
             </li>

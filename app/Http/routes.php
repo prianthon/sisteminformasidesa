@@ -120,7 +120,9 @@ $router->group([
       resource('standar/kemiskinan','Lib\StandarKemiskinanController');
       ////menu pengguna////
       //menu pengguna
-      resource('pengguna','PenggunaController');
+      resource('pengguna','Pengguna\PenggunaController');
+      //menu hak akses
+      resource('hak/akses','Pengguna\HakController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });

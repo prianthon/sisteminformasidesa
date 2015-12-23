@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Daftar Pelayanan</title>
+  <title>Desa2.0 - Pustaka</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Persyaratan Dokumen</div>
+  <div class="navbar-center">Hak Akses</div>
 @endsection
 
 @section('mainsidebar')
@@ -21,14 +21,14 @@
             <li>
                 <a href="{{ URL::to('/penduduk') }}"><i class="fa fa-edit"></i><span class="sidebar-text">Penduduk</span></span></a>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-rocket"></i><span class="sidebar-text">Pelayanan</span>
                 <span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/pelayanan') }}"><span class="sidebar-text">Surat</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/persyaratandokumen') }}"><span class="sidebar-text">Persyaratan Dokumen</span></a>
                     </li>
                     <li>
@@ -216,13 +216,13 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-group"></i><span class="sidebar-text">Pengguna</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/pengguna') }}"><span class="sidebar-text">Pengguna</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/hak/akses') }}"><span class="sidebar-text">Hak akses</span></a>
                     </li>
                 </ul>
