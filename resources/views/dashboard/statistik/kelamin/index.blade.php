@@ -200,7 +200,7 @@
                         <a href="{{ URL::to('/pendidikan') }}"><span class="sidebar-text">Pendidikan</span></a>
                     </li>
                     <li>
-                        <a href="password_forgot.html"><span class="sidebar-text">Penyalur TKI</span></a>
+                        <a href="{{ URL::to('/penyalur/tki') }}"><span class="sidebar-text">Penyalur TKI</span></a>
                     </li>
                     <li>
                         <a href="lockscreen.html"><span class="sidebar-text">Status Kawin</span></a>

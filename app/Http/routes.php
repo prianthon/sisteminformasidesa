@@ -108,6 +108,8 @@ $router->group([
       resource('pekerjaan','Lib\PekerjaanController');
       //menu pendidikan
       resource('pendidikan','Lib\PendidikanController');
+      //menu penyalur tki
+      resource('penyalur/tki','Lib\PenyalurTkiController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
