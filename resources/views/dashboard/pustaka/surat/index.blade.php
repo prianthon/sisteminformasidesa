@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Statistik</title>
+  <title>Desa2.0 - Pustaka</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Jenis Kelamin</div>
+  <div class="navbar-center">Surat</div>
 @endsection
 
 @section('mainsidebar')
@@ -111,14 +111,14 @@
                     </li>
                 </ul>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-bar-chart-o"></i><span class="sidebar-text">Statistik</span><span class="fa arrow"></span>
                 </a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/statistik/piramidapenduduk') }}"><span class="sidebar-text">Piramida Penduduk</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/statistik/jeniskelamin') }}"><span class="sidebar-text">Jenis Kelamin</span></a>
                     </li>
                     <li>
@@ -184,7 +184,7 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-book"></i><span class="sidebar-text">Pustaka</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
@@ -208,7 +208,7 @@
                     <li>
                         <a href="{{ URL::to('/status/tinggal') }}"><span class="sidebar-text">Status Tinggal</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/surat') }}"><span class="sidebar-text">Surat</span></a>
                     </li>
                     <li>

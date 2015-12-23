@@ -114,6 +114,8 @@ $router->group([
       resource('status/kawin','Lib\StatusKawinController');
       //menu status tinggal
       resource('status/tinggal','Lib\StatusTinggalController');
+      //menu surat
+      resource('surat','Lib\SuratController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
