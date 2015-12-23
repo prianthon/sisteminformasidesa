@@ -194,7 +194,7 @@
                         <a href="{{ URL::to('/hubungan') }}"><span class="sidebar-text">Hubungan</span></a>
                     </li>
                     <li>
-                        <a href="login.html"><span class="sidebar-text">Pekerjaan</span></a>
+                        <a href="{{ URL::to('/pekerjaan') }}"><span class="sidebar-text">Pekerjaan</span></a>
                     </li>
                     <li>
                         <a href="signup.html"><span class="sidebar-text">Pendidikan</span></a>
