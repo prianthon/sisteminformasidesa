@@ -112,6 +112,8 @@ $router->group([
       resource('penyalur/tki','Lib\PenyalurTkiController');
       //menu status kawin
       resource('status/kawin','Lib\StatusKawinController');
+      //menu status tinggal
+      resource('status/tinggal','Lib\StatusTinggalController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });

@@ -206,7 +206,7 @@
                         <a href="{{ URL::to('/status/kawin') }}"><span class="sidebar-text">Status Kawin</span></a>
                     </li>
                     <li>
-                        <a href="session_timeout.html"><span class="sidebar-text">Status Tinggal</span></a>
+                        <a href="{{ URL::to('/status/tinggal') }}"><span class="sidebar-text">Status Tinggal</span></a>
                     </li>
                     <li>
                         <a href="session_timeout.html"><span class="sidebar-text">Surat</span></a>
