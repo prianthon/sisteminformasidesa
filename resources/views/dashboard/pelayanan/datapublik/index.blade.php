@@ -180,7 +180,7 @@
                         <a href="{{ URL::to('/laporan/menurutwilayah') }}"><span class="sidebar-text">Menurut Wilayah</span></a>
                     </li>
                     <li>
-                        <a href="tables_editable.html"><span class="sidebar-text">Wajib KTP</span></a>
+                        <a href="{{ URL::to('/laporan/wajibktp') }}"><span class="sidebar-text">Wajib KTP</span></a>
                     </li>
                 </ul>
             </li>
