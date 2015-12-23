@@ -212,7 +212,7 @@
                         <a href="{{ URL::to('/surat') }}"><span class="sidebar-text">Surat</span></a>
                     </li>
                     <li>
-                        <a href="session_timeout.html"><span class="sidebar-text">Standar Kemiskinan</span></a>
+                        <a href="{{ URL::to('/standar/kemiskinan') }}"><span class="sidebar-text">Standar Kemiskinan</span></a>
                     </li>
                 </ul>
             </li>

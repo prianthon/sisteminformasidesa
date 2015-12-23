@@ -116,6 +116,8 @@ $router->group([
       resource('status/tinggal','Lib\StatusTinggalController');
       //menu surat
       resource('surat','Lib\SuratController');
+      //menu standar kemiskinan
+      resource('standar/kemiskinan','Lib\StandarKemiskinanController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
