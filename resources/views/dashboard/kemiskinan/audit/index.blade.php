@@ -104,10 +104,10 @@
                 <a href="#"><i class="fa fa-check"></i><span class="sidebar-text">Inventaris</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="components.html"><span class="sidebar-text">Inventaris</span></a>
+                        <a href="{{ URL::to('/inventaris') }}"><span class="sidebar-text">Inventaris</span></a>
                     </li>
                     <li>
-                        <a href="animations.html"><span class="sidebar-text">Jenis Inventaris</span></a>
+                        <a href="{{ URL::to('/jenis/inventaris') }}"><span class="sidebar-text">Jenis Inventaris</span></a>
                     </li>
                 </ul>
             </li>
@@ -116,25 +116,25 @@
                 </a>
                 <ul class="submenu collapse">
                     <li>
-                        <a href="timeline.html"><span class="sidebar-text">Piramida Penduduk</span></a>
+                        <a href="{{ URL::to('/statistik/piramidapenduduk') }}"><span class="sidebar-text">Piramida Penduduk</span></a>
                     </li>
                     <li>
-                        <a href="forum.html"><span class="sidebar-text">Jenis Kelamin</span></a>
+                        <a href="{{ URL::to('/statistik/jeniskelamin') }}"><span class="sidebar-text">Jenis Kelamin</span></a>
                     </li>
                     <li>
-                        <a href="members.html"><span class="sidebar-text">Perkawinan</span></a>
+                        <a href="{{ URL::to('/statistik/perkawinan') }}"><span class="sidebar-text">Perkawinan</span></a>
                     </li>
                     <li>
-                        <a href="search_results.html"><span class="sidebar-text">Agama</span></a>
+                        <a href="{{ URL::to('/statistik/agama') }}"><span class="sidebar-text">Agama</span></a>
                     </li>
                     <li>
-                        <a href="contact.html"><span class="sidebar-text">Golongan Darah</span></a>
+                        <a href="{{ URL::to('/statistik/golongandarah') }}"><span class="sidebar-text">Golongan Darah</span></a>
                     </li>
                     <li>
-                        <a href="comments.html"><span class="sidebar-text">Pendidikan</span></a>
+                        <a href="{{ URL::to('/statistik/pendidikan') }}"><span class="sidebar-text">Pendidikan</span></a>
                     </li>
                     <li>
-                        <a href="faq.html"><span class="sidebar-text">Pekerjaan</span></a>
+                        <a href="{{ URL::to('/statistik/pekerjaan') }}"><span class="sidebar-text">Pekerjaan</span></a>
                     </li>
                     <li>
                         <a href="404.html"><span class="sidebar-text">Status Tinggal</span></a>

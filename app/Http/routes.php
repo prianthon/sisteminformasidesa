@@ -53,6 +53,26 @@ $router->group([
       get('ekspor','Perkantoran\EksporController@index');
       //menu aset desa
       get('aset/desa','Perkantoran\AsetController@index');
+      ////menu inventaris////
+      //menu inventaris
+      get('inventaris','Inventaris\InventarisController@index');
+      //menu jenis inventaris
+      get('jenis/inventaris','Inventaris\JenisController@index');
+      ////menu statistik////
+      //menu piramida penduduk
+      get('statistik/piramidapenduduk','Statistik\PiramidaController@index');
+      //menu jenis kelamin
+      get('statistik/jeniskelamin','Statistik\KelaminController@index');
+      //menu perkawinan
+      get('statistik/perkawinan','Statistik\PerkawinanController@index');
+      //menu agama
+      get('statistik/agama','Statistik\AgamaController@index');
+      //menu golongan darah
+      get('statistik/golongandarah','Statistik\DarahController@index');
+      //menu pendidikan
+      get('statistik/pendidikan','Statistik\PendidikanController@index');
+      //menu pekerjaan
+      get('statistik/pekerjaan','Statistik\PekerjaanController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
