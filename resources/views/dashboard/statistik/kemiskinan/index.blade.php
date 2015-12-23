@@ -160,13 +160,13 @@
                         <a href="{{ URL::to('/keuangan/realisasi') }}"><span class="sidebar-text">Realisasi</span></a>
                     </li>
                     <li>
-                        <a href="panels_draggable.html"><span class="sidebar-text">Kodifikasi Akun</span></a>
+                        <a href="{{ URL::to('/keuangan/kodifikasiakun') }}"><span class="sidebar-text">Kodifikasi Akun</span></a>
                     </li>
                     <li>
-                        <a href="panels_draggable.html"><span class="sidebar-text">Sumberdana</span></a>
+                        <a href="{{ URL::to('/keuangan/sumberdana') }}"><span class="sidebar-text">Sumberdana</span></a>
                     </li>
                     <li>
-                        <a href="panels_draggable.html"><span class="sidebar-text">Pustaka Satuan</span></a>
+                        <a href="{{ URL::to('/keuangan/pustakasatuan') }}"><span class="sidebar-text">Pustaka Satuan</span></a>
                     </li>
                     <li>
                         <a href="panels_draggable.html"><span class="sidebar-text">Pengaturan</span></a>

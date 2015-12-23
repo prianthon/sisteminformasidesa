@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Inventaris</title>
+  <title>Desa2.0 - Keuangan</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Jenis Inventaris</div>
+  <div class="navbar-center">Kodifikasi Akun</div>
 @endsection
 
 @section('mainsidebar')
@@ -100,13 +100,13 @@
                     </li>
                 </ul>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-check"></i><span class="sidebar-text">Inventaris</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
                         <a href="{{ URL::to('/inventaris') }}"><span class="sidebar-text">Inventaris</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/jenis/inventaris') }}"><span class="sidebar-text">Jenis Inventaris</span></a>
                     </li>
                 </ul>
@@ -147,7 +147,7 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <li class="active current hasSub">
                 <a href="#"><i class="fa fa-money"></i><span class="sidebar-text">Keuangan</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
@@ -159,7 +159,7 @@
                     <li>
                         <a href="{{ URL::to('/keuangan/realisasi') }}"><span class="sidebar-text">Realisasi</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/keuangan/kodifikasiakun') }}"><span class="sidebar-text">Kodifikasi Akun</span></a>
                     </li>
                     <li>

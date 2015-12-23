@@ -86,6 +86,14 @@ $router->group([
       get('keuangan/penganggaran','Keuangan\PenganggaranController@index');
       //menu realisasi
       get('keuangan/realisasi','Keuangan\RealisasiController@index');
+      //menu kodifikasi akun
+      get('keuangan/kodifikasiakun','Keuangan\KodifikasiController@index');
+      // menu sumber dana
+      get('keuangan/sumberdana','Keuangan\SumberController@index');
+      //menu pustaka satuan
+      get('keuangan/pustakasatuan','Keuangan\PustakaController@index');
+      //menu pengaturan
+      get('keuangan/pengaturan','Keuangan\PengaturanController@index');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
 });
