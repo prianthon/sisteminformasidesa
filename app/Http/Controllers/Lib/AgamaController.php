@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Agama;
+use App\Http\Requests\Libs\AgamaRequest;
 
 class AgamaController extends Controller
 {
@@ -28,7 +29,7 @@ class AgamaController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pustaka.agama.create');
     }
 
     /**
@@ -37,9 +38,14 @@ class AgamaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AgamaRequest $request)
     {
-        //
+        $this->validate($request,[
+          'agama'=>'required'
+        ]);
+        $data=$request->all();
+        Agama::create($data);
+        return redirect('agama');
     }
 
     /**
@@ -61,7 +67,8 @@ class AgamaController extends Controller
      */
     public function edit($id)
     {
-        //
+      $agama = Agama::find($id);
+      return view('dashboard.pustaka.agama.edit', compact('agama'));
     }
 
     /**
@@ -71,9 +78,12 @@ class AgamaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AgamaRequest $request, $id)
     {
-        //
+        $data=$request->all();
+        $agama = Agama::find($id);
+        $agama->update($data);
+        return redirect('agama');
     }
 
     /**
@@ -84,6 +94,8 @@ class AgamaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $agama = Agama::find($id);
+        $agama->delete();
+        return redirect('agama');
     }
 }
