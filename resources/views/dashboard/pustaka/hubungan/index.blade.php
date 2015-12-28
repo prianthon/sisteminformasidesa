@@ -277,11 +277,37 @@
 
 @section('maincontent')
 <div id="main-content">
+  <div class="panel-body">
     <div class="row">
-        <div class="col-lg-12">
-            <h1>Blank Page <small>Blank Page</small></h1>
-            <br><br><br>
+        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+            <h1>Kelola <small>Hubungan Keluarga</small></h1>
+            <br>
+            {!! link_to('hubungan/create','Tambah Hubungan Keluarga',['class'=>'btn btn-primary']) !!}
+            <table class="table table-striped table-hover">
+              <thead class="no-bd">
+                <tr>
+                  <th><strong>ID Hubungan</strong></th>
+                  <th><strong>Hubungan Keluarga</strong></th>
+                  <th width="15%"><strong>Aksi</strong></th>
+                </tr>
+              </thead>
+              <tbody class="no-bd-y">
+                @foreach($hubungan_keluarga as $h)
+                <tr>
+                  <td>{{ $h->id }}</td>
+                  <td>{{ $h->hubungan_keluarga }}</td>
+                  <td>
+                    {!! Form::open(array('method'=>'delete','url'=>'hubungan/'.$h->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
+                    {!! link_to('hubungan/'.$h->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
+                    {!! Form::close() !!}
+                  </td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+            {!! $hubungan_keluarga->render() !!}
         </div>
     </div>
+  </div>
 </div>
 @endsection

@@ -5,7 +5,7 @@
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Agama</div>
+  <div class="navbar-center">Hubungan</div>
 @endsection
 
 @section('mainsidebar')
@@ -187,10 +187,10 @@
             <li class="active current hasSub">
                 <a href="#"><i class="fa fa-book"></i><span class="sidebar-text">Pustaka</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/agama') }}"><span class="sidebar-text">Agama</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/hubungan') }}"><span class="sidebar-text">Hubungan</span></a>
                     </li>
                     <li>
@@ -280,32 +280,18 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-            <h1>Kelola <small>Agama</small></h1>
+            <h1>Tambah <small>Hubungan Keluarga</small></h1>
             <br>
-            {!! link_to('agama/create','Tambah Agama',['class'=>'btn btn-primary']) !!}
-            <table class="table table-striped table-hover">
-              <thead class="no-bd">
-                <tr>
-                  <th><strong>ID Agama</strong></th>
-                  <th><strong>Agama</strong></th>
-                  <th width="15%"><strong>Aksi</strong></th>
-                </tr>
-              </thead>
-              <tbody class="no-bd-y">
-                @foreach($agama as $a)
-                <tr>
-                  <td>{{ $a->id }}</td>
-                  <td>{{ $a->agama }}</td>
-                  <td>
-                    {!! Form::open(array('method'=>'delete','url'=>'agama/'.$a->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                    {!! link_to('agama/'.$a->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                    {!! Form::close() !!}
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-            {!! $agama->render() !!}
+            {!! Form::open(array('url'=>'hubungan')) !!}
+            {!! link_to('hubungan','Kelola Hubungan Keluarga',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+            <br><br>
+            {!! Html::ul($errors->all()) !!}
+            <div class="form-group">
+                <div class="controls">
+                    @include('dashboard.pustaka.hubungan.form')
+                </div>
+            </div>
+            {!! Form::close() !!}
         </div>
     </div>
   </div>

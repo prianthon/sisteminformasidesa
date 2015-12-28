@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\HubunganKeluarga;
+use App\Http\Requests\Libs\HubunganKeluargaRequest;
 
 class HubunganController extends Controller
 {
@@ -16,7 +18,13 @@ class HubunganController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.hubungan.index');
+      $hubungan_keluarga = HubunganKeluarga::paginate(10);
+      return view('dashboard.pustaka.hubungan.index', compact('hubungan_keluarga'));
+    }
+
+    public function cari()
+    {
+      
     }
 
     /**
@@ -26,7 +34,7 @@ class HubunganController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pustaka.hubungan.create');
     }
 
     /**
@@ -35,9 +43,11 @@ class HubunganController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(HubunganKeluargaRequest $request)
     {
-        //
+      $data=$request->all();
+      HubunganKeluarga::create($data);
+      return redirect('hubungan');
     }
 
     /**
@@ -59,7 +69,8 @@ class HubunganController extends Controller
      */
     public function edit($id)
     {
-        //
+      $hubungan_keluarga = HubunganKeluarga::find($id);
+      return view('dashboard.pustaka.hubungan.edit', compact('hubungan_keluarga'));
     }
 
     /**
@@ -69,9 +80,12 @@ class HubunganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(HubunganKeluargaRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $hubungan_keluarga = HubunganKeluarga::find($id);
+      $hubungan_keluarga->update($data);
+      return redirect('hubungan');
     }
 
     /**
@@ -82,6 +96,8 @@ class HubunganController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $hubungan_keluarga = HubunganKeluarga::find($id);
+      $hubungan_keluarga->delete();
+      return redirect('hubungan');
     }
 }

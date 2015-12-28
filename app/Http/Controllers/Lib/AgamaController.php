@@ -18,7 +18,7 @@ class AgamaController extends Controller
      */
     public function index()
     {
-        $agama = Agama::all();
+        $agama = Agama::paginate(10);
         return view('dashboard.pustaka.agama.index', compact('agama'));
     }
 
@@ -40,9 +40,6 @@ class AgamaController extends Controller
      */
     public function store(AgamaRequest $request)
     {
-        $this->validate($request,[
-          'agama'=>'required'
-        ]);
         $data=$request->all();
         Agama::create($data);
         return redirect('agama');

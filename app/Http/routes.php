@@ -103,6 +103,7 @@ $router->group([
       //menu agama
       resource('agama','Lib\AgamaController');
       //menu hubungan
+      post('hubungan/cari','Lib\HubunganController@cari');
       resource('hubungan','Lib\HubunganController');
       //menu pekerjaan
       resource('pekerjaan','Lib\PekerjaanController');
