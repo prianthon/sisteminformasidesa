@@ -5,7 +5,7 @@
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Pekerjaan</div>
+  <div class="navbar-center">Penyalur TKI</div>
 @endsection
 
 @section('mainsidebar')
@@ -193,13 +193,13 @@
                     <li>
                         <a href="{{ URL::to('/hubungan') }}"><span class="sidebar-text">Hubungan</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/pekerjaan') }}"><span class="sidebar-text">Pekerjaan</span></a>
                     </li>
                     <li>
                         <a href="{{ URL::to('/pendidikan') }}"><span class="sidebar-text">Pendidikan</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/penyalur/tki') }}"><span class="sidebar-text">Penyalur TKI</span></a>
                     </li>
                     <li>
@@ -280,15 +280,15 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-            <h1>Ubah <small>Pekerjaan</small></h1>
+            <h1>Ubah <small>Penyalur TKI</small></h1>
             <br>
-            {!! Form::model($pekerjaan, array('url'=>'pekerjaan/'.$pekerjaan->id,'method'=>'patch')) !!}
-            {!! link_to('pekerjaan','Kelola Pekerjaan',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+            {!! Form::model($penyalur_tkis, array('url'=>'penyalur/tki/'.$penyalur_tkis->id,'method'=>'patch')) !!}
+            {!! link_to('penyalur/tki','Kelola Penyalur TKI',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
             <br><br>
             {!! Html::ul($errors->all()) !!}
             <div class="form-group">
                 <div class="controls">
-                    @include('dashboard.pustaka.pekerjaan.form')
+                    @include('dashboard.pustaka.penyalurtki.form')
                 </div>
             </div>
             {!! Form::close() !!}

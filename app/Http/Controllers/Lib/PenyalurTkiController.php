@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\PenyalurTki;
+use App\Http\Requests\Libs\PenyalurTkiRequest;
 
 class PenyalurTkiController extends Controller
 {
@@ -16,7 +18,15 @@ class PenyalurTkiController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.penyalurtki.index');
+      $penyalur_tkis = PenyalurTki::paginate(10);
+      return view('dashboard.pustaka.penyalurtki.index', compact('penyalur_tkis'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $penyalur_tkis = PenyalurTki::where('nama_pptkis','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.penyalurtki.index', compact('penyalur_tkis'));
     }
 
     /**
@@ -26,7 +36,7 @@ class PenyalurTkiController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pustaka.penyalurtki.create');
     }
 
     /**
@@ -35,9 +45,11 @@ class PenyalurTkiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PenyalurTkiRequest $request)
     {
-        //
+      $data=$request->all();
+      PenyalurTki::create($data);
+      return redirect('penyalur/tki');
     }
 
     /**
@@ -59,7 +71,8 @@ class PenyalurTkiController extends Controller
      */
     public function edit($id)
     {
-        //
+      $penyalur_tkis = PenyalurTki::find($id);
+      return view('dashboard.pustaka.penyalurtki.edit', compact('penyalur_tkis'));
     }
 
     /**
@@ -69,9 +82,12 @@ class PenyalurTkiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PenyalurTkiRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $penyalur_tkis = PenyalurTki::find($id);
+      $penyalur_tkis->update($data);
+      return redirect('penyalur/tki');
     }
 
     /**
@@ -82,6 +98,8 @@ class PenyalurTkiController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $penyalur_tkis = PenyalurTki::find($id);
+      $penyalur_tkis->delete();
+      return redirect('penyalur/tki');
     }
 }

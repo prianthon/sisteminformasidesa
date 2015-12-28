@@ -277,11 +277,50 @@
 
 @section('maincontent')
 <div id="main-content">
+  <div class="panel-body">
     <div class="row">
-        <div class="col-lg-12">
-            <h1>Blank Page <small>Blank Page</small></h1>
-            <br><br><br>
+        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+            <h1>Kelola <small>Penyalur TKI</small></h1>
+            <br>
+            {!! link_to('penyalur/tki/create','Tambah Penyalur TKI',['class'=>'btn btn-primary']) !!}
+            <hr>
+            {!! Form::open(array('url'=>'penyalur/tki/cari')) !!}
+            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Penyalur TKI, ketik lalu tekan enter']) !!}
+            {!! Form::close() !!}
+            <hr>
+            <table class="table table-striped table-hover">
+              <thead class="no-bd">
+                <tr>
+                  <th><strong>ID Penyalur TKI</strong></th>
+                  <th><strong>Nama PPTKIS</strong></th>
+                  <th><strong>Penanggung Jawab</strong></th>
+                  <th><strong>Nomor Izin PPTKIS</strong></th>
+                  <th><strong>Tanggal Izin</strong></th>
+                  <th><strong>Nomor Telepon</strong></th>
+                  <th width="15%"><strong>Aksi</strong></th>
+                </tr>
+              </thead>
+              <tbody class="no-bd-y">
+                @foreach($penyalur_tkis as $tki)
+                <tr>
+                  <td>{{ $tki->id }}</td>
+                  <td>{{ $tki->nama_pptkis }}</td>
+                  <td>{{ $tki->penanggung_jawab }}</td>
+                  <td>{{ $tki->nomor_pptkis }}</td>
+                  <td>{{ $tki->tanggal_izin }}</td>
+                  <td>{{ $tki->nomor_telepon }}</td>
+                  <td>
+                    {!! Form::open(array('method'=>'delete','url'=>'penyalur/tki/'.$tki->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
+                    {!! link_to('penyalur/tki/'.$tki->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
+                    {!! Form::close() !!}
+                  </td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+            {!! $penyalur_tkis->render() !!}
         </div>
     </div>
+  </div>
 </div>
 @endsection

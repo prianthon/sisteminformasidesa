@@ -280,7 +280,7 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-            <h1>Tambah <small>Pendidikan</small></h1>
+            <h1>Ubah <small>Pendidikan</small></h1>
             <br>
             {!! Form::model($pendidikan, array('url'=>'pendidikan/'.$pendidikan->id,'method'=>'patch')) !!}
             {!! link_to('pendidikan','Kelola Pendidikan',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}

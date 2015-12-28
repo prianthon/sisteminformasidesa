@@ -113,8 +113,10 @@ $router->group([
       post('pendidikan/cari','Lib\PendidikanController@cari');
       resource('pendidikan','Lib\PendidikanController');
       //menu penyalur tki
+      post('penyalur/tki/cari','Lib\PenyalurTkiController@cari');
       resource('penyalur/tki','Lib\PenyalurTkiController');
       //menu status kawin
+      post('status/kawin/cari','Lib\StatusKawinController@cari');
       resource('status/kawin','Lib\StatusKawinController');
       //menu status tinggal
       resource('status/tinggal','Lib\StatusTinggalController');
