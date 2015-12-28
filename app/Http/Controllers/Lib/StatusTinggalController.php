@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\StatusTinggal;
+use App\Http\Requests\Libs\StatusTinggalRequest;
 
 class StatusTinggalController extends Controller
 {
@@ -16,7 +18,15 @@ class StatusTinggalController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.statustinggal.index');
+        $status_tinggal = StatusTinggal::paginate(10);
+        return view('dashboard.pustaka.statustinggal.index', compact('status_tinggal'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $status_tinggal = StatusTinggal::where('status_tinggal','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.statustinggal.index', compact('status_tinggal'));
     }
 
     /**
@@ -26,7 +36,7 @@ class StatusTinggalController extends Controller
      */
     public function create()
     {
-        //
+      return view('dashboard.pustaka.statustinggal.create');
     }
 
     /**
@@ -35,9 +45,11 @@ class StatusTinggalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StatusTinggalRequest $request)
     {
-        //
+      $data=$request->all();
+      StatusTinggal::create($data);
+      return redirect('status/tinggal');
     }
 
     /**
@@ -59,7 +71,8 @@ class StatusTinggalController extends Controller
      */
     public function edit($id)
     {
-        //
+      $status_tinggal = StatusTinggal::find($id);
+      return view('dashboard.pustaka.statustinggal.edit', compact('status_tinggal'));
     }
 
     /**
@@ -69,9 +82,12 @@ class StatusTinggalController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StatusTinggalRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $status_tinggal = StatusTinggal::find($id);
+      $status_tinggal->update($data);
+      return redirect('status/tinggal');
     }
 
     /**
@@ -82,6 +98,8 @@ class StatusTinggalController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $status_tinggal = StatusTinggal::find($id);
+      $status_tinggal->delete();
+      return redirect('status/tinggal');
     }
 }

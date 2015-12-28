@@ -280,37 +280,18 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-            <h1>Kelola <small>Status Tinggal</small></h1>
+            <h1>Ubah <small>Status Tinggal</small></h1>
             <br>
-            {!! link_to('status/tinggal/create','Tambah Status Tinggal',['class'=>'btn btn-primary']) !!}
-            <hr>
-            {!! Form::open(array('url'=>'status/tinggal/cari')) !!}
-            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Status Tinggal, ketik lalu tekan enter']) !!}
+            {!! Form::model($status_tinggal, array('url'=>'status/tinggal/'.$agama->id,'method'=>'patch')) !!}
+            {!! link_to('status/tinggal','Kelola Status Tinggal',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+            <br><br>
+            {!! Html::ul($errors->all()) !!}
+            <div class="form-group">
+                <div class="controls">
+                    @include('dashboard.pustaka.statustinggal.form')
+                </div>
+            </div>
             {!! Form::close() !!}
-            <hr>
-            <table class="table table-striped table-hover">
-              <thead class="no-bd">
-                <tr>
-                  <th><strong>ID Status Tinggal</strong></th>
-                  <th><strong>Status Tinggal</strong></th>
-                  <th width="15%"><strong>Aksi</strong></th>
-                </tr>
-              </thead>
-              <tbody class="no-bd-y">
-                @foreach($status_tinggal as $tinggal)
-                <tr>
-                  <td>{{ $tinggal->id }}</td>
-                  <td>{{ $tinggal->status_tinggal }}</td>
-                  <td>
-                    {!! Form::open(array('method'=>'delete','url'=>'status/tinggal/'.$tinggal->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                    {!! link_to('status/tinggal/'.$tinggal->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                    {!! Form::close() !!}
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-            {!! $status_tinggal->render() !!}
         </div>
     </div>
   </div>

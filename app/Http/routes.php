@@ -119,6 +119,7 @@ $router->group([
       post('status/kawin/cari','Lib\StatusKawinController@cari');
       resource('status/kawin','Lib\StatusKawinController');
       //menu status tinggal
+      post('status/tinggal/cari','Lib\StatusTinggalController@cari');
       resource('status/tinggal','Lib\StatusTinggalController');
       //menu surat
       resource('surat','Lib\SuratController');
