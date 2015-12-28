@@ -22,6 +22,13 @@ class AgamaController extends Controller
         return view('dashboard.pustaka.agama.index', compact('agama'));
     }
 
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $agama = Agama::where('agama','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.agama.index', compact('agama'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

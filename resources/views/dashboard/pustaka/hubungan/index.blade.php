@@ -283,6 +283,11 @@
             <h1>Kelola <small>Hubungan Keluarga</small></h1>
             <br>
             {!! link_to('hubungan/create','Tambah Hubungan Keluarga',['class'=>'btn btn-primary']) !!}
+            <hr>
+            {!! Form::open(array('url'=>'hubungan/cari')) !!}
+            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Hubungan Keluarga, ketik lalu tekan enter']) !!}
+            {!! Form::close() !!}
+            <hr>
             <table class="table table-striped table-hover">
               <thead class="no-bd">
                 <tr>

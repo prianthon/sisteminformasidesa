@@ -101,13 +101,16 @@ $router->group([
       get('laporan/wajibktp','Laporan\WajibController@index');
       ////menu pustaka////
       //menu agama
+      post('agama/cari','Lib\AgamaController@cari');
       resource('agama','Lib\AgamaController');
       //menu hubungan
       post('hubungan/cari','Lib\HubunganController@cari');
       resource('hubungan','Lib\HubunganController');
       //menu pekerjaan
+      post('pekerjaan/cari','Lib\PekerjaanController@cari');
       resource('pekerjaan','Lib\PekerjaanController');
       //menu pendidikan
+      post('pendidikan/cari','Lib\PendidikanController@cari');
       resource('pendidikan','Lib\PendidikanController');
       //menu penyalur tki
       resource('penyalur/tki','Lib\PenyalurTkiController');

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Pekerjaan;
+use App\Http\Requests\Libs\PekerjaanRequest;
 
 class PekerjaanController extends Controller
 {
@@ -16,7 +18,15 @@ class PekerjaanController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.pekerjaan.index');
+        $pekerjaan = Pekerjaan::paginate(10);
+        return view('dashboard.pustaka.pekerjaan.index', compact('pekerjaan'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $pekerjaan = Pekerjaan::where('pekerjaan','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.pekerjaan.index', compact('pekerjaan'));
     }
 
     /**
@@ -26,7 +36,7 @@ class PekerjaanController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pustaka.pekerjaan.create');
     }
 
     /**
@@ -35,9 +45,11 @@ class PekerjaanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PekerjaanRequest $request)
     {
-        //
+      $data=$request->all();
+      Pekerjaan::create($data);
+      return redirect('pekerjaan');
     }
 
     /**
@@ -59,7 +71,8 @@ class PekerjaanController extends Controller
      */
     public function edit($id)
     {
-        //
+      $pekerjaan = Pekerjaan::find($id);
+      return view('dashboard.pustaka.pekerjaan.edit', compact('pekerjaan'));
     }
 
     /**
@@ -69,9 +82,12 @@ class PekerjaanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PekerjaanRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $pekerjaan = Pekerjaan::find($id);
+      $pekerjaan->update($data);
+      return redirect('pekerjaan');
     }
 
     /**
@@ -82,6 +98,8 @@ class PekerjaanController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $pekerjaan = Pekerjaan::find($id);
+      $pekerjaan->delete();
+      return redirect('pekerjaan');
     }
 }

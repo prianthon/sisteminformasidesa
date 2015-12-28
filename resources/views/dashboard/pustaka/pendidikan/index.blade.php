@@ -277,11 +277,42 @@
 
 @section('maincontent')
 <div id="main-content">
+  <div class="panel-body">
     <div class="row">
-        <div class="col-lg-12">
-            <h1>Blank Page <small>Blank Page</small></h1>
-            <br><br><br>
+        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+            <h1>Kelola <small>Pendidikan</small></h1>
+            <br>
+            {!! link_to('pendidikan/create','Tambah Pendidikan',['class'=>'btn btn-primary']) !!}
+            <hr>
+            {!! Form::open(array('url'=>'pendidikan/cari')) !!}
+            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Pendidikan, ketik lalu tekan enter']) !!}
+            {!! Form::close() !!}
+            <hr>
+            <table class="table table-striped table-hover">
+              <thead class="no-bd">
+                <tr>
+                  <th><strong>ID Pendidikan</strong></th>
+                  <th><strong>Pendidikan</strong></th>
+                  <th width="15%"><strong>Aksi</strong></th>
+                </tr>
+              </thead>
+              <tbody class="no-bd-y">
+                @foreach($pendidikan as $pen)
+                <tr>
+                  <td>{{ $pen->id }}</td>
+                  <td>{{ $pen->pendidikan }}</td>
+                  <td>
+                    {!! Form::open(array('method'=>'delete','url'=>'pendidikan/'.$pen->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
+                    {!! link_to('pendidikan/'.$pen->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
+                    {!! Form::close() !!}
+                  </td>
+                </tr>
+                @endforeach
+              </tbody>
+            </table>
+            {!! $pendidikan->render() !!}
         </div>
     </div>
+  </div>
 </div>
 @endsection

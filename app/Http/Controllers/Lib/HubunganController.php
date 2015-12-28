@@ -22,9 +22,11 @@ class HubunganController extends Controller
       return view('dashboard.pustaka.hubungan.index', compact('hubungan_keluarga'));
     }
 
-    public function cari()
+    public function cari(Request $request)
     {
-      
+      $keyword = $request['keyword'];
+      $hubungan_keluarga = HubunganKeluarga::where('hubungan_keluarga','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.hubungan.index', compact('hubungan_keluarga'));
     }
 
     /**

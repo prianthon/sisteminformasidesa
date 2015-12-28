@@ -5,7 +5,7 @@
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Pekerjaan</div>
+  <div class="navbar-center">Pendidikan</div>
 @endsection
 
 @section('mainsidebar')
@@ -193,10 +193,10 @@
                     <li>
                         <a href="{{ URL::to('/hubungan') }}"><span class="sidebar-text">Hubungan</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/pekerjaan') }}"><span class="sidebar-text">Pekerjaan</span></a>
                     </li>
-                    <li>
+                    <li class="current">
                         <a href="{{ URL::to('/pendidikan') }}"><span class="sidebar-text">Pendidikan</span></a>
                     </li>
                     <li>
@@ -280,37 +280,18 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-            <h1>Kelola <small>Pekerjaan</small></h1>
+            <h1>Tambah <small>Pendidikan</small></h1>
             <br>
-            {!! link_to('pekerjaan/create','Tambah Pekerjaan',['class'=>'btn btn-primary']) !!}
-            <hr>
-            {!! Form::open(array('url'=>'pekerjaan/cari')) !!}
-            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Pekerjaan, ketik lalu tekan enter']) !!}
+            {!! Form::model($pendidikan, array('url'=>'pendidikan/'.$pendidikan->id,'method'=>'patch')) !!}
+            {!! link_to('pendidikan','Kelola Pendidikan',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+            <br><br>
+            {!! Html::ul($errors->all()) !!}
+            <div class="form-group">
+                <div class="controls">
+                    @include('dashboard.pustaka.pendidikan.form')
+                </div>
+            </div>
             {!! Form::close() !!}
-            <hr>
-            <table class="table table-striped table-hover">
-              <thead class="no-bd">
-                <tr>
-                  <th><strong>ID Pekerjaan</strong></th>
-                  <th><strong>Pekerjaan</strong></th>
-                  <th width="15%"><strong>Aksi</strong></th>
-                </tr>
-              </thead>
-              <tbody class="no-bd-y">
-                @foreach($pekerjaan as $p)
-                <tr>
-                  <td>{{ $p->id }}</td>
-                  <td>{{ $p->pekerjaan }}</td>
-                  <td>
-                    {!! Form::open(array('method'=>'delete','url'=>'pekerjaan/'.$p->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                    {!! link_to('pekerjaan/'.$p->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                    {!! Form::close() !!}
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-            {!! $pekerjaan->render() !!}
         </div>
     </div>
   </div>

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Pendidikan;
+use App\Http\Requests\Libs\PendidikanRequest;
 
 class PendidikanController extends Controller
 {
@@ -16,7 +18,15 @@ class PendidikanController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.pendidikan.index');
+        $pendidikan = Pendidikan::paginate(10);
+        return view('dashboard.pustaka.pendidikan.index', compact('pendidikan'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $pendidikan = Pendidikan::where('pendidikan','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.pendidikan.index', compact('pendidikan'));
     }
 
     /**
@@ -26,7 +36,7 @@ class PendidikanController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pustaka.pendidikan.create');
     }
 
     /**
@@ -35,9 +45,11 @@ class PendidikanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PendidikanRequest $request)
     {
-        //
+      $data=$request->all();
+      Pendidikan::create($data);
+      return redirect('pendidikan');
     }
 
     /**
@@ -59,7 +71,8 @@ class PendidikanController extends Controller
      */
     public function edit($id)
     {
-        //
+      $pendidikan = Pendidikan::find($id);
+      return view('dashboard.pustaka.pendidikan.edit', compact('pendidikan'));
     }
 
     /**
@@ -69,9 +82,12 @@ class PendidikanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PendidikanRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $pendidikan = Pendidikan::find($id);
+      $pendidikan->update($data);
+      return redirect('pendidikan');
     }
 
     /**
@@ -82,6 +98,8 @@ class PendidikanController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $pendidikan = Pendidikan::find($id);
+      $pendidikan->delete();
+      return redirect('pendidikan');
     }
 }

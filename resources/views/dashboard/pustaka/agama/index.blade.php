@@ -283,6 +283,11 @@
             <h1>Kelola <small>Agama</small></h1>
             <br>
             {!! link_to('agama/create','Tambah Agama',['class'=>'btn btn-primary']) !!}
+            <hr>
+            {!! Form::open(array('url'=>'agama/cari')) !!}
+            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Agama, ketik lalu tekan enter']) !!}
+            {!! Form::close() !!}
+            <hr>
             <table class="table table-striped table-hover">
               <thead class="no-bd">
                 <tr>
