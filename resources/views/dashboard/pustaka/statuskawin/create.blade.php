@@ -280,37 +280,18 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-            <h1>Kelola <small>Status Kawin</small></h1>
+            <h1>Tambah <small>Status Kawin</small></h1>
             <br>
-            {!! link_to('status/kawin/create','Tambah Status Kawin',['class'=>'btn btn-primary']) !!}
-            <hr>
-            {!! Form::open(array('url'=>'status/kawin/cari')) !!}
-            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Status Kawin, ketik lalu tekan enter']) !!}
+            {!! Form::open(array('url'=>'status/kawin')) !!}
+            {!! link_to('status/kawin','Kelola Status Kawin',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+            <br><br>
+            {!! Html::ul($errors->all()) !!}
+            <div class="form-group">
+                <div class="controls">
+                    @include('dashboard.pustaka.statuskawin.form')
+                </div>
+            </div>
             {!! Form::close() !!}
-            <hr>
-            <table class="table table-striped table-hover">
-              <thead class="no-bd">
-                <tr>
-                  <th><strong>ID Status Kawin</strong></th>
-                  <th><strong>Status Kawin</strong></th>
-                  <th width="15%"><strong>Aksi</strong></th>
-                </tr>
-              </thead>
-              <tbody class="no-bd-y">
-                @foreach($status_kawin as $status)
-                <tr>
-                  <td>{{ $status->id }}</td>
-                  <td>{{ $status->status_kawin }}</td>
-                  <td>
-                    {!! Form::open(array('method'=>'delete','url'=>'status/kawin/'.$status->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                    {!! link_to('status/kawin/'.$status->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                    {!! Form::close() !!}
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-            {!! $status_kawin->render() !!}
         </div>
     </div>
   </div>

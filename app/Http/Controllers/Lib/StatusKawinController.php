@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\StatusKawin;
+use App\Http\Requests\Libs\StatusKawinRequest;
 
 class StatusKawinController extends Controller
 {
@@ -16,7 +18,15 @@ class StatusKawinController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.statuskawin.index');
+        $status_kawin = StatusKawin::paginate(10);
+        return view('dashboard.pustaka.statuskawin.index', compact('status_kawin'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $status_kawin = StatusKawin::where('status_kawin','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.statuskawin.index', compact('status_kawin'));
     }
 
     /**
@@ -26,7 +36,7 @@ class StatusKawinController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pustaka.statuskawin.create');
     }
 
     /**
@@ -35,9 +45,11 @@ class StatusKawinController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StatusKawinRequest $request)
     {
-        //
+      $data=$request->all();
+      StatusKawin::create($data);
+      return redirect('status/kawin');
     }
 
     /**
@@ -59,7 +71,8 @@ class StatusKawinController extends Controller
      */
     public function edit($id)
     {
-        //
+      $status_kawin = StatusKawin::find($id);
+      return view('dashboard.pustaka.statuskawin.edit', compact('status_kawin'));
     }
 
     /**
@@ -69,9 +82,12 @@ class StatusKawinController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StatusKawinRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $status_kawin = StatusKawin::find($id);
+      $status_kawin->update($data);
+      return redirect('status/kawin');
     }
 
     /**
@@ -82,6 +98,8 @@ class StatusKawinController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $status_kawin = StatusKawin::find($id);
+      $status_kawin->delete();
+      return redirect('status/kawin');
     }
 }
