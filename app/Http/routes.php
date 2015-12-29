@@ -122,6 +122,7 @@ $router->group([
       post('status/tinggal/cari','Lib\StatusTinggalController@cari');
       resource('status/tinggal','Lib\StatusTinggalController');
       //menu surat
+      post('surat/cari','Lib\SuratController@cari');
       resource('surat','Lib\SuratController');
       //menu standar kemiskinan
       resource('standar/kemiskinan','Lib\StandarKemiskinanController');
