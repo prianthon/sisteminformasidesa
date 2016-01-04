@@ -13,6 +13,7 @@ class CreateKodifikasiSuratsTable extends Migration
     public function up()
     {
         Schema::create('kodifikasi_surats', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('kode_surat',50);
             $table->string('nama_surat',200);
             $table->integer('parent_id');

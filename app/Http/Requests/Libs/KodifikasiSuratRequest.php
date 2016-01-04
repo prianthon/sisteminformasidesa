@@ -13,7 +13,7 @@ class KodifikasiSuratRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,21 @@ class KodifikasiSuratRequest extends Request
      *
      * @return array
      */
-    public function rules()
-    {
-        return [
-            //
-        ];
-    }
+     public function rules()
+     {
+         return [
+             'kode_surat'=>'required',
+             'nama_surat'=>'required',
+             'parent_id'=>'required'
+         ];
+     }
+
+     public function messages()
+     {
+       return [
+           'kode_surat.required' => 'Kolom Kode Surat tidak boleh kosong',
+           'nama_surat.required' => 'Kolom Nama Surat tidak boleh kosong',
+           'parent_id.required' => 'Kolom Parent tidak boleh kosong'
+       ];
+     }
 }

@@ -280,39 +280,20 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-            <h1>Kelola <small>Kodifikasi Surat</small></h1>
+            <h1>Tambah <small>Kodifikasi Surat</small></h1>
             <br>
-            {!! link_to('surat/create','Tambah Surat',['class'=>'btn btn-primary']) !!}
-            <hr>
-            {!! Form::open(array('url'=>'surat/cari')) !!}
-            {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Surat, ketik lalu tekan enter']) !!}
+            {!! Form::open(array('url'=>'surat')) !!}
+            {!! link_to('surat','Kelola Kodifikasi Surat',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+            <br><br>
+            {!! Html::ul($errors->all()) !!}
+            <div class="form-group">
+                <div class="controls">
+                  <div class="col-md-6">
+                    @include('dashboard.pustaka.surat.form')
+                  </div>
+                </div>
+            </div>
             {!! Form::close() !!}
-            <hr>
-            <table class="table table-striped table-hover">
-              <thead class="no-bd">
-                <tr>
-                  <th><strong>Kode Surat</strong></th>
-                  <th><strong>Nama Surat</strong></th>
-                  <th><strong>Parent</strong></th>
-                  <th width="15%"><strong>Aksi</strong></th>
-                </tr>
-              </thead>
-              <tbody class="no-bd-y">
-                @foreach($kodifikasi_surat as $ks)
-                <tr>
-                  <td>{{ $ks->kode_surat }}</td>
-                  <td>{{ $ks->nama_surat }}</td>
-                  <td>{{ $ks->parent_id }}</td>
-                  <td>
-                    {!! Form::open(array('method'=>'delete','url'=>'surat/'.$ks->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                    {!! link_to('surat/'.$ks->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                    {!! Form::close() !!}
-                  </td>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
-            {!! $kodifikasi_surat->render() !!}
         </div>
     </div>
   </div>

@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\KodifikasiSurat;
+use App\User;
+use App\Http\Requests\Libs\KodifikasiSuratRequest;
 
 class SuratController extends Controller
 {
@@ -16,7 +19,15 @@ class SuratController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pustaka.surat.index');
+        $kodifikasi_surat = KodifikasiSurat::paginate(10);
+        return view('dashboard.pustaka.surat.index', compact('kodifikasi_surat'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $kodifikasi_surat = KodifikasiSurat::where('kode_surat','=',$keyword)->paginate(10) ;
+      return view('dashboard.pustaka.surat.index', compact('kodifikasi_surat'));
     }
 
     /**
@@ -26,7 +37,7 @@ class SuratController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pustaka.surat.create');
     }
 
     /**
@@ -35,9 +46,11 @@ class SuratController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(KodifikasiSuratRequest $request)
     {
-        //
+      $data=$request->all();
+      KodifikasiSurat::create($data);
+      return redirect('surat');
     }
 
     /**
@@ -59,7 +72,8 @@ class SuratController extends Controller
      */
     public function edit($id)
     {
-        //
+      $kodifikasi_surat = KodifikasiSurat::find($id);
+      return view('dashboard.pustaka.surat.edit', compact('kodifikasi_surat'));
     }
 
     /**
@@ -69,9 +83,12 @@ class SuratController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(KodifikasiSuratRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $kodifikasi_surat = KodifikasiSurat::find($id);
+      $kodifikasi_surat->update($data);
+      return redirect('surat');
     }
 
     /**
@@ -82,6 +99,8 @@ class SuratController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $kodifikasi_surat = KodifikasiSurat::find($id);
+      $kodifikasi_surat->delete();
+      return redirect('surat');
     }
 }
