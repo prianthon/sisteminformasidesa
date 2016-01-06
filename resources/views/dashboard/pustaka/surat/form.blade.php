@@ -1,6 +1,6 @@
 {!! Form::text('kode_surat',null,['class'=>'form-control','placeholder'=>'Ketikkan Kode Surat','autofocus']) !!}<br><br>
 {!! Form::text('nama_surat',null,['class'=>'form-control','placeholder'=>'Ketikkan Nama Surat']) !!}<br><br>
-{!! Form::select('id', App\User::lists('name','id'),null,['class'=>'form-control'] ) !!}
+<!--{!! Form::select('id', App\User::lists('name','id'),null,['class'=>'form-control'] ) !!}-->
 {!! Form::select('parent_id',array(
                                           '01'      => '01 - Surat Pengantar',
                                           '470'     => '470 - Kependudukan',
