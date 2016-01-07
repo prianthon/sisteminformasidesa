@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\KodifikasiSurat;
+use App\ParentSurat;
 use App\User;
 use App\Http\Requests\Libs\KodifikasiSuratRequest;
 
@@ -19,6 +20,7 @@ class SuratController extends Controller
      */
     public function index()
     {
+        $parent_surat = ParentSurat::all();
         $kodifikasi_surat = KodifikasiSurat::paginate(10);
         return view('dashboard.pustaka.surat.index', compact('kodifikasi_surat'));
     }

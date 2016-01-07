@@ -302,7 +302,7 @@
                 <tr>
                   <td>{{ $ks->kode_surat }}</td>
                   <td>{{ $ks->nama_surat }}</td>
-                  <td>{{ $ks->parent_id }}</td>
+                  <td>{{ $ks->parentsurat->kode_parent }}</td>
                   <td>
                     {!! Form::open(array('method'=>'delete','url'=>'surat/'.$ks->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
                     {!! link_to('surat/'.$ks->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
