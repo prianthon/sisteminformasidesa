@@ -280,9 +280,10 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Status Tinggal'=>'/status/tinggal','Ubah']) !!}
             <h1>Ubah <small>Status Tinggal</small></h1>
             <br>
-            {!! Form::model($status_tinggal, array('url'=>'status/tinggal/'.$agama->id,'method'=>'patch')) !!}
+            {!! Form::model($status_tinggal, array('url'=>'status/tinggal/'.$status_tinggal->id,'method'=>'patch')) !!}
             {!! link_to('status/tinggal','Kelola Status Tinggal',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
             <br><br>
             {!! Html::ul($errors->all()) !!}

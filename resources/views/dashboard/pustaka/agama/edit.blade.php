@@ -280,6 +280,7 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Agama'=>'/agama','Ubah']) !!}
             <h1>Ubah <small>Agama</small></h1>
             <br>
             {!! Form::model($agama, array('url'=>'agama/'.$agama->id,'method'=>'patch')) !!}

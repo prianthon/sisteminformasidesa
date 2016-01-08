@@ -280,6 +280,7 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Surat'=>'/surat','Kelola']) !!}
             <h1>Kelola <small>Kodifikasi Surat</small></h1>
             <br>
             {!! link_to('surat/create','Tambah Surat',['class'=>'btn btn-primary']) !!}

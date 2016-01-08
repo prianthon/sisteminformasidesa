@@ -280,6 +280,7 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pendidikan'=>'/pendidikan','Kelola']) !!}
             <h1>Kelola <small>Pendidikan</small></h1>
             <br>
             {!! link_to('pendidikan/create','Tambah Pendidikan',['class'=>'btn btn-primary']) !!}

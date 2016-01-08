@@ -280,6 +280,7 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Status Kawin'=>'/status/kawin','Kelola']) !!}
             <h1>Kelola <small>Status Kawin</small></h1>
             <br>
             {!! link_to('status/kawin/create','Tambah Status Kawin',['class'=>'btn btn-primary']) !!}

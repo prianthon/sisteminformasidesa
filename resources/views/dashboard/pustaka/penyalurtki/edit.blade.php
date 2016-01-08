@@ -280,6 +280,7 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Penyalur TKI'=>'/penyalur/tki','Ubah']) !!}
             <h1>Ubah <small>Penyalur TKI</small></h1>
             <br>
             {!! Form::model($penyalur_tkis, array('url'=>'penyalur/tki/'.$penyalur_tkis->id,'method'=>'patch')) !!}

@@ -279,6 +279,7 @@
 <div id="main-content">
     <div class="row">
         <div class="col-lg-12">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Standar Kemiskinan'=>'/standar/kemiskinan','Kelola']) !!}
             <h1>Blank Page <small>Blank Page</small></h1>
             <br><br><br>
         </div>

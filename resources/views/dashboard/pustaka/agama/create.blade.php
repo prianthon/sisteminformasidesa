@@ -280,6 +280,7 @@
   <div class="panel-body">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Agama'=>'/agama','Tambah']) !!}
             <h1>Tambah <small>Agama</small></h1>
             <br>
             {!! Form::open(array('url'=>'agama')) !!}
