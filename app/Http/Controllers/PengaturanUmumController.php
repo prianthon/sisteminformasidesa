@@ -11,6 +11,6 @@ class PengaturanUmumController extends Controller
 {
     public function index()
     {
-      return view('dashboard.pengaturan.index');
+      return view('dashboard.pengaturan.umum.index');
     }
 }

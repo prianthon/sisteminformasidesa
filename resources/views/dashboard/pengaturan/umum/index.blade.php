@@ -277,11 +277,47 @@
 
 @section('maincontent')
 <div id="main-content">
+  <div class="panel-body">
     <div class="row">
-        <div class="col-lg-12">
-            <h1>Blank Page <small>Blank Page</small></h1>
-            <br><br><br>
-        </div>
+      <div class="col-md-12">
+        <h1>Pengaturan<small> umum</small></h1><br/>
+          <div class="">
+            <ul id="myTab2" class="nav nav-tabs nav-dark">
+                <li class="dropdown active">
+                  <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> Pengaturan Umum <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                      <li><a href="#tab2_1" tabindex="-1" data-toggle="tab">Ubah Pengaturan Umum</a></li>
+                      <li><a href="#tab2_4" tabindex="-1" data-toggle="tab">Kelola Lib Provinsi</a></li>
+                      <li><a href="#tab2_5" tabindex="-1" data-toggle="tab">Kelola Lib Kabupaten</a></li>
+                      <li><a href="#tab2_6" tabindex="-1" data-toggle="tab">Kelola Lib Kecamatan</a></li>
+                      <li><a href="#tab2_7" tabindex="-1" data-toggle="tab">Kelola Lib Desa</a></li>
+                  </ul>
+                </li>
+                <li class=""><a href="#tab2_2" data-toggle="tab"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
+                <li class=""><a href="#tab2_3" data-toggle="tab"><i class="fa fa-cog"></i> Perangkat Desa</a></li>
+            </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab2_1">
+                  <div class="row column-seperation">
+                    <div class="col-md-7 line-separator">
+                        @include('dashboard.pengaturan.umum.form')
+                    </div>
+                    <div class="col-md-5">
+                        @include('dashboard.pengaturan.umum.form_logo_pemdes')
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="tab2_2">
+                    <h3>"Sooner or later, those who win are those who think they <strong>can</strong>."</h3>
+                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit,  sartorial.</p>
+                </div>
+                <div class="tab-pane fade" id="tab2_3">
+                    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-t readymade Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banks irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlksh vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+                </div>
+              </div>
+          </div>
+      </div>
     </div>
+  </div>
 </div>
 @endsection

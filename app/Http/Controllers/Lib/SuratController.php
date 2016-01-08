@@ -20,7 +20,7 @@ class SuratController extends Controller
      */
     public function index()
     {
-        $parent_surat = ParentSurat::all();
+        //$parent_surat = ParentSurat::all();
         $kodifikasi_surat = KodifikasiSurat::paginate(10);
         return view('dashboard.pustaka.surat.index', compact('kodifikasi_surat'));
     }
