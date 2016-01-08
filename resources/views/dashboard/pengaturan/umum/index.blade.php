@@ -280,6 +280,7 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
+        {!! Breadcrumb::withLinks(['Home'=>'/dashboard','Pengaturan'=>'/pengaturan/umum','Umum']) !!}
         <h1>Pengaturan<small> umum</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
