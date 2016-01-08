@@ -132,7 +132,10 @@ $router->group([
       //menu hak akses
       resource('hak/akses','Pengguna\HakController');
       ////menu pengaturan////
+      //menu pengaturan umum
       get('pengaturan/umum','PengaturanUmumController@index');
+      //menu pengaturan wilayah administratif
+      get('pengaturan/umum/wilayah','Pengaturan\PengaturanUmumWilayahAdministratifController@index');
       //menu reg provinsi
       resource('pengaturan/umum/libprovinsi','Lib\PengaturanUmumRegProvinsiController');
 });

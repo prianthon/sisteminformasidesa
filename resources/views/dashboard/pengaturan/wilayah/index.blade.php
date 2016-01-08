@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Pengaturan Umum</title>
+  <title>Desa2.0 - Pengaturan Wilayah Administratif</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Pengaturan Umum</div>
+  <div class="navbar-center">Pengaturan Wilayah Administratif</div>
 @endsection
 
 @section('mainsidebar')
@@ -284,29 +284,22 @@
         <h1>Pengaturan<small> umum</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
-                <li class="dropdown active">
+                <li class="dropdown">
                   <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> Pengaturan Umum <b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                      <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1" data-toggle="tab">Ubah Pengaturan Umum</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1">Ubah Pengaturan Umum</a></li>
                       <li><a href="#tab2_4" tabindex="-1" data-toggle="tab">Kelola Lib Provinsi</a></li>
                       <li><a href="#tab2_5" tabindex="-1" data-toggle="tab">Kelola Lib Kabupaten</a></li>
                       <li><a href="#tab2_6" tabindex="-1" data-toggle="tab">Kelola Lib Kecamatan</a></li>
                       <li><a href="#tab2_7" tabindex="-1" data-toggle="tab">Kelola Lib Desa</a></li>
                   </ul>
                 </li>
-                <li class=""><a href="{{ URL::to('/pengaturan/umum/wilayah') }}"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
+                <li class="active"><a href="{{ URL::to('/pengaturan/umum/wilayah') }}" data-toggle="tab"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
                 <li class=""><a href="#tab2_3" data-toggle="tab"><i class="fa fa-cog"></i> Perangkat Desa</a></li>
             </ul>
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
-                  <div class="row column-seperation">
-                    <div class="col-md-7 line-separator">
-                        @include('dashboard.pengaturan.umum.form')
-                    </div>
-                    <div class="col-md-5">
-                        @include('dashboard.pengaturan.umum.form_logo_pemdes')
-                    </div>
-                  </div>
+                  wilayah administratif
                 </div>
               </div>
           </div>

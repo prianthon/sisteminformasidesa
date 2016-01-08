@@ -16,7 +16,8 @@ class PengaturanUmumRegProvinsiController extends Controller
      */
     public function index()
     {
-        //
+      $libprovinsi = Libprovinsi::paginate(10);
+      return view('dashboard.pengaturan.umum.libprovinsi.index', compact('libprovinsi'));
     }
 
     /**
