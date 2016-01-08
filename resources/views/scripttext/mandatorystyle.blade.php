@@ -2,4 +2,6 @@
 <link href="{{ asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/assets/css/plugins.min.css') }}" rel="stylesheet">
 <link href="{{ asset('/assets/css/style.min.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/main.css') }}" rel="stylesheet">
+<link href="{{ asset('/css/sweetalert.css') }}" rel="stylesheet">
 <link href="#" rel="stylesheet" id="theme-color">

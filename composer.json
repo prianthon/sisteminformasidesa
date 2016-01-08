@@ -8,7 +8,9 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "laravelcollective/html": "~5.0",
-        "patricktalmadge/bootstrapper": "~5"
+        "patricktalmadge/bootstrapper": "~5",
+        "creativeorange/gravatar": "~1.0",
+        "socieboy/alerts": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

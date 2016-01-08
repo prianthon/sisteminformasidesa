@@ -49,6 +49,7 @@ class StatusTinggalController extends Controller
     {
       $data=$request->all();
       StatusTinggal::create($data);
+      alert()->overlay('Selamat', 'Tambah Status Tinggal Berhasil!', 'success');
       return redirect('status/tinggal');
     }
 
@@ -87,6 +88,7 @@ class StatusTinggalController extends Controller
       $data=$request->all();
       $status_tinggal = StatusTinggal::find($id);
       $status_tinggal->update($data);
+      alert()->overlay('Selamat', 'Ubah Status Tinggal Berhasil!', 'success');
       return redirect('status/tinggal');
     }
 
@@ -100,6 +102,7 @@ class StatusTinggalController extends Controller
     {
       $status_tinggal = StatusTinggal::find($id);
       $status_tinggal->delete();
+      alert()->overlay('Selamat', 'Hapus Status Tinggal Berhasil!', 'success');
       return redirect('status/tinggal');
     }
 }

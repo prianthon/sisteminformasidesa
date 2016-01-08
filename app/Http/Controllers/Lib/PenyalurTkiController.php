@@ -49,6 +49,7 @@ class PenyalurTkiController extends Controller
     {
       $data=$request->all();
       PenyalurTki::create($data);
+      alert()->overlay('Selamat', 'Tambah Penyalur TKI Berhasil!', 'success');
       return redirect('penyalur/tki');
     }
 
@@ -87,6 +88,7 @@ class PenyalurTkiController extends Controller
       $data=$request->all();
       $penyalur_tkis = PenyalurTki::find($id);
       $penyalur_tkis->update($data);
+      alert()->overlay('Selamat', 'Ubah Penyalur TKI Berhasil!', 'success');
       return redirect('penyalur/tki');
     }
 
@@ -100,6 +102,7 @@ class PenyalurTkiController extends Controller
     {
       $penyalur_tkis = PenyalurTki::find($id);
       $penyalur_tkis->delete();
+      alert()->overlay('Selamat', 'Hapus Penyalur TKI Berhasil!', 'success');
       return redirect('penyalur/tki');
     }
 }

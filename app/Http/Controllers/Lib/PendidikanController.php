@@ -49,6 +49,7 @@ class PendidikanController extends Controller
     {
       $data=$request->all();
       Pendidikan::create($data);
+      alert()->overlay('Selamat', 'Tambah Pendidikan Berhasil!', 'success');
       return redirect('pendidikan');
     }
 
@@ -87,6 +88,7 @@ class PendidikanController extends Controller
       $data=$request->all();
       $pendidikan = Pendidikan::find($id);
       $pendidikan->update($data);
+      alert()->overlay('Selamat', 'Ubah Pendidikan Berhasil!', 'success');
       return redirect('pendidikan');
     }
 
@@ -100,6 +102,7 @@ class PendidikanController extends Controller
     {
       $pendidikan = Pendidikan::find($id);
       $pendidikan->delete();
+      alert()->overlay('Selamat', 'Hapus Pendidikan Berhasil!', 'success');
       return redirect('pendidikan');
     }
 }

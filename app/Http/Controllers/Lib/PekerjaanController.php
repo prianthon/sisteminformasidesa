@@ -49,6 +49,7 @@ class PekerjaanController extends Controller
     {
       $data=$request->all();
       Pekerjaan::create($data);
+      alert()->overlay('Selamat', 'Tambah Pekerjaan Berhasil!', 'success');
       return redirect('pekerjaan');
     }
 
@@ -87,6 +88,7 @@ class PekerjaanController extends Controller
       $data=$request->all();
       $pekerjaan = Pekerjaan::find($id);
       $pekerjaan->update($data);
+      alert()->overlay('Selamat', 'Ubah Pekerjaan Berhasil!', 'success');
       return redirect('pekerjaan');
     }
 
@@ -100,6 +102,7 @@ class PekerjaanController extends Controller
     {
       $pekerjaan = Pekerjaan::find($id);
       $pekerjaan->delete();
+      alert()->overlay('Selamat', 'Hapus Pekerjaan Berhasil!', 'success');
       return redirect('pekerjaan');
     }
 }

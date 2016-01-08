@@ -49,6 +49,7 @@ class HubunganController extends Controller
     {
       $data=$request->all();
       HubunganKeluarga::create($data);
+      alert()->overlay('Selamat', 'Tambah Hubungan Keluarga Berhasil!', 'success');
       return redirect('hubungan');
     }
 
@@ -87,6 +88,7 @@ class HubunganController extends Controller
       $data=$request->all();
       $hubungan_keluarga = HubunganKeluarga::find($id);
       $hubungan_keluarga->update($data);
+      alert()->overlay('Selamat', 'Ubah Hubungan Keluarga Berhasil!', 'success');
       return redirect('hubungan');
     }
 
@@ -100,6 +102,7 @@ class HubunganController extends Controller
     {
       $hubungan_keluarga = HubunganKeluarga::find($id);
       $hubungan_keluarga->delete();
+      alert()->overlay('Selamat', 'Hapus Hubungan Keluarga Berhasil!', 'success');
       return redirect('hubungan');
     }
 }

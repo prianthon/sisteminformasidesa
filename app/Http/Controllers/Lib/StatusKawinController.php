@@ -49,6 +49,7 @@ class StatusKawinController extends Controller
     {
       $data=$request->all();
       StatusKawin::create($data);
+      alert()->overlay('Selamat', 'Tambah Status Kawin Berhasil!', 'success');
       return redirect('status/kawin');
     }
 
@@ -87,6 +88,7 @@ class StatusKawinController extends Controller
       $data=$request->all();
       $status_kawin = StatusKawin::find($id);
       $status_kawin->update($data);
+      alert()->overlay('Selamat', 'Ubah Status Kawin Berhasil!', 'success');
       return redirect('status/kawin');
     }
 
@@ -100,6 +102,7 @@ class StatusKawinController extends Controller
     {
       $status_kawin = StatusKawin::find($id);
       $status_kawin->delete();
+      alert()->overlay('Selamat', 'Hapus Status Kawin Berhasil!', 'success');
       return redirect('status/kawin');
     }
 }

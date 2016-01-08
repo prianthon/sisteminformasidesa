@@ -1,0 +1,10 @@
+.circ {
+  width: 26px;
+  vertical-align: middle;
+  border-radius: 40%;
+  box-shadow: 0 0 0 2px #fff;
+  margin-right: 4px;
+}
+.circ:hover {
+  box-shadow: 0 0 0 3px #f00;
+}

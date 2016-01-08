@@ -1,6 +1,6 @@
 <li class="dropdown" id="user-header">
     <a href="#" class="dropdown-toggle c-white" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-        <img src="{{ asset('/assets/img/avatars/avatar2.png') }}" alt="user avatar" width="30" class="p-r-5">
+        <img src="{{ Gravatar::get(Auth::user()->email)  }}" alt="user avatar" width="" class="circ">
         <span class="username">{{ Auth::user()->name }}</span>
         <i class="fa fa-angle-down p-r-10"></i>
     </a>

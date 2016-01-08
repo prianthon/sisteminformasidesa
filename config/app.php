@@ -146,6 +146,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Bootstrapper\BootstrapperL5ServiceProvider::class,
+        Creativeorange\Gravatar\GravatarServiceProvider::class,
+        Socieboy\Alerts\AlertServiceProvider::class,
 
     ],
 
@@ -197,6 +199,7 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Breadcrumb' => Bootstrapper\Facades\Breadcrumb::class,
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
 
     ],
 

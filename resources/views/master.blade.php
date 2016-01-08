@@ -74,6 +74,7 @@
     <!-- BEGIN MANDATORY SCRIPTS -->
     @include('scripttext.mandatoryscripts')
     <!-- END MANDATORY SCRIPTS -->
+    @include('Alerts::show')
     <script src="{{ asset('/assets/js/application.js') }}"></script>
 </body>
 </html>

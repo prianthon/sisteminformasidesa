@@ -49,6 +49,7 @@ class AgamaController extends Controller
     {
         $data=$request->all();
         Agama::create($data);
+        alert()->overlay('Selamat', 'Tambah Nama Agama Berhasil!', 'success');
         return redirect('agama');
     }
 
@@ -87,6 +88,7 @@ class AgamaController extends Controller
         $data=$request->all();
         $agama = Agama::find($id);
         $agama->update($data);
+        alert()->overlay('Selamat', 'Ubah Nama Agama Berhasil!', 'success');
         return redirect('agama');
     }
 
@@ -100,6 +102,7 @@ class AgamaController extends Controller
     {
         $agama = Agama::find($id);
         $agama->delete();
+        alert()->overlay('Selamat', 'Hapus Nama Agama Berhasil!', 'success');
         return redirect('agama');
     }
 }

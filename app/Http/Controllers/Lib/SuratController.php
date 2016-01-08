@@ -52,6 +52,7 @@ class SuratController extends Controller
     {
       $data=$request->all();
       KodifikasiSurat::create($data);
+      alert()->overlay('Selamat', 'Tambah Kodifikasi Surat Berhasil!', 'success');
       return redirect('surat');
     }
 
@@ -90,6 +91,7 @@ class SuratController extends Controller
       $data=$request->all();
       $kodifikasi_surat = KodifikasiSurat::find($id);
       $kodifikasi_surat->update($data);
+      alert()->overlay('Selamat', 'Ubah Kodifikasi Surat Berhasil!', 'success');
       return redirect('surat');
     }
 
@@ -103,6 +105,7 @@ class SuratController extends Controller
     {
       $kodifikasi_surat = KodifikasiSurat::find($id);
       $kodifikasi_surat->delete();
+      alert()->overlay('Selamat', 'Hapus Kodifikasi Surat Berhasil!', 'success');
       return redirect('surat');
     }
 }
