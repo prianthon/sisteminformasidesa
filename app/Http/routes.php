@@ -133,6 +133,8 @@ $router->group([
       resource('hak/akses','Pengguna\HakController');
       ////menu pengaturan////
       get('pengaturan/umum','PengaturanUmumController@index');
+      //menu reg provinsi
+      resource('pengaturan/umum/libprovinsi','Lib\PengaturanUmumRegProvinsiController');
 });
 // Logging in and out
 get('/auth/login', 'Auth\AuthController@getLogin');
