@@ -13,7 +13,7 @@ class Libkabupaten extends Model
   # Untuk membatasi attribut yang boleh di isi (Untuk keamanan)
   protected $fillable = ['kode_kabupaten','nama_kabupaten','provinsi_id'];
 
-  # Relasi one-to-many provinsi ke kabupateN
+  # Relasi one-to-many provinsi ke kabupaten
   public function libprovinsi()
   {
     return $this->belongsTo('App\Libprovinsi','provinsi_id');
