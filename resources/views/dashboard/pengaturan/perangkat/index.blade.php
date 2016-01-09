@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Pengaturan Wilayah Administratif</title>
+  <title>Desa2.0 - Pengaturan Perangkat Desa</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Pengaturan Wilayah Administratif</div>
+  <div class="navbar-center">Pengaturan Perangkat Desa</div>
 @endsection
 
 @section('mainsidebar')
@@ -280,7 +280,7 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
-        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan'=>'/pengaturan/umum/wilayah','Wilayah Administratif']) !!}
+        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan'=>'/pengaturan/umum/perangkatdesa','Perangkat Desa']) !!}
         <h1>Pengaturan<small> umum</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
@@ -294,12 +294,12 @@
                       <li><a href="#tab2_7" tabindex="-1">Kelola Lib Desa</a></li>
                   </ul>
                 </li>
-                <li class="active"><a href="{{ URL::to('/pengaturan/umum/wilayah') }}"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
-                <li class=""><a href="{{ URL::to('/pengaturan/umum/perangkatdesa') }}"><i class="fa fa-cog"></i> Perangkat Desa</a></li>
+                <li class=""><a href="{{ URL::to('/pengaturan/umum/wilayah') }}"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
+                <li class="active"><a href="{{ URL::to('/pengaturan/umum/perangkatdesa') }}"><i class="fa fa-cog"></i> Perangkat Desa</a></li>
             </ul>
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
-                  wilayah administratif
+                  Perangkat Desa
                 </div>
               </div>
           </div>

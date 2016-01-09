@@ -136,6 +136,8 @@ $router->group([
       get('pengaturan/umum','PengaturanUmumController@index');
       //menu pengaturan wilayah administratif
       get('pengaturan/umum/wilayah','Pengaturan\PengaturanUmumWilayahAdministratifController@index');
+      //menu pengaturan perangkat desa
+      get('pengaturan/umum/perangkatdesa','Pengaturan\PengaturanUmumPerangkatDesaController@index');
       //menu reg provinsi
       resource('pengaturan/umum/libprovinsi','Lib\PengaturanUmumRegProvinsiController');
 });
