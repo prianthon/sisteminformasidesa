@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Libkabupaten;
+use App\Libprovinsi;
+use App\Http\Requests\Libs\RegKabupatenRequest;
 
 class PengaturanUmumRegKabupatenController extends Controller
 {
@@ -16,7 +19,15 @@ class PengaturanUmumRegKabupatenController extends Controller
      */
     public function index()
     {
-        return view('dashboard.pengaturan.umum.libkabupaten.index');
+        $libkabupaten = Libkabupaten::paginate(5);
+        return view('dashboard.pengaturan.umum.libkabupaten.index', compact('libkabupaten'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $libkabupaten = Libkabupaten::where('nama_kabupaten','=',$keyword)->paginate(5) ;
+      return view('dashboard.pengaturan.umum.libkabupaten.index', compact('libkabupaten'));
     }
 
     /**
@@ -26,7 +37,7 @@ class PengaturanUmumRegKabupatenController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pengaturan.umum.libkabupaten.create');
     }
 
     /**
@@ -35,9 +46,12 @@ class PengaturanUmumRegKabupatenController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegKabupatenRequest $request)
     {
-        //
+      $data=$request->all();
+      Libkabupaten::create($data);
+      alert()->overlay('Selamat', 'Tambah Kode dan Nama Lib Kabupaten Berhasil!', 'success');
+      return redirect('pengaturan/umum/libkabupaten');
     }
 
     /**
@@ -59,7 +73,8 @@ class PengaturanUmumRegKabupatenController extends Controller
      */
     public function edit($id)
     {
-        //
+      $libkabupaten = Libkabupaten::find($id);
+      return view('dashboard.pengaturan.umum.libkabupaten.edit', compact('libkabupaten'));
     }
 
     /**
@@ -69,9 +84,13 @@ class PengaturanUmumRegKabupatenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegKabupatenRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $libkabupaten = Libkabupaten::find($id);
+      $libkabupaten->update($data);
+      alert()->overlay('Selamat', 'Ubah Kode dan Nama Lib Kabupaten Berhasil!', 'success');
+      return redirect('pengaturan/umum/libkabupaten');
     }
 
     /**
@@ -82,6 +101,9 @@ class PengaturanUmumRegKabupatenController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $libkabupaten = Libkabupaten::find($id);
+      $libkabupaten->delete();
+      alert()->overlay('Selamat', 'Hapus Kode dan Nama Lib Kabupaten Berhasil!', 'success');
+      return redirect('pengaturan/umum/libkabupaten');
     }
 }

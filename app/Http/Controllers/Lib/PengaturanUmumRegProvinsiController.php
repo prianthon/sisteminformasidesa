@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Libprovinsi;
+use App\Libkabupaten;
 use App\Http\Requests\Libs\RegProvinsiRequest;
 
 class PengaturanUmumRegProvinsiController extends Controller
