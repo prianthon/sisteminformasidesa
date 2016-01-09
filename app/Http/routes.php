@@ -140,6 +140,12 @@ $router->group([
       get('pengaturan/umum/perangkatdesa','Pengaturan\PengaturanUmumPerangkatDesaController@index');
       //menu reg provinsi
       resource('pengaturan/umum/libprovinsi','Lib\PengaturanUmumRegProvinsiController');
+      //menu reg kabupaten
+      resource('pengaturan/umum/libkabupaten','Lib\PengaturanUmumRegKabupatenController');
+      //menu reg kecamatan
+      resource('pengaturan/umum/libkecamatan','Lib\PengaturanUmumRegKecamatanController');
+      //menu reg desa
+      resource('pengaturan/umum/libdesa','Lib\PengaturanUmumRegDesaController');
 });
 // Logging in and out
 get('/auth/login', 'Auth\AuthController@getLogin');

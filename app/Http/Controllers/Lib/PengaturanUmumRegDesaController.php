@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Libprovinsi;
 
-class PengaturanUmumRegProvinsiController extends Controller
+class PengaturanUmumRegDesaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +16,7 @@ class PengaturanUmumRegProvinsiController extends Controller
      */
     public function index()
     {
-      $libprovinsi = Libprovinsi::paginate(10);
-      return view('dashboard.pengaturan.umum.libprovinsi.index', compact('libprovinsi'));
+        return view('dashboard.pengaturan.umum.libdesa.index');
     }
 
     /**
