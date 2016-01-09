@@ -142,6 +142,7 @@ $router->group([
       post('pengaturan/umum/libprovinsi/cari','Lib\PengaturanUmumRegProvinsiController@cari');
       resource('pengaturan/umum/libprovinsi','Lib\PengaturanUmumRegProvinsiController');
       //menu reg kabupaten
+      post('pengaturan/umum/libkabupaten/cari','Lib\PengaturanUmumRegKabupatenController@cari');
       resource('pengaturan/umum/libkabupaten','Lib\PengaturanUmumRegKabupatenController');
       //menu reg kecamatan
       resource('pengaturan/umum/libkecamatan','Lib\PengaturanUmumRegKecamatanController');

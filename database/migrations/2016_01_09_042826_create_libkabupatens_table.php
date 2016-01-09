@@ -14,6 +14,10 @@ class CreateLibkabupatensTable extends Migration
     {
         Schema::create('libkabupatens', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('kode_kabupaten',4);
+            $table->string('nama_kabupaten',45);
+            $table->unsignedInteger('provinsi_id');
+            $table->foreign('provinsi_id')->references('id')->on('libprovinsis')->onDelete('CASCADE');
             $table->timestamps();
         });
     }
