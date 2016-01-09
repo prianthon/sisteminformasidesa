@@ -139,6 +139,7 @@ $router->group([
       //menu pengaturan perangkat desa
       get('pengaturan/umum/perangkatdesa','Pengaturan\PengaturanUmumPerangkatDesaController@index');
       //menu reg provinsi
+      post('pengaturan/umum/libprovinsi/cari','Lib\PengaturanUmumRegProvinsiController@cari');
       resource('pengaturan/umum/libprovinsi','Lib\PengaturanUmumRegProvinsiController');
       //menu reg kabupaten
       resource('pengaturan/umum/libkabupaten','Lib\PengaturanUmumRegKabupatenController');

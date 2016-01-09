@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Libprovinsi;
+use App\Http\Requests\Libs\RegProvinsiRequest;
 
 class PengaturanUmumRegProvinsiController extends Controller
 {
@@ -17,7 +18,14 @@ class PengaturanUmumRegProvinsiController extends Controller
      */
     public function index()
     {
-      $libprovinsi = Libprovinsi::paginate(10);
+      $libprovinsi = Libprovinsi::paginate(5);
+      return view('dashboard.pengaturan.umum.libprovinsi.index', compact('libprovinsi'));
+    }
+
+    public function cari(Request $request)
+    {
+      $keyword = $request['keyword'];
+      $libprovinsi = Libprovinsi::where('nama_provinsi','=',$keyword)->paginate(5) ;
       return view('dashboard.pengaturan.umum.libprovinsi.index', compact('libprovinsi'));
     }
 
@@ -28,7 +36,7 @@ class PengaturanUmumRegProvinsiController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pengaturan.umum.libprovinsi.create');
     }
 
     /**
@@ -37,9 +45,12 @@ class PengaturanUmumRegProvinsiController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegProvinsiRequest $request)
     {
-        //
+      $data=$request->all();
+      Libprovinsi::create($data);
+      alert()->overlay('Selamat', 'Tambah Kode dan Nama Lib Provinsi Berhasil!', 'success');
+      return redirect('pengaturan/umum/libprovinsi');
     }
 
     /**
@@ -61,7 +72,8 @@ class PengaturanUmumRegProvinsiController extends Controller
      */
     public function edit($id)
     {
-        //
+      $libprovinsi = Libprovinsi::find($id);
+      return view('dashboard.pengaturan.umum.libprovinsi.edit', compact('libprovinsi'));
     }
 
     /**
@@ -71,9 +83,13 @@ class PengaturanUmumRegProvinsiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegProvinsiRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $libprovinsi = Libprovinsi::find($id);
+      $libprovinsi->update($data);
+      alert()->overlay('Selamat', 'Ubah Kode dan Nama Lib Provinsi Berhasil!', 'success');
+      return redirect('pengaturan/umum/libprovinsi');
     }
 
     /**
@@ -84,6 +100,9 @@ class PengaturanUmumRegProvinsiController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $libprovinsi = Libprovinsi::find($id);
+      $libprovinsi->delete();
+      alert()->overlay('Selamat', 'Hapus Kode dan Nama Lib Provinsi Berhasil!', 'success');
+      return redirect('pengaturan/umum/libprovinsi');
     }
 }

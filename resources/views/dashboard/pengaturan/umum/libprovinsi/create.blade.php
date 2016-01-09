@@ -280,8 +280,8 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
-        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan Umum'=>'/pengaturan/umum','Kelola'=>'/pengaturan/umum/libprovinsi','Lib Provinsi']) !!}
-        <h1>Kelola<small> Lib Provinsi</small></h1><br/>
+        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan Umum'=>'/pengaturan/umum','Kelola Lib Provinsi'=>'/pengaturan/umum/libprovinsi','Tambah'=>'/pengaturan/umum/libprovinsi/create','Lib Provinsi']) !!}
+        <h1>Tambah<small> Lib Provinsi</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
                 <li class="dropdown active">
@@ -300,37 +300,17 @@
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
                   <div class="row"><br/>
-                    {!! link_to('pengaturan/umum/libprovinsi/create','Tambah Lib Provinsi',['class'=>'btn btn-primary']) !!}
-                    <hr>
-                    {!! Form::open(array('url'=>'pengaturan/umum/libprovinsi/cari')) !!}
-                    {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Lib Provinsi, ketik lalu tekan enter']) !!}
+                    <br>
+                    {!! Form::open(array('url'=>'/pengaturan/umum/libprovinsi')) !!}
+                    {!! link_to('/pengaturan/umum/libprovinsi','Kelola Lib Provinsi',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+                    <br><br>
+                    {!! Html::ul($errors->all()) !!}
+                    <div class="form-group">
+                        <div class="controls">
+                            @include('dashboard.pengaturan.umum.libprovinsi.form')
+                        </div>
+                    </div>
                     {!! Form::close() !!}
-                    <hr>
-                    <table class="table table-striped table-hover">
-                      <thead class="no-bd">
-                        <tr>
-                          <th><strong>ID Lib Provinsi</strong></th>
-                          <th><strong>Kode Provinsi</strong></th>
-                          <th><strong>Nama Provinsi</strong></th>
-                          <th width="15%"><strong>Aksi</strong></th>
-                        </tr>
-                      </thead>
-                      <tbody class="no-bd-y">
-                        @foreach($libprovinsi as $lp)
-                        <tr>
-                          <td>{{ $lp->id }}</td>
-                          <td>{{ $lp->kode_provinsi }}</td>
-                          <td>{{ $lp->nama_provinsi }}</td>
-                          <td>
-                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libprovinsi/'.$lp->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                            {!! link_to('pengaturan/umum/libprovinsi/'.$lp->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                            {!! Form::close() !!}
-                          </td>
-                        </tr>
-                        @endforeach
-                      </tbody>
-                    </table>
-                    {!! $libprovinsi->render() !!}
                   </div>
                 </div>
               </div>
