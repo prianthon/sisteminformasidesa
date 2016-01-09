@@ -14,6 +14,10 @@ class CreateLibkecamatansTable extends Migration
     {
         Schema::create('libkecamatans', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('kode_kecamatan',7);
+            $table->string('nama_kecamatan',45);
+            $table->unsignedInteger('kabupaten_id');
+            $table->foreign('kabupaten_id')->references('id')->on('libkabupatens')->onDelete('CASCADE');
             $table->timestamps();
         });
     }
