@@ -18,4 +18,9 @@ class Libkabupaten extends Model
   {
     return $this->belongsTo('App\Libprovinsi','provinsi_id');
   }
+
+  public function libkecamatan()
+  {
+    return $this->hasMany('App\Libkecamatan','kabupaten_id');
+  }
 }
