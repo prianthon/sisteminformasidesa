@@ -33,7 +33,23 @@ class RegKecamatanSeeder extends Seeder
         array('id'=>15, 'kode_kecamatan'=>'1102022', 'nama_kecamatan'=>'KUALA BARU', 'kabupaten_id'=>'2'),
         array('id'=>16, 'kode_kecamatan'=>'1102021', 'nama_kecamatan'=>'SINGKIL UTARA', 'kabupaten_id'=>'2'),
         array('id'=>17, 'kode_kecamatan'=>'1102020', 'nama_kecamatan'=>'SINGKIL', 'kabupaten_id'=>'2'),
-        array('id'=>18, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'PULAU BANYAK', 'kabupaten_id'=>'2')
+        array('id'=>18, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'PULAU BANYAK', 'kabupaten_id'=>'2'),
+        array('id'=>19, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'LABUHAN HAJI BARAT', 'kabupaten_id'=>'3'),
+        array('id'=>20, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'LABUHAN HAJI TIMUR', 'kabupaten_id'=>'3'),
+        array('id'=>21, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'LABUHAN HAJI', 'kabupaten_id'=>'3'),
+        array('id'=>22, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'MEUKEK', 'kabupaten_id'=>'3'),
+        array('id'=>23, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'SAWANG', 'kabupaten_id'=>'3'),
+        array('id'=>24, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'SAMA DUA', 'kabupaten_id'=>'3'),
+        array('id'=>25, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'TAPAK TUAN', 'kabupaten_id'=>'3'),
+        array('id'=>26, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'KLUET TENGAH', 'kabupaten_id'=>'3'),
+        array('id'=>27, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'PASIE RAJA', 'kabupaten_id'=>'3'),
+        array('id'=>28, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'KLUET UTARA', 'kabupaten_id'=>'3'),
+        array('id'=>29, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'KLUET TIMUR', 'kabupaten_id'=>'3'),
+        array('id'=>30, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'KLUET SELATAN', 'kabupaten_id'=>'3'),
+        array('id'=>31, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'BAKONGAN TIMUR', 'kabupaten_id'=>'3'),
+        array('id'=>32, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'BAKONGAN', 'kabupaten_id'=>'3'),
+        array('id'=>33, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'TRUMON TIMUR', 'kabupaten_id'=>'3'),
+        array('id'=>34, 'kode_kecamatan'=>'1102010', 'nama_kecamatan'=>'TRUMON', 'kabupaten_id'=>'3'),
       );
 
       // masukkan data ke database
