@@ -280,8 +280,8 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
-        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan Umum'=>'/pengaturan/umum','Kelola'=>'/pengaturan/umum/libkecamatan','Lib Kecamatan']) !!}
-        <h1>Kelola<small> Lib Kecamatan</small></h1><br/>
+        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan Umum'=>'/pengaturan/umum','Kelola Lib Kecamatan'=>'/pengaturan/umum/libkecamatan','Ubah'=>'/pengaturan/umum/libkecamatan/create','Lib Kecamatan']) !!}
+        <h1>Ubah<small> Lib Kecamatan</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
                 <li class="dropdown active">
@@ -300,39 +300,17 @@
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
                   <div class="row"><br/>
-                    {!! link_to('pengaturan/umum/libkecamatan/create','Tambah Lib Kecamatan',['class'=>'btn btn-primary']) !!}
-                    <hr>
-                    {!! Form::open(array('url'=>'pengaturan/umum/libkecamatan/cari')) !!}
-                    {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Lib Kecamatan, ketik lalu tekan enter']) !!}
+                    <br>
+                    {!! Form::model($libkecamatan, array('url'=>'pengaturan/umum/libkecamatan/'.$libkecamatan->id,'method'=>'patch')) !!}
+                    {!! link_to('/pengaturan/umum/libkecamatan','Kelola Lib Kecamatan',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+                    <br><br>
+                    {!! Html::ul($errors->all()) !!}
+                    <div class="form-group">
+                        <div class="controls">
+                            @include('dashboard.pengaturan.umum.libkecamatan.form')
+                        </div>
+                    </div>
                     {!! Form::close() !!}
-                    <hr>
-                    <table class="table table-striped table-hover">
-                      <thead class="no-bd">
-                        <tr>
-                          <th><strong>ID Lib Kecamatan</strong></th>
-                          <th><strong>Kode Kecamatan</strong></th>
-                          <th><strong>Nama Kecamatan</strong></th>
-                          <th><strong>Kelompok Kabupaten</strong></th>
-                          <th width="15%"><strong>Aksi</strong></th>
-                        </tr>
-                      </thead>
-                      <tbody class="no-bd-y">
-                        @foreach($libkecamatan as $lkc)
-                        <tr>
-                          <td>{{ $lkc->id }}</td>
-                          <td>{{ $lkc->kode_kecamatan }}</td>
-                          <td>{{ $lkc->nama_kecamatan }}</td>
-                          <td>{{ $lkc->libkabupaten->nama_kabupaten }}</td>
-                          <td>
-                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libkecamatan/'.$lkc->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                            {!! link_to('pengaturan/umum/libkecamatan/'.$lkc->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                            {!! Form::close() !!}
-                          </td>
-                        </tr>
-                        @endforeach
-                      </tbody>
-                    </table>
-                    {!! $libkecamatan->render() !!}
                   </div>
                 </div>
               </div>

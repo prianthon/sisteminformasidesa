@@ -145,8 +145,10 @@ $router->group([
       post('pengaturan/umum/libkabupaten/cari','Lib\PengaturanUmumRegKabupatenController@cari');
       resource('pengaturan/umum/libkabupaten','Lib\PengaturanUmumRegKabupatenController');
       //menu reg kecamatan
+      post('pengaturan/umum/libkecamatan/cari','Lib\PengaturanUmumRegKecamatanController@cari');
       resource('pengaturan/umum/libkecamatan','Lib\PengaturanUmumRegKecamatanController');
       //menu reg desa
+      post('pengaturan/umum/libdesa/cari','Lib\PengaturanUmumRegDesaController@cari');
       resource('pengaturan/umum/libdesa','Lib\PengaturanUmumRegDesaController');
 });
 // Logging in and out
