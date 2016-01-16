@@ -15,6 +15,7 @@ class CreatePekerjaansTable extends Migration
         Schema::create('pekerjaans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('pekerjaan',75)->unique();
+            $table->enum('tipe',array('A','B'));
             $table->timestamps();
         });
     }

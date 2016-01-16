@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pekerjaan extends Model
 {
-    protected $fillable = ['pekerjaan'];
+    # Tentukan nama tabel terkait
+    protected $table = 'pekerjaans';
+
+    protected $fillable = ['pekerjaan','tipe'];
 }
