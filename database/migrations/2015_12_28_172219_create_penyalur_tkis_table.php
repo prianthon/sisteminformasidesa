@@ -24,12 +24,10 @@ class CreatePenyalurTkisTable extends Migration
             $table->string('alamat_penampungan');
             $table->string('email',80);
             $table->string('website',80);
-            $table->unsignedInteger('negara_penempatan_id');
-            $table->foreign('negara_penempatan_id')->references('id')->on('libnegarapenempatans')->onDelete('CASCADE');
+            $table->integer('negarapenempatan_id');
             $table->string('anggota_assosiasi',50);
             $table->string('kantor_cabang');
-            $table->unsignedInteger('provinsi_id');
-            $table->foreign('provinsi_id')->references('id')->on('libprovinsis')->onDelete('CASCADE');
+            $table->integer('provinsi_id');
             $table->timestamps();
         });
     }
