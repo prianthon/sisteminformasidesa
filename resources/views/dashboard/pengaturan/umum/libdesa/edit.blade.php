@@ -280,7 +280,7 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
-        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan'=>'/pengaturan/umum','Lib Provinsi']) !!}
+        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan Umum'=>'/pengaturan/umum','Kelola Lib Desa'=>'/pengaturan/umum/libdesa','Ubah'=>'/pengaturan/umum/libdesa/create','Lib Desa']) !!}
         <h1>Ubah<small> Lib Desa</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
