@@ -281,7 +281,7 @@
     <div class="row">
       <div class="col-md-12">
         {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan'=>'/pengaturan/umum','Lib Provinsi']) !!}
-        <h1>Pengaturan<small> umum</small></h1><br/>
+        <h1>Ubah<small> Lib Desa</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
                 <li class="dropdown active">
@@ -300,40 +300,19 @@
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
                   <div class="row"><br/>
-                    {!! link_to('pengaturan/umum/libdesa/create','Tambah Lib Desa',['class'=>'btn btn-primary']) !!}
-                    <hr>
-                    {!! Form::open(array('url'=>'pengaturan/umum/libdesa/cari')) !!}
-                    {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Lib Desa, ketik lalu tekan enter']) !!}
+                    <br>
+                    <div class="col-md-8">
+                    {!! Form::model($libdesa, array('url'=>'pengaturan/umum/libdesa/'.$libdesa->id,'method'=>'patch')) !!}
+                    {!! link_to('/pengaturan/umum/libdesa','Kelola Lib Desa',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+                    <br><br>
+                    {!! Html::ul($errors->all()) !!}
+                    <div class="form-group">
+                        <div class="controls">
+                            @include('dashboard.pengaturan.umum.libdesa.form')
+                        </div>
+                    </div>
                     {!! Form::close() !!}
-                    <hr>
-                    <table class="table table-striped table-hover">
-                      <thead class="no-bd">
-                        <tr>
-                          <th><strong>ID Lib Desa</strong></th>
-                          <th><strong>Kode Desa</strong></th>
-                          <th><strong>Nama Desa</strong></th>
-                          <th><strong>Kelompok Kecamatan</strong></th>
-                          <th width="15%"><strong>Aksi</strong></th>
-                        </tr>
-                      </thead>
-                      <tbody class="no-bd-y">
-                        @foreach($libdesa as $ld)
-                        <tr>
-                          <td>{{ $ld->id }}</td>
-                          <td>{{ $ld->kode_desa }}</td>
-                          <td>{{ $ld->nama_desa }}</td>
-                          <td>{{ $ld->libkecamatan->nama_kecamatan }}</td>
-                          <td>
-                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libdesa/'.$ld->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                            {!! link_to('pengaturan/umum/libdesa/'.$ld->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
-                            {!! Form::close() !!}
-                          </td>
-                        </tr>
-                        @endforeach
-                      </tbody>
-                    </table>
-                    {!! $libdesa->render() !!}
-                  </div>
+                    </div>
                 </div>
               </div>
           </div>
