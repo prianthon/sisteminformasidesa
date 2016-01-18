@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(LibDesaSeeder::class);
         // lib pustaka
         $this->call(LibAgamaSeeder::class);
+        $this->call(LibHubunganSeeder::class);
         // lib users
         $this->call(UsersTableSeeder::class);
         // lib parent surat
