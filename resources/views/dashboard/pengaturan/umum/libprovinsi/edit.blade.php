@@ -301,6 +301,7 @@
                 <div class="tab-pane fade active in" id="tab2_1">
                   <div class="row"><br/>
                     <br>
+                    <div class="col-md-8">
                     {!! Form::model($libprovinsi, array('url'=>'pengaturan/umum/libprovinsi/'.$libprovinsi->id,'method'=>'patch')) !!}
                     {!! link_to('/pengaturan/umum/libprovinsi','Kelola Lib Provinsi',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
                     <br><br>
@@ -311,6 +312,7 @@
                         </div>
                     </div>
                     {!! Form::close() !!}
+                    </div>
                   </div>
                 </div>
               </div>
