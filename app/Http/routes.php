@@ -115,6 +115,9 @@ $router->group([
       //menu penyalur tki
       post('penyalur/tki/cari','Lib\PenyalurTkiController@cari');
       resource('penyalur/tki','Lib\PenyalurTkiController');
+      //menu reg negara
+      post('penyalur/tki/libnegara/cari','Lib\NegaraController@cari');
+      resource('penyalur/tki/libnegara','Lib\NegaraController');
       //menu status kawin
       post('status/kawin/cari','Lib\StatusKawinController@cari');
       resource('status/kawin','Lib\StatusKawinController');
