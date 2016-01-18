@@ -14,11 +14,14 @@ class DatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call(UserTableSeeder::class);
+        // lib provinsi
         $this->call(LibProvinsiSeeder::class);
         $this->call(LibKabupatenSeeder::class);
         $this->call(LibKecamatanSeeder::class);
+        $this->call(LibDesaSeeder::class);
+        // lib users
         $this->call(UsersTableSeeder::class);
+        // lib parent surat
         $this->call(ParentSuratsSeeder::class);
 
         Model::reguard();

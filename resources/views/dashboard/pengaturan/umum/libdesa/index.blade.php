@@ -281,7 +281,7 @@
     <div class="row">
       <div class="col-md-12">
         {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan'=>'/pengaturan/umum','Lib Provinsi']) !!}
-        <h1>Pengaturan<small> umum</small></h1><br/>
+        <h1>Kelola<small> Lib Desa</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
                 <li class="dropdown active">
