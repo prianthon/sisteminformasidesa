@@ -13,6 +13,6 @@ class PenyalurTki extends Model
 
     public function libnegara()
     {
-      return $this->hasMany('App\Libnegara','negarapenempatan_id');
+      return $this->hasMany('App\Libnegarapenempatan','negarapenempatan_id');
     }
 }

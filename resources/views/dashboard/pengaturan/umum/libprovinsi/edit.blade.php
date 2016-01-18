@@ -288,6 +288,7 @@
                   <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> Pengaturan Umum <b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
                       <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1">Ubah Pengaturan Umum</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libnegara') }}" tabindex="-1">Kelola Lib Negara</a></li>
                       <li><a href="{{ URL::to('/pengaturan/umum/libprovinsi') }}" tabindex="-1">Kelola Lib Provinsi</a></li>
                       <li><a href="{{ URL::to('/pengaturan/umum/libkabupaten') }}" tabindex="-1">Kelola Lib Kabupaten</a></li>
                       <li><a href="{{ URL::to('/pengaturan/umum/libkecamatan') }}" tabindex="-1">Kelola Lib Kecamatan</a></li>

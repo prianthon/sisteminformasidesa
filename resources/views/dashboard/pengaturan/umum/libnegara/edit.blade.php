@@ -1,11 +1,11 @@
 @extends('master')
 
 @section('title')
-  <title>Desa2.0 - Pustaka</title>
+  <title>Desa2.0 - Pengaturan Umum</title>
 @endsection
 
 @section('navbar-center')
-  <div class="navbar-center">Penyalur TKI</div>
+  <div class="navbar-center">Pengaturan Umum</div>
 @endsection
 
 @section('mainsidebar')
@@ -184,7 +184,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="active current hasSub">
+            <li>
                 <a href="#"><i class="fa fa-book"></i><span class="sidebar-text">Pustaka</span><span class="fa arrow"></span></a>
                 <ul class="submenu collapse">
                     <li>
@@ -199,7 +199,7 @@
                     <li>
                         <a href="{{ URL::to('/pendidikan') }}"><span class="sidebar-text">Pendidikan</span></a>
                     </li>
-                    <li class="current">
+                    <li>
                         <a href="{{ URL::to('/penyalur/tki') }}"><span class="sidebar-text">Penyalur TKI</span></a>
                     </li>
                     <li>
@@ -227,7 +227,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="m-b-245">
+            <li class="m-b-245 current">
                 <a href="{{ URL::to('/pengaturan/umum') }}"><i class="fa fa-wrench"></i><span class="sidebar-text">Pengaturan</span></a>
             </li>
         </ul>
@@ -279,53 +279,46 @@
 <div id="main-content">
   <div class="panel-body">
     <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-          {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Penyalur TKI'=>'/penyalur/tki','Kelola']) !!}
-            <h1>Kelola <small>Negara Penempatan</small></h1><br>
-            <div class="">
-              <ul id="myTab2" class="nav nav-tabs nav-dark">
-                  <li class=""><a href="{{ URL::to('/penyalur/tki') }}"><i class="fa fa-user"></i> Penyalur TKI</a></li>
-                  <li class="active"><a href="{{ URL::to('/penyalur/tki/libnegara') }}"><i class="fa fa-cog"></i> Kelola Lib Negara</a></li>
-              </ul>
-                <div class="tab-content">
-                  <div class="tab-pane fade active in" id="tab2_1">
-                    <div class="row"><br/>
-                      {!! link_to('penyalur/tki/libnegara/create','Tambah Negara Penempatan',['class'=>'btn btn-primary']) !!}
-                      <hr>
-                      {!! Form::open(array('url'=>'penyalur/tki/libnegara/cari')) !!}
-                      {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Negara Penempatan, ketik lalu tekan enter']) !!}
-                      {!! Form::close() !!}
-                      <hr>
-                      <table class="table table-striped table-hover">
-                        <thead class="no-bd">
-                          <tr>
-                            <th><strong>ID Negara</strong></th>
-                            <th><strong>Kode Negara</strong></th>
-                            <th><strong>Nama Negara</strong></th>
-                            <th width="15%"><strong>Aksi</strong></th>
-                          </tr>
-                        </thead>
-                        <tbody class="no-bd-y">
-                          @foreach($libnegara as $ln)
-                          <tr>
-                            <td>{{ $ln->id }}</td>
-                            <td>{{ $ln->kode_negara }}</td>
-                            <td>{{ $ln->nama_negara }}</td>
-                            <td>
-                              {!! Form::open(array('method'=>'delete','url'=>'penyalur/tki/libnegara/'.$ln->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                              {!! link_to('penyalur/tki/libnegara/'.$ln->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn  btn-danger btn-sm']) !!}
-                              {!! Form::close() !!}
-                            </td>
-                          </tr>
-                          @endforeach
-                        </tbody>
-                      </table>
-                      {!! $libnegara->render() !!}
+      <div class="col-md-12">
+        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan Umum'=>'/pengaturan/umum','Kelola Lib Negara'=>'/pengaturan/umum/libnegara','Ubah'=>'/pengaturan/umum/libnegara/create','Lib Negara']) !!}
+        <h1>Ubah<small> Lib Negara</small></h1><br/>
+          <div class="">
+            <ul id="myTab2" class="nav nav-tabs nav-dark">
+                <li class="dropdown active">
+                  <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> Pengaturan Umum <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                      <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1">Ubah Pengaturan Umum</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libnegara') }}" tabindex="-1">Kelola Lib Negara</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libprovinsi') }}" tabindex="-1">Kelola Lib Provinsi</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libkabupaten') }}" tabindex="-1">Kelola Lib Kabupaten</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libkecamatan') }}" tabindex="-1">Kelola Lib Kecamatan</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libdesa') }}" tabindex="-1">Kelola Lib Desa</a></li>
+                  </ul>
+                </li>
+                <li class=""><a href="{{ URL::to('/pengaturan/umum/wilayah') }}"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
+                <li class=""><a href="{{ URL::to('/pengaturan/umum/perangkatdesa') }}"><i class="fa fa-cog"></i> Perangkat Desa</a></li>
+            </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab2_1">
+                  <div class="row"><br/>
+                    <br>
+                    <div class="col-md-8">
+                    {!! Form::model($libnegarapenempatan, array('url'=>'pengaturan/umum/libnegara/'.$libnegarapenempatan->id,'method'=>'patch')) !!}
+                    {!! link_to('/pengaturan/umum/libnegara','Kelola Lib Negara',['class'=>'btn btn-primary']) !!} {!! Form::submit('Simpan',['class'=>'btn btn-success']) !!}
+                    <br><br>
+                    {!! Html::ul($errors->all()) !!}
+                    <div class="form-group">
+                        <div class="controls">
+                            @include('dashboard.pengaturan.umum.libnegara.form')
+                        </div>
+                    </div>
+                    {!! Form::close() !!}
                     </div>
                   </div>
                 </div>
-            </div>
-        </div>
+              </div>
+          </div>
+      </div>
     </div>
   </div>
 </div>

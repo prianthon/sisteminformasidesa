@@ -280,19 +280,19 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
-        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan'=>'/pengaturan/umum','Umum']) !!}
-        <h1>Pengaturan<small> umum</small></h1><br/>
+        {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Pengaturan Umum'=>'/pengaturan/umum','Kelola'=>'/pengaturan/umum/libnegara','Lib Negara']) !!}
+        <h1>Kelola<small> Lib Negara</small></h1><br/>
           <div class="">
             <ul id="myTab2" class="nav nav-tabs nav-dark">
                 <li class="dropdown active">
                   <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> Pengaturan Umum <b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                    <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1">Ubah Pengaturan Umum</a></li>
-                    <li><a href="{{ URL::to('/pengaturan/umum/libnegara') }}" tabindex="-1">Kelola Lib Negara</a></li>
-                    <li><a href="{{ URL::to('/pengaturan/umum/libprovinsi') }}" tabindex="-1">Kelola Lib Provinsi</a></li>
-                    <li><a href="{{ URL::to('/pengaturan/umum/libkabupaten') }}" tabindex="-1">Kelola Lib Kabupaten</a></li>
-                    <li><a href="{{ URL::to('/pengaturan/umum/libkecamatan') }}" tabindex="-1">Kelola Lib Kecamatan</a></li>
-                    <li><a href="{{ URL::to('/pengaturan/umum/libdesa') }}" tabindex="-1">Kelola Lib Desa</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1">Ubah Pengaturan Umum</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libnegara') }}" tabindex="-1">Kelola Lib Negara</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libprovinsi') }}" tabindex="-1">Kelola Lib Provinsi</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libkabupaten') }}" tabindex="-1">Kelola Lib Kabupaten</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libkecamatan') }}" tabindex="-1">Kelola Lib Kecamatan</a></li>
+                      <li><a href="{{ URL::to('/pengaturan/umum/libdesa') }}" tabindex="-1">Kelola Lib Desa</a></li>
                   </ul>
                 </li>
                 <li class=""><a href="{{ URL::to('/pengaturan/umum/wilayah') }}"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
@@ -300,13 +300,38 @@
             </ul>
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
-                  <div class="row column-seperation">
-                    <div class="col-md-7 line-separator">
-                        @include('dashboard.pengaturan.umum.form')
-                    </div>
-                    <div class="col-md-5">
-                        @include('dashboard.pengaturan.umum.form_logo_pemdes')
-                    </div>
+                  <div class="row"><br/>
+                    {!! link_to('pengaturan/umum/libnegara/create','Tambah Lib Negara',['class'=>'btn btn-primary']) !!}
+                    <hr>
+                    {!! Form::open(array('url'=>'pengaturan/umum/libnegara/cari')) !!}
+                    {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Lib Negara, ketik lalu tekan enter']) !!}
+                    {!! Form::close() !!}
+                    <hr>
+                    <table class="table table-striped table-hover">
+                      <thead class="no-bd">
+                        <tr>
+                          <th><strong>ID Lib Negara</strong></th>
+                          <th><strong>Kode Negara</strong></th>
+                          <th><strong>Nama Negara</strong></th>
+                          <th width="15%"><strong>Aksi</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody class="no-bd-y">
+                        @foreach($libnegarapenempatan as $ln)
+                        <tr>
+                          <td>{{ $ln->id }}</td>
+                          <td>{{ $ln->kode_negara }}</td>
+                          <td>{{ $ln->nama_negara }}</td>
+                          <td>
+                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libnegara/'.$ln->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
+                            {!! link_to('pengaturan/umum/libnegara/'.$ln->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
+                            {!! Form::close() !!}
+                          </td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                    </table>
+                    {!! $libnegarapenempatan->render() !!}
                   </div>
                 </div>
               </div>

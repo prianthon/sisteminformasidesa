@@ -282,14 +282,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
           {!! Breadcrumb::withLinks(['Dashboard'=>'/dashboard','Penyalur TKI'=>'/penyalur/tki','Kelola']) !!}
             <h1>Kelola <small>Penyalur TKI</small></h1><br>
-            <div class="">
-              <ul id="myTab2" class="nav nav-tabs nav-dark">
-                  <li class="active"><a href="{{ URL::to('/penyalur/tki') }}"><i class="fa fa-user"></i> Penyalur TKI</a></li>
-                  <li class=""><a href="{{ URL::to('/penyalur/tki/libnegara') }}"><i class="fa fa-cog"></i> Kelola Lib Negara</a></li>
-              </ul>
-                <div class="tab-content">
-                  <div class="tab-pane fade active in" id="tab2_1">
-                    <div class="row"><br/>
+
                       {!! link_to('penyalur/tki/create','Tambah Penyalur TKI',['class'=>'btn btn-primary']) !!}
                       <hr>
                       {!! Form::open(array('url'=>'penyalur/tki/cari')) !!}
@@ -327,10 +320,7 @@
                         </tbody>
                       </table>
                       {!! $penyalur_tkis->render() !!}
-                    </div>
-                  </div>
-                </div>
-            </div>
+                  
         </div>
     </div>
   </div>

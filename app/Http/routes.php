@@ -116,8 +116,8 @@ $router->group([
       post('penyalur/tki/cari','Lib\PenyalurTkiController@cari');
       resource('penyalur/tki','Lib\PenyalurTkiController');
       //menu reg negara
-      post('penyalur/tki/libnegara/cari','Lib\NegaraController@cari');
-      resource('penyalur/tki/libnegara','Lib\NegaraController');
+      //post('penyalur/tki/libnegara/cari','Lib\NegaraController@cari');
+      //resource('penyalur/tki/libnegara','Lib\NegaraController');
       //menu status kawin
       post('status/kawin/cari','Lib\StatusKawinController@cari');
       resource('status/kawin','Lib\StatusKawinController');
@@ -141,6 +141,9 @@ $router->group([
       get('pengaturan/umum/wilayah','Pengaturan\PengaturanUmumWilayahAdministratifController@index');
       //menu pengaturan perangkat desa
       get('pengaturan/umum/perangkatdesa','Pengaturan\PengaturanUmumPerangkatDesaController@index');
+      //menu reg negara
+      post('pengaturan/umum/libnegara/cari','Lib\PengaturanUmumRegNegaraController@cari');
+      resource('pengaturan/umum/libnegara','Lib\PengaturanUmumRegNegaraController');
       //menu reg provinsi
       post('pengaturan/umum/libprovinsi/cari','Lib\PengaturanUmumRegProvinsiController@cari');
       resource('pengaturan/umum/libprovinsi','Lib\PengaturanUmumRegProvinsiController');

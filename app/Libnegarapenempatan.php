@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Libnegara extends Model
+class Libnegarapenempatan extends Model
 {
   # Tentukan nama tabel terkait
   protected $table = 'libnegarapenempatans';
