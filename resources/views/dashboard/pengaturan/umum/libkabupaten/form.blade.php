@@ -8,5 +8,5 @@
 </div>
 <div class="form-group">
   <label class="form-label"><strong>Kelompok Provinsi</strong></label>
-    {!! Form::select('provinsi_id', App\Libprovinsi::lists('nama_provinsi','id'),null,['class'=>'form-control'] ) !!}
+    {!! Form::select('provinsi_id', App\Libprovinsi::lists('nama_provinsi','id'),null,['class'=>'form-control','data-live-search'=>'true'] ) !!}
 </div>

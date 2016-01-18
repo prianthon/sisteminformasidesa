@@ -8,5 +8,5 @@
 </div>
 <div class="form-group">
   <label class="form-label"><strong>Kelompok Kecamatan</strong></label>
-    {!! Form::select('kecamatan_id', App\Libkecamatan::lists('nama_kecamatan','id'),null,['class'=>'form-control'] ) !!}
+    {!! Form::select('kecamatan_id', App\Libkecamatan::lists('nama_kecamatan','id'),null,['class'=>'form-control','data-live-search'=>'true'] ) !!}
 </div>

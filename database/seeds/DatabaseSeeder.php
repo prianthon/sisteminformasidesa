@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // lib provinsi
+        $this->call(LibNegaraSeeder::class);
         $this->call(LibProvinsiSeeder::class);
         $this->call(LibKabupatenSeeder::class);
         $this->call(LibKecamatanSeeder::class);
