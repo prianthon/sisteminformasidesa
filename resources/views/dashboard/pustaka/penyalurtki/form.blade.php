@@ -1,6 +1,6 @@
 <div class="col-md-8">
   <div class="form-group">
-    <label class="form-label"><strong>Nama PPTKIS</strong></label>
+    <label class="form-label"><strong>Nama PPTKIS <span class="asterisk">*</span></strong></label>
       {!! Form::text('nama_pptkis',null,['class'=>'form-control','placeholder'=>'Ketikkan Nama PPTKIS','autofocus']) !!}
   </div>
   <div class="form-group">
@@ -8,12 +8,12 @@
       {!! Form::text('penanggung_jawab',null,['class'=>'form-control','placeholder'=>'Ketikkan Nama PPTKIS']) !!}
   </div>
   <div class="form-group">
-    <label class="form-label"><strong>Nomor PPTKIS</strong></label>
+    <label class="form-label"><strong>Nomor PPTKIS <span class="asterisk">*</span></strong></label>
       {!! Form::text('nomor_pptkis',null,['class'=>'form-control','placeholder'=>'Ketikkan Nomor Izin PPTKIS']) !!}
   </div>
   <div class="form-group">
-    <label class="form-label"><strong>Tanggal Izin</strong></label>
-      {!! Form::date('tanggal_izin',null,['class'=>'form-control','placeholder'=>'Ketikkan Tanggal Izin PPTKIS']) !!}
+    <label class="form-label"><strong>Tanggal Izin <span class="asterisk">*</span></strong></label>
+      {!! Form::date('tanggal_izin',null,['class'=>'datetimepicker form-control','placeholder'=>'Ketikkan Tanggal Izin PPTKIS']) !!}
   </div>
   <div class="form-group">
     <label class="form-label"><strong>Nomor Telepon</strong></label>
@@ -24,7 +24,7 @@
       {!! Form::text('nomor_fax',null,['class'=>'form-control','placeholder'=>'Ketikkan Nomor Fax PPTKIS']) !!}
   </div>
   <div class="form-group">
-    <label class="form-label"><strong>Alamat Kantor</strong></label>
+    <label class="form-label"><strong>Alamat Kantor <span class="asterisk">*</span></strong></label>
       {!! Form::text('alamat_kantor',null,['class'=>'form-control','placeholder'=>'Ketikkan Alamat Kantor PPTKIS']) !!}
   </div>
   <div class="form-group">
@@ -41,7 +41,7 @@
   </div>
   <div class="form-group">
     <label class="form-label"><strong>Negara Penempatan</strong></label>
-      {!! Form::select('negarapenempatan_id', App\Libnegarapenempatan::lists('nama_negara','id'),null,['class'=>'form-control','data-live-search'=>'true'] ) !!}
+      {!! Form::select('negarapenempatan_id', App\Libnegarapenempatan::lists('nama_negara','id'),null,['class'=>'form-control','data-live-search'=>'true', 'multiple title'=>'Pilih satu atau lebih', 'multiple'=>'multiple'] ) !!}
   </div>
   <div class="form-group">
     <label class="form-label"><strong>Anggota Assosiasi</strong></label>
@@ -52,7 +52,7 @@
       {!! Form::text('kantor_cabang',null,['class'=>'form-control','placeholder'=>'Ketikkan Alamat Kantor Cabang PPTKIS']) !!}
   </div>
   <div class="form-group">
-    <label class="form-label"><strong>Provinsi</strong></label>
+    <label class="form-label"><strong>Provinsi <span class="asterisk">*</span></strong></label>
       {!! Form::select('provinsi_id', App\Libprovinsi::lists('nama_provinsi','id'),null,['class'=>'form-control','data-live-search'=>'true'] ) !!}
   </div>
 </div>

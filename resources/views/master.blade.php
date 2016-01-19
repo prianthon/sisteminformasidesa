@@ -16,6 +16,9 @@
     <!-- BEGIN MANDATORY STYLE -->
     @include('scripttext.mandatorystyle')
     <!-- END  MANDATORY STYLE -->
+    <!--begin page level style-->
+    @include('scripttext.pagelevel')
+    <!--end page level style-->
     <script src="{{ asset('/assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
 </head>
 
@@ -74,6 +77,9 @@
     <!-- BEGIN MANDATORY SCRIPTS -->
     @include('scripttext.mandatoryscripts')
     <!-- END MANDATORY SCRIPTS -->
+    <!--begin page level script-->
+    @include('scripttext.pagelevelscript')
+    <!--end page level script-->
     @include('Alerts::show')
     <script src="{{ asset('/assets/js/application.js') }}"></script>
 </body>
