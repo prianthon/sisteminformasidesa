@@ -25,9 +25,10 @@ class PenyalurTkiRequest extends Request
      {
          return [
              'nama_pptkis'=>'required',
-             'penanggung_jawab'=>'required',
              'nomor_pptkis'=>'required',
-             'alamat_kantor'=>'required'
+             'tanggal_izin'=>'required',
+             'alamat_kantor'=>'required',
+             'provinsi_id'=>'required'
          ];
      }
 
@@ -35,9 +36,10 @@ class PenyalurTkiRequest extends Request
      {
        return [
            'nama_pptkis.required' => 'Kolom PPTKIS tidak boleh kosong',
-           'penanggung_jawab' => 'Kolom Penanggung Jawab tidak boleh kosong',
-           'nomor_pptkis' => 'Kolom Nomor PPTKIS tidak boleh kosong',
-           'alamat_kantor' => 'Kolom Alamat Kantor tidak boleh kosong'
+           'nomor_pptkis.required' => 'Kolom Nomor Izin PPTKIS tidak boleh kosong',
+           'tanggal_izin.required' => 'Kolom Tanggal Izin tidak boleh kosong',
+           'alamat_kantor.required' => 'Kolom Alamat Kantor tidak boleh kosong',
+           'provinsi_id.required' => 'Kolom Provinsi ID tidak boleh kosong'
        ];
      }
 }

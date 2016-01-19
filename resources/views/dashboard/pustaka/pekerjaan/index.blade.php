@@ -294,6 +294,7 @@
                 <tr>
                   <th><strong>ID Pekerjaan</strong></th>
                   <th><strong>Pekerjaan</strong></th>
+                  <th><strong>Tipe</strong></th>
                   <th width="15%"><strong>Aksi</strong></th>
                 </tr>
               </thead>
@@ -302,6 +303,7 @@
                 <tr>
                   <td>{{ $p->id }}</td>
                   <td>{{ $p->pekerjaan }}</td>
+                  <td>{{ $p->tipe }}</td>
                   <td>
                     {!! Form::open(array('method'=>'delete','url'=>'pekerjaan/'.$p->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
                     {!! link_to('pekerjaan/'.$p->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
