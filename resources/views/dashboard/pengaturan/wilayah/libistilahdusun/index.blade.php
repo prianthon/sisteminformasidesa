@@ -295,7 +295,7 @@
                     <li><a href="{{ URL::to('/pengaturan/umum/libdesa') }}" tabindex="-1">Kelola Lib Desa</a></li>
                   </ul>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown active">
                   <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Wilayah Administratif <b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
                     <li><a href="{{ URL::to('/pengaturan/umum/wilayah') }}" tabindex="-1">Ubah Wilayah Administratif</a></li>

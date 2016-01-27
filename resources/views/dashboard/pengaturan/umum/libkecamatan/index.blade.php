@@ -287,16 +287,31 @@
                 <li class="dropdown active">
                   <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> Pengaturan Umum <b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                      <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1">Ubah Pengaturan Umum</a></li>
-                      <li><a href="{{ URL::to('/pengaturan/umum/libnegara') }}" tabindex="-1">Kelola Lib Negara</a></li>
-                      <li><a href="{{ URL::to('/pengaturan/umum/libprovinsi') }}" tabindex="-1">Kelola Lib Provinsi</a></li>
-                      <li><a href="{{ URL::to('/pengaturan/umum/libkabupaten') }}" tabindex="-1">Kelola Lib Kabupaten</a></li>
-                      <li><a href="{{ URL::to('/pengaturan/umum/libkecamatan') }}" tabindex="-1">Kelola Lib Kecamatan</a></li>
-                      <li><a href="{{ URL::to('/pengaturan/umum/libdesa') }}" tabindex="-1">Kelola Lib Desa</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum') }}" tabindex="-1">Ubah Pengaturan Umum</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/libnegara') }}" tabindex="-1">Kelola Lib Negara</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/libprovinsi') }}" tabindex="-1">Kelola Lib Provinsi</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/libkabupaten') }}" tabindex="-1">Kelola Lib Kabupaten</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/libkecamatan') }}" tabindex="-1">Kelola Lib Kecamatan</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/libdesa') }}" tabindex="-1">Kelola Lib Desa</a></li>
                   </ul>
                 </li>
-                <li class=""><a href="{{ URL::to('/pengaturan/umum/wilayah') }}"><i class="fa fa-user"></i> Wilayah Administratif</a></li>
-                <li class=""><a href="{{ URL::to('/pengaturan/umum/perangkatdesa') }}"><i class="fa fa-cog"></i> Perangkat Desa</a></li>
+                <li class="dropdown">
+                  <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Wilayah Administratif <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                    <li><a href="{{ URL::to('/pengaturan/umum/wilayah') }}" tabindex="-1">Ubah Wilayah Administratif</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/libistilahdusun') }}" tabindex="-1">Kelola Lib Istilah Dusun</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/libdusun') }}" tabindex="-1">Kelola Lib Dusun</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/librw') }}" tabindex="-1">Kelola Lib RW</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/librt') }}" tabindex="-1">Kelola Lib RT</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> Perangkat Desa <b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                    <li><a href="{{ URL::to('/pengaturan/umum/perangkatdesa') }}" tabindex="-1">Ubah Perangkat Desa</a></li>
+                    <li><a href="{{ URL::to('/pengaturan/umum/perangkatjabatan') }}" tabindex="-1">Kelola Lib Jabatan Perangkat</a></li>
+                  </ul>
+                </li>
             </ul>
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">

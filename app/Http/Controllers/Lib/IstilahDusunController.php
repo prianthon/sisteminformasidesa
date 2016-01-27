@@ -36,7 +36,7 @@ class IstilahDusunController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pengaturan.wilayah.libistilahdusun.create');
     }
 
     /**
@@ -45,9 +45,12 @@ class IstilahDusunController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegIstilahRequest $request)
     {
-        //
+      $data=$request->all();
+      LibIstilahDusun::create($data);
+      alert()->overlay('Selamat', 'Tambah Istilah Dusun Berhasil!', 'success');
+      return redirect('pengaturan/umum/libistilahdusun');
     }
 
     /**
@@ -58,7 +61,7 @@ class IstilahDusunController extends Controller
      */
     public function show($id)
     {
-        //
+      //
     }
 
     /**
@@ -69,7 +72,8 @@ class IstilahDusunController extends Controller
      */
     public function edit($id)
     {
-        //
+      $libistilah = LibIstilahDusun::find($id);
+      return view('dashboard.pengaturan.wilayah.libistilahdusun.edit', compact('libistilah'));
     }
 
     /**
@@ -79,9 +83,13 @@ class IstilahDusunController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegIstilahRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $libistilah = LibIstilahDusun::find($id);
+      $libistilah->update($data);
+      alert()->overlay('Selamat', 'Ubah Istilah Dusun Berhasil!', 'success');
+      return redirect('pengaturan/umum/libistilahdusun');
     }
 
     /**
@@ -92,6 +100,9 @@ class IstilahDusunController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $libistilah = LibIstilahDusun::find($id);
+      $libistilah->delete();
+      alert()->overlay('Selamat', 'Hapus Istilah Dusun Berhasil!', 'success');
+      return redirect('pengaturan/umum/libistilahdusun');
     }
 }
