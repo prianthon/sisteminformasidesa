@@ -139,6 +139,9 @@ $router->group([
       get('pengaturan/umum','PengaturanUmumController@index');
       //menu pengaturan wilayah administratif
       get('pengaturan/umum/wilayah','Pengaturan\PengaturanUmumWilayahAdministratifController@index');
+      //menu istilah dusun
+      post('pengaturan/umum/libistilahdusun/cari','Lib\IstilahDusunController@cari');
+      resource('pengaturan/umum/libistilahdusun','Lib\IstilahDusunController');
       //menu pengaturan perangkat desa
       get('pengaturan/umum/perangkatdesa','Pengaturan\PengaturanUmumPerangkatDesaController@index');
       //menu reg negara
