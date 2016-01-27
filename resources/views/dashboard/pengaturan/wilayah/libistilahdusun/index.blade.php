@@ -315,13 +315,36 @@
             </ul>
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
-                  <div class="row column-seperation">
-                    <div class="col-md-7 line-separator">
-                        @include('dashboard.pengaturan.umum.form')
-                    </div>
-                    <div class="col-md-5">
-                        @include('dashboard.pengaturan.umum.form_logo_pemdes')
-                    </div>
+                  <div class="row"><br/>
+                    {!! link_to('pengaturan/umum/libistilahdusun/create','Tambah Lib Istilah Dusun',['class'=>'btn btn-primary']) !!}
+                    <hr>
+                    {!! Form::open(array('url'=>'pengaturan/umum/libistilahdusun/cari')) !!}
+                    {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Lib Istilah Dusun, ketik lalu tekan enter']) !!}
+                    {!! Form::close() !!}
+                    <hr>
+                    <table class="table table-striped table-hover">
+                      <thead class="no-bd">
+                        <tr>
+                          <th><strong>ID Lib Istilah Dusun</strong></th>
+                          <th><strong>Istilah Dusun</strong></th>
+                          <th width="15%"><strong>Aksi</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody class="no-bd-y">
+                        @foreach($libistilah as $li)
+                        <tr>
+                          <td>{{ $li->id }}</td>
+                          <td>{{ $li->istilah_dusun }}</td>
+                          <td>
+                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libistilahdusun/'.$li->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
+                            {!! link_to('pengaturan/umum/libistilahdusun/'.$li->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
+                            {!! Form::close() !!}
+                          </td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                    </table>
+                    {!! $libistilah->render() !!}
                   </div>
                 </div>
               </div>
