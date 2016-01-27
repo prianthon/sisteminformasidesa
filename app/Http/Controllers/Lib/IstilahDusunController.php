@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\LibIstilahDusun;
+use App\Http\Requests\Libs\RegIstilahRequest;
 
 class IstilahDusunController extends Controller
 {
@@ -14,10 +16,18 @@ class IstilahDusunController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+     public function index()
+     {
+       $libistilah = LibIstilahDusun::paginate(5);
+       return view('dashboard.pengaturan.wilayah.libistilahdusun.index', compact('libistilah'));
+     }
+
+     public function cari(Request $request)
+     {
+       $keyword = $request['keyword'];
+       $libistilah = LibIstilahDusun::where('istilah_dusun','=',$keyword)->paginate(5);
+       return view('dashboard.pengaturan.wilayah.libistilahdusun.index', compact('libistilah'));
+     }
 
     /**
      * Show the form for creating a new resource.

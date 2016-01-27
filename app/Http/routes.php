@@ -142,6 +142,15 @@ $router->group([
       //menu istilah dusun
       post('pengaturan/umum/libistilahdusun/cari','Lib\IstilahDusunController@cari');
       resource('pengaturan/umum/libistilahdusun','Lib\IstilahDusunController');
+      //menu lib dusun
+      post('pengaturan/umum/libdusun/cari','Lib\DusunController@cari');
+      resource('pengaturan/umum/libdusun','Lib\DusunController');
+      //menu lib rw
+      post('pengaturan/umum/librw/cari','Lib\RwController@cari');
+      resource('pengaturan/umum/librw','Lib\RwController');
+      //menu lib rt
+      post('pengaturan/umum/librt/cari','Lib\RtController@cari');
+      resource('pengaturan/umum/librt','Lib\RtController');
       //menu pengaturan perangkat desa
       get('pengaturan/umum/perangkatdesa','Pengaturan\PengaturanUmumPerangkatDesaController@index');
       //menu reg negara
