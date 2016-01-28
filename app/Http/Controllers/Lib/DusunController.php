@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Datapenduduk;
+use App\Libdusun;
+use App\Librw;
+use App\Http\Requests\Libs\RegDusunRequest;
 
 class DusunController extends Controller
 {
@@ -14,10 +18,18 @@ class DusunController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+     public function index()
+     {
+       $libdusun = Libdusun::paginate(5);
+       return view('dashboard.pengaturan.wilayah.libdusun.index', compact('libdusun'));
+     }
+
+     public function cari(Request $request)
+     {
+       $keyword = $request['keyword'];
+       $libdusun = Libdusun::where('nama_dusun','=',$keyword)->paginate(5);
+       return view('dashboard.pengaturan.wilayah.libdusun.index', compact('libdusun'));
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +38,7 @@ class DusunController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pengaturan.wilayah.libdusun.create');
     }
 
     /**
@@ -35,9 +47,12 @@ class DusunController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegDusunRequest $request)
     {
-        //
+      $data=$request->all();
+      Libdusun::create($data);
+      alert()->overlay('Selamat', 'Tambah Nama Dusun Berhasil!', 'success');
+      return redirect('pengaturan/umum/libdusun');
     }
 
     /**
@@ -59,7 +74,8 @@ class DusunController extends Controller
      */
     public function edit($id)
     {
-        //
+      $libdusun = Libdusun::find($id);
+      return view('dashboard.pengaturan.wilayah.libdusun.edit', compact('libdusun'));
     }
 
     /**
@@ -69,9 +85,13 @@ class DusunController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegDusunRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $libdusun = Libdusun::find($id);
+      $libdusun->update($data);
+      alert()->overlay('Selamat', 'Ubah Nama Dusun Berhasil!', 'success');
+      return redirect('pengaturan/umum/libdusun');
     }
 
     /**
@@ -82,6 +102,9 @@ class DusunController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $libdusun = Libdusun::find($id);
+      $libdusun->delete();
+      alert()->overlay('Selamat', 'Hapus Nama Dusun Berhasil!', 'success');
+      return redirect('pengaturan/umum/libdusun');
     }
 }

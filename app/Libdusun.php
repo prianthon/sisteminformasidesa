@@ -14,8 +14,8 @@ class Libdusun extends Model
   protected $fillable = ['nama_dusun','penduduk_kadus_id'];
 
   # Relasi one-to-many provinsi ke kabupaten
-  public function librw()
+  public function datapenduduk()
   {
-    return $this->hasMany('App\Librw','penduduk_kadus_id');
+    return $this->belongsTo('App\DataPenduduk','penduduk_kadus_id');
   }
 }
