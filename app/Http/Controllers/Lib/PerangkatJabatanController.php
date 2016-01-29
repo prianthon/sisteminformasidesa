@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Libperangkatjabatan;
+use App\Http\Requests\Libs\PerangkatJabatanRequest;
 
 class PerangkatJabatanController extends Controller
 {
@@ -14,10 +16,18 @@ class PerangkatJabatanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+     public function index()
+     {
+       $libjabatan = Libperangkatjabatan::paginate(5);
+       return view('dashboard.pengaturan.perangkat.libjabatan.index', compact('libjabatan'));
+     }
+
+     public function cari(Request $request)
+     {
+       $keyword = $request['keyword'];
+       $libjabatan = Libperangkatjabatan::where('perangkat_jabatan','=',$keyword)->paginate(5);
+       return view('dashboard.pengaturan.perangkat.libjabatan.index', compact('libjabatan'));
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +36,7 @@ class PerangkatJabatanController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pengaturan.perangkat.libjabatan.create');
     }
 
     /**
@@ -35,9 +45,12 @@ class PerangkatJabatanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PerangkatJabatanRequest $request)
     {
-        //
+      $data=$request->all();
+      Libperangkatjabatan::create($data);
+      alert()->overlay('Selamat', 'Tambah Jabatan Perangkat Berhasil!', 'success');
+      return redirect('pengaturan/umum/perangkatjabatan');
     }
 
     /**
@@ -59,7 +72,8 @@ class PerangkatJabatanController extends Controller
      */
     public function edit($id)
     {
-        //
+      $libjabatan = Libperangkatjabatan::find($id);
+      return view('dashboard.pengaturan.perangkat.libjabatan.edit', compact('libjabatan'));
     }
 
     /**
@@ -69,9 +83,13 @@ class PerangkatJabatanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PerangkatJabatanRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $libjabatan = Libperangkatjabatan::find($id);
+      $libjabatan->update($data);
+      alert()->overlay('Selamat', 'Ubah Jabatan Perangkat Berhasil!', 'success');
+      return redirect('pengaturan/umum/perangkatjabatan');
     }
 
     /**
@@ -82,6 +100,9 @@ class PerangkatJabatanController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $libjabatan = Libperangkatjabatan::find($id);
+      $libjabatan->delete();
+      alert()->overlay('Selamat', 'Hapus Jabatan Perangkat Berhasil!', 'success');
+      return redirect('pengaturan/umum/perangkatjabatan');
     }
 }

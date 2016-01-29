@@ -153,6 +153,9 @@ $router->group([
       resource('pengaturan/umum/librt','Lib\RtController');
       //menu pengaturan perangkat desa
       get('pengaturan/umum/perangkatdesa','Pengaturan\PengaturanUmumPerangkatDesaController@index');
+      //menu perangkat jabatan
+      post('pengaturan/umum/perangkatjabatan/cari','Lib\PerangkatJabatanController@cari');
+      resource('pengaturan/umum/perangkatjabatan','Lib\PerangkatJabatanController');
       //menu reg negara
       post('pengaturan/umum/libnegara/cari','Lib\PengaturanUmumRegNegaraController@cari');
       resource('pengaturan/umum/libnegara','Lib\PengaturanUmumRegNegaraController');
