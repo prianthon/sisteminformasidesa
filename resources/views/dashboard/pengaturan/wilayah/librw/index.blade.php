@@ -327,7 +327,6 @@
                         <tr>
                           <th><strong>ID Lib RW</strong></th>
                           <th><strong>Nomor RW</strong></th>
-                          <th><strong>Ketua RW</strong></th>
                           <th><strong>Nama Dusun</strong></th>
                           <th width="15%"><strong>Aksi</strong></th>
                         </tr>
@@ -337,7 +336,6 @@
                         <tr>
                           <td>{{ $lr->id }}</td>
                           <td>{{ $lr->nomor_rw }}</td>
-                          <td>{{ $lr->datapenduduk->nama }}</td>
                           <td>{{ $lr->libdusun->nama_dusun }}</td>
                           <td>
                             {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/librw/'.$lr->id)) !!}{!! Form::hidden('_delete','DELETE') !!}

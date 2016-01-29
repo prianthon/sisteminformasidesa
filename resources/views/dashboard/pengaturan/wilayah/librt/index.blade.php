@@ -327,7 +327,6 @@
                         <tr>
                           <th><strong>ID Lib RT</strong></th>
                           <th><strong>Nomor RT</strong></th>
-                          <th><strong>Ketua RT</strong></th>
                           <th><strong>Nomor RW</strong></th>
                           <th width="15%"><strong>Aksi</strong></th>
                         </tr>
@@ -337,7 +336,6 @@
                         <tr>
                           <td>{{ $lt->id }}</td>
                           <td>{{ $lt->nomor_rt }}</td>
-                          <td>{{ $lt->datapenduduk->nama }}</td>
                           <td>{{ $lt->librw->nomor_rw }}</td>
                           <td>
                             {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/librt/'.$lt->id)) !!}{!! Form::hidden('_delete','DELETE') !!}

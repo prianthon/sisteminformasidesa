@@ -327,7 +327,6 @@
                         <tr>
                           <th><strong>ID Lib Dusun</strong></th>
                           <th><strong>Nama Dusun</strong></th>
-                          <th><strong>Kepala Dusun</strong></th>
                           <th width="15%"><strong>Aksi</strong></th>
                         </tr>
                       </thead>
@@ -336,7 +335,6 @@
                         <tr>
                           <td>{{ $ld->id }}</td>
                           <td>{{ $ld->nama_dusun }}</td>
-                          <td>{{ $ld->datapenduduk->nama }}</td>
                           <td>
                             {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libdusun/'.$ld->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
                             {!! link_to('pengaturan/umum/libdusun/'.$ld->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
