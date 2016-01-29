@@ -18,4 +18,10 @@ class Libdusun extends Model
   {
     return $this->belongsTo('App\DataPenduduk','penduduk_kadus_id');
   }
+
+  # Relasi one-to-many provinsi ke kabupaten
+  public function librw()
+  {
+    return $this->hasMany('App\Librw','penduduk_ketuarw_id');
+  }
 }

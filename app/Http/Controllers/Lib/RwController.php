@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Datapenduduk;
 use App\Libdusun;
 use App\Librw;
-use App\Http\Requests\Libs\RegDusunRequest;
+use App\Http\Requests\Libs\RegRwRequest;
 
 class RwController extends Controller
 {
@@ -18,10 +18,18 @@ class RwController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+     public function index()
+     {
+       $librw = Librw::paginate(5);
+       return view('dashboard.pengaturan.wilayah.librw.index', compact('librw'));
+     }
+
+     public function cari(Request $request)
+     {
+       $keyword = $request['keyword'];
+       $librw = Librw::where('nomor_rw','=',$keyword)->paginate(5);
+       return view('dashboard.pengaturan.wilayah.librw.index', compact('librw'));
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -30,7 +38,7 @@ class RwController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pengaturan.wilayah.librw.create');
     }
 
     /**
@@ -39,9 +47,12 @@ class RwController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegRwRequest $request)
     {
-        //
+      $data=$request->all();
+      Librw::create($data);
+      alert()->overlay('Selamat', 'Tambah RW Berhasil!', 'success');
+      return redirect('pengaturan/umum/librw');
     }
 
     /**
@@ -63,7 +74,8 @@ class RwController extends Controller
      */
     public function edit($id)
     {
-        //
+      $librw = Librw::find($id);
+      return view('dashboard.pengaturan.wilayah.librw.edit', compact('librw'));
     }
 
     /**
@@ -73,9 +85,13 @@ class RwController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegRwRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $librw = Librw::find($id);
+      $librw->update($data);
+      alert()->overlay('Selamat', 'Ubah RW Berhasil!', 'success');
+      return redirect('pengaturan/umum/librw');
     }
 
     /**
@@ -86,6 +102,9 @@ class RwController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $librw = Librw::find($id);
+      $librw->delete();
+      alert()->overlay('Selamat', 'Hapus RW Berhasil!', 'success');
+      return redirect('pengaturan/umum/librw');
     }
 }

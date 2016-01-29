@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Datapenduduk;
+use App\Libdusun;
+use App\Librw;
+use App\Librt;
+use App\Http\Requests\Libs\DataPendudukRequest;
 
 class DataPendudukController extends Controller
 {

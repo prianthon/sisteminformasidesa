@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Datapenduduk;
+use App\Librt;
+use App\Librw;
+use App\Http\Requests\Libs\RegRtRequest;
 
 class RtController extends Controller
 {
@@ -14,10 +18,18 @@ class RtController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-    }
+     public function index()
+     {
+       $librt = Librt::paginate(5);
+       return view('dashboard.pengaturan.wilayah.librt.index', compact('librt'));
+     }
+
+     public function cari(Request $request)
+     {
+       $keyword = $request['keyword'];
+       $librt = Librt::where('nomor_rt','=',$keyword)->paginate(5);
+       return view('dashboard.pengaturan.wilayah.librt.index', compact('librt'));
+     }
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +38,7 @@ class RtController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.pengaturan.wilayah.librt.create');
     }
 
     /**
@@ -35,9 +47,12 @@ class RtController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RegRtRequest $request)
     {
-        //
+      $data=$request->all();
+      Librt::create($data);
+      alert()->overlay('Selamat', 'Tambah RT Berhasil!', 'success');
+      return redirect('pengaturan/umum/librt');
     }
 
     /**
@@ -59,7 +74,8 @@ class RtController extends Controller
      */
     public function edit($id)
     {
-        //
+      $librt = Librt::find($id);
+      return view('dashboard.pengaturan.wilayah.librt.edit', compact('librt'));
     }
 
     /**
@@ -69,9 +85,13 @@ class RtController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RegRtRequest $request, $id)
     {
-        //
+      $data=$request->all();
+      $librt = Librt::find($id);
+      $librt->update($data);
+      alert()->overlay('Selamat', 'Ubah RT Berhasil!', 'success');
+      return redirect('pengaturan/umum/librt');
     }
 
     /**
@@ -82,6 +102,9 @@ class RtController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $librt = Librt::find($id);
+      $librt->delete();
+      alert()->overlay('Selamat', 'Hapus RT Berhasil!', 'success');
+      return redirect('pengaturan/umum/librt');
     }
 }

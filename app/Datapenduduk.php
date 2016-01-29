@@ -18,4 +18,16 @@ class Datapenduduk extends Model
   {
     return $this->hasMany('App\Libdusun','penduduk_kadus_id');
   }
+
+  # Relasi one-to-many provinsi ke kabupaten
+  public function librw()
+  {
+    return $this->hasMany('App\Librw','penduduk_kadus_id');
+  }
+
+  # Relasi one-to-many provinsi ke kabupaten
+  public function librt()
+  {
+    return $this->hasMany('App\Librt','penduduk_kadus_id');
+  }
 }

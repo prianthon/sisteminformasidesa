@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Libs;
 
 use App\Http\Requests\Request;
 
@@ -13,7 +13,7 @@ class RegRwRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,17 @@ class RegRwRequest extends Request
      *
      * @return array
      */
-    public function rules()
-    {
-        return [
-            //
-        ];
-    }
+     public function rules()
+     {
+         return [
+             'nama_dusun'=>'required'
+         ];
+     }
+
+     public function messages()
+     {
+       return [
+           'nama_dusun.required' => 'Kolom Nama Dusun tidak boleh kosong'
+       ];
+     }
 }
