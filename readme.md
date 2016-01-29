@@ -1,3 +1,5 @@
+![alt tag](https://github.com/prianthon/sisteminformasidesa/blob/master/public/thumb/des.png)
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
