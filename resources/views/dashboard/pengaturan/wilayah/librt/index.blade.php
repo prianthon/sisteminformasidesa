@@ -325,7 +325,6 @@
                     <table class="table table-striped table-hover">
                       <thead class="no-bd">
                         <tr>
-                          <th><strong>ID Lib RT</strong></th>
                           <th><strong>Nomor RT</strong></th>
                           <th><strong>Nomor RW</strong></th>
                           <th width="15%"><strong>Aksi</strong></th>
@@ -334,7 +333,6 @@
                       <tbody class="no-bd-y">
                         @foreach($librt as $lt)
                         <tr>
-                          <td>{{ $lt->id }}</td>
                           <td>{{ $lt->nomor_rt }}</td>
                           <td>{{ $lt->librw->nomor_rw }}</td>
                           <td>

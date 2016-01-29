@@ -325,7 +325,6 @@
                     <table class="table table-striped table-hover">
                       <thead class="no-bd">
                         <tr>
-                          <th><strong>ID Lib Istilah Dusun</strong></th>
                           <th><strong>Istilah Dusun</strong></th>
                           <th width="15%"><strong>Aksi</strong></th>
                         </tr>
@@ -333,7 +332,6 @@
                       <tbody class="no-bd-y">
                         @foreach($libistilah as $li)
                         <tr>
-                          <td>{{ $li->id }}</td>
                           <td>{{ $li->istilah_dusun }}</td>
                           <td>
                             {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libistilahdusun/'.$li->id)) !!}{!! Form::hidden('_delete','DELETE') !!}

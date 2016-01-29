@@ -325,7 +325,6 @@
                     <table class="table table-striped table-hover">
                       <thead class="no-bd">
                         <tr>
-                          <th><strong>ID Lib Dusun</strong></th>
                           <th><strong>Nama Dusun</strong></th>
                           <th width="15%"><strong>Aksi</strong></th>
                         </tr>
@@ -333,7 +332,6 @@
                       <tbody class="no-bd-y">
                         @foreach($libdusun as $ld)
                         <tr>
-                          <td>{{ $ld->id }}</td>
                           <td>{{ $ld->nama_dusun }}</td>
                           <td>
                             {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/libdusun/'.$ld->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
