@@ -23,4 +23,10 @@ class Librw extends Model
   {
     return $this->belongsTo('App\Libdusun','libdusun_id');
   }
+
+  # Relasi one-to-many provinsi ke kabupaten
+  public function librt()
+  {
+    return $this->hasMany('App\Librt','librw_id');
+  }
 }

@@ -22,12 +22,12 @@ class Datapenduduk extends Model
   # Relasi one-to-many provinsi ke kabupaten
   public function librw()
   {
-    return $this->hasMany('App\Librw','penduduk_kadus_id');
+    return $this->hasMany('App\Librw','penduduk_ketuarw_id');
   }
 
   # Relasi one-to-many provinsi ke kabupaten
   public function librt()
   {
-    return $this->hasMany('App\Librt','penduduk_kadus_id');
+    return $this->hasMany('App\Librt','penduduk_ketuart_id');
   }
 }

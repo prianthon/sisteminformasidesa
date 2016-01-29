@@ -4,7 +4,7 @@ namespace App\Http\Requests\Libs;
 
 use App\Http\Requests\Request;
 
-class RegRwRequest extends Request
+class RegRtRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,14 +24,14 @@ class RegRwRequest extends Request
      public function rules()
      {
          return [
-             'nomor_rw'=>'required'
+             'nomor_rt'=>'required'
          ];
      }
 
      public function messages()
      {
        return [
-           'nomor_rw.required' => 'Kolom Nomor RW tidak boleh kosong'
+           'nomor_rt.required' => 'Kolom Nomor RT tidak boleh kosong'
        ];
      }
 }
