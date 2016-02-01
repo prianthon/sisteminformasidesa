@@ -315,7 +315,35 @@
             </ul>
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
-                  Perangkat Desa
+                  <div class="row"><br/>
+                    {!! link_to('pengaturan/umum/perangkatjabatan/create','Tambah Lib Jabatan Perangkat',['class'=>'btn btn-primary']) !!}
+                    <hr>
+                    {!! Form::open(array('url'=>'pengaturan/umum/perangkatjabatan/cari')) !!}
+                    {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Lib Jabatan Perangkat, ketik lalu tekan enter']) !!}
+                    {!! Form::close() !!}
+                    <hr>
+                    <table class="table table-striped table-hover">
+                      <thead class="no-bd">
+                        <tr>
+                          <th><strong>Jabatan Perangkat</strong></th>
+                          <th width="15%"><strong>Aksi</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody class="no-bd-y">
+                        @foreach($libjabatan as $lj)
+                        <tr>
+                          <td>{{ $lj->perangkat_jabatan }}</td>
+                          <td>
+                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/perangkatjabatan/'.$lj->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
+                            {!! link_to('pengaturan/umum/perangkatjabatan/'.$lj->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
+                            {!! Form::close() !!}
+                          </td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                    </table>
+                    {!! $libjabatan->render() !!}
+                  </div>
                 </div>
               </div>
           </div>

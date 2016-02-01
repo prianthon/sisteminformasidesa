@@ -11,6 +11,14 @@ class PengaturanUmumPerangkatDesaController extends Controller
 {
   public function index()
   {
-      return view('dashboard.pengaturan.perangkat.index');
+      $libjabatan = Libperangkatjabatan::paginate(5);
+      return view('dashboard.pengaturan.perangkat.index', compact('libjabatan'));
+  }
+
+  public function cari(Request $request)
+  {
+    $keyword = $request['keyword'];
+    $libjabatan = Libperangkatjabatan::where('perangkat_jabatan','=',$keyword)->paginate(5);
+    return view('dashboard.pengaturan.perangkat.libjabatan.index', compact('libjabatan'));
   }
 }
