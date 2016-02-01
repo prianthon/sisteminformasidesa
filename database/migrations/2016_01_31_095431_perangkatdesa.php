@@ -18,7 +18,7 @@ class Perangkatdesa extends Migration
           $table->string('nip',55);
           $table->bigInteger('datapenduduk_id');
           $table->integer('jabatan_id');
-          $table->string('pangkat_golongan')
+          $table->string('pangkat_golongan');
           $table->timestamps();
       });
     }
