@@ -316,33 +316,35 @@
               <div class="tab-content">
                 <div class="tab-pane fade active in" id="tab2_1">
                   <div class="row"><br/>
-                    {!! link_to('pengaturan/umum/perangkatjabatan/create','Tambah Lib Jabatan Perangkat',['class'=>'btn btn-primary']) !!}
-                    <hr>
-                    {!! Form::open(array('url'=>'pengaturan/umum/perangkatjabatan/cari')) !!}
-                    {!! Form::text('keyword',null,['class'=>'form-control','placeholder'=>'Cari Lib Jabatan Perangkat, ketik lalu tekan enter']) !!}
-                    {!! Form::close() !!}
+                    {!! link_to('pengaturan/umum/perangkatdesa/create','Tambah Perangkat Desa',['class'=>'btn btn-primary']) !!}
                     <hr>
                     <table class="table table-striped table-hover">
                       <thead class="no-bd">
                         <tr>
-                          <th><strong>Jabatan Perangkat</strong></th>
+                          <th><strong>Perangkat Desa</strong></th>
+                          <th><strong>Jabatan</strong></th>
+                          <th><strong>NIAP</strong></th>
+                          <th><strong>NIP</strong></th>
                           <th width="15%"><strong>Aksi</strong></th>
                         </tr>
                       </thead>
                       <tbody class="no-bd-y">
-                        @foreach($libjabatan as $lj)
+                        @foreach($perangkatdesa as $pd)
                         <tr>
-                          <td>{{ $lj->perangkat_jabatan }}</td>
+                          <td>{{ $pd->pendudukid->nama }}</td>
+                          <td>{{ $pd->jabatanid->perangkat_jabatan }}</td>
+                          <td>{{ $pd->niap }}</td>
+                          <td>{{ $pd->nip }}</td>
                           <td>
-                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/perangkatjabatan/'.$lj->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
-                            {!! link_to('pengaturan/umum/perangkatjabatan/'.$lj->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
+                            {!! Form::open(array('method'=>'delete','url'=>'pengaturan/umum/perangkatdesa/'.$pd->id)) !!}{!! Form::hidden('_delete','DELETE') !!}
+                            {!! link_to('pengaturan/umum/perangkatdesa/'.$pd->id.'/edit','Ubah',['class'=>'btn btn-warning btn-sm']) !!}{!! Form::submit('Hapus',['class'=>'btn btn-danger btn-sm']) !!}
                             {!! Form::close() !!}
                           </td>
                         </tr>
                         @endforeach
                       </tbody>
                     </table>
-                    {!! $libjabatan->render() !!}
+                    {!! $perangkatdesa->render() !!}
                   </div>
                 </div>
               </div>

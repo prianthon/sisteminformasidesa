@@ -6,19 +6,21 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\PerangkatDesa;
+use App\Datapenduduk;
+use App\Libperangkatjabatan;
+use App\Http\Requests\BukanLibs\PerangkatDesaRequest;
 
 class PengaturanUmumPerangkatDesaController extends Controller
 {
   public function index()
   {
-      $libjabatan = Libperangkatjabatan::paginate(5);
-      return view('dashboard.pengaturan.perangkat.index', compact('libjabatan'));
+      $perangkatdesa = PerangkatDesa::paginate(5);
+      return view('dashboard.pengaturan.perangkat.desa.index', compact('perangkatdesa'));
   }
 
-  public function cari(Request $request)
+  public function create()
   {
-    $keyword = $request['keyword'];
-    $libjabatan = Libperangkatjabatan::where('perangkat_jabatan','=',$keyword)->paginate(5);
-    return view('dashboard.pengaturan.perangkat.libjabatan.index', compact('libjabatan'));
+      return view('dashboard.pengaturan.perangkat.desa.create');
   }
 }

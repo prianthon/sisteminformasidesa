@@ -12,4 +12,9 @@ class Libperangkatjabatan extends Model
   # MASS ASSIGNMENT
   # Untuk membatasi attribut yang boleh di isi (Untuk keamanan)
   protected $fillable = ['perangkat_jabatan'];
+
+  public function perangkatdesa()
+  {
+    return $this->hasMany('App\PerangkatDesa','jabatan_id');
+  }
 }

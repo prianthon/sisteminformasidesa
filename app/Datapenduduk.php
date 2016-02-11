@@ -30,4 +30,9 @@ class Datapenduduk extends Model
   {
     return $this->hasMany('App\Librt','penduduk_ketuart_id');
   }
+
+  public function perangkatdesa()
+  {
+    return $this->hasMany('App\PerangkatDesa','datapenduduk_id');
+  }
 }
