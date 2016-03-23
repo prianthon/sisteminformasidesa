@@ -279,8 +279,64 @@
 <div id="main-content">
     <div class="row">
         <div class="col-lg-12">
-            <h1>Blank Page <small>Blank Page</small></h1>
-            <br><br><br>
+            <div class="row">
+              <div class="col-lg-3 m-b-20">
+                    <div id="flip-panel-4" class="live-tile" data-delay="1500">
+                        <div class="panel no-bd bd-3 bg-purple">
+                            <div class="panel-body bg-purple">
+                                <div class="row">
+                                    <div class="col-md-12 m-t-40 m-b-20">
+                                        <h1 class="text-center">105</h1>
+                                        <h3 class="text-center">KELUARGA</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 m-b-20">
+                      <div id="flip-panel-4" class="live-tile" data-delay="1500">
+                          <div class="panel no-bd bd-3 bg-red">
+                              <div class="panel-body bg-red">
+                                  <div class="row">
+                                      <div class="col-md-12 m-t-40 m-b-20">
+                                        <h1 class="text-center">361</h1>
+                                        <h3 class="text-center">PENDUDUK</h3>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 m-b-20">
+                        <div id="flip-panel-4" class="live-tile" data-delay="1500">
+                            <div class="panel no-bd bd-3 bg-blue">
+                                <div class="panel-body bg-blue">
+                                    <div class="row">
+                                        <div class="col-md-12 m-t-40 m-b-20">
+                                          <h1 class="text-center">187</h1>
+                                          <h3 class="text-center">LAKI-LAKI</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 m-b-20">
+                          <div id="flip-panel-4" class="live-tile" data-delay="1500">
+                              <div class="panel no-bd bd-3 bg-green">
+                                  <div class="panel-body bg-green">
+                                      <div class="row">
+                                          <div class="col-md-12 m-t-40 m-b-20">
+                                            <h1 class="text-center">174</h1>
+                                            <h3 class="text-center">PEREMPUAN</h3>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
         </div>
     </div>
 </div>
