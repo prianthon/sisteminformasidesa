@@ -277,6 +277,7 @@
 
 @section('maincontent')
 <div id="main-content">
+  <div class="panel-body">
     <div class="row">
         <div class="col-lg-12">
             <div class="row">
@@ -339,5 +340,6 @@
               </div>
         </div>
     </div>
+  </div>
 </div>
 @endsection

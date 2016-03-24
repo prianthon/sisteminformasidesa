@@ -277,11 +277,213 @@
 
 @section('maincontent')
 <div id="main-content">
+  <div class="panel-body">
     <div class="row">
         <div class="col-lg-12">
-            <h1>Blank Page <small>Blank Page</small></h1>
-            <br><br><br>
+          <div class="row">
+            <div class="col-md-4 m-b-30">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="text-center col-xs-4">
+                                <img src="assets/img/avatars/avatar4_big.png" class="img-responsive" alt="avatar 4">
+                            </div>
+                            <div class="clearfix col-xs-8">
+                                <h2 class="c-dark w-600">Razaqul</h2>
+                                <p class="c-gray f-16"><strong>No KK :</strong><br> 3204060102080012</p>
+                            </div>
+                        </div>
+                        <div class="panel-footer p-t-0 p-b-0">
+                            <div class="row">
+                              <div class="col-xs-6 bg-green p-20">
+                                  <div class="text-center m-b-10">
+                                      <i class="f-24 fa fa-group"></i>
+                                  </div>
+                                  <div class="text-center f-16">
+                                      Alamat : <br><strong>KP. BARIBIS</strong>
+                                  </div>
+                              </div>
+                              <div class="col-xs-6 bg-red p-20">
+                                  <div class="text-center m-b-10">
+                                      <i class="f-24 fa fa-heart"></i>
+                                  </div>
+                                  <div class="text-center f-16">
+                                      Anggota Keluarga <strong>3</strong>
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 m-b-30">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="text-center col-xs-4">
+                                    <img src="assets/img/avatars/avatar4_big.png" class="img-responsive" alt="avatar 4">
+                                </div>
+                                <div class="clearfix col-xs-8">
+                                    <h2 class="c-dark w-600">Hidayat</h2>
+                                    <p class="c-gray f-16"><strong>No KK :</strong><br> 3204060102080013</p>
+                                </div>
+                            </div>
+                            <div class="panel-footer p-t-0 p-b-0">
+                                <div class="row">
+                                  <div class="col-xs-6 bg-green p-20">
+                                      <div class="text-center m-b-10">
+                                          <i class="f-24 fa fa-group"></i>
+                                      </div>
+                                      <div class="text-center f-16">
+                                          Alamat : <br><strong>KP. BABAKAN</strong>
+                                      </div>
+                                  </div>
+                                  <div class="col-xs-6 bg-red p-20">
+                                      <div class="text-center m-b-10">
+                                          <i class="f-24 fa fa-heart"></i>
+                                      </div>
+                                      <div class="text-center f-16">
+                                          Anggota Keluarga <strong>4</strong>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-b-30">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="text-center col-xs-4">
+                                        <img src="assets/img/avatars/avatar4_big.png" class="img-responsive" alt="avatar 4">
+                                    </div>
+                                    <div class="clearfix col-xs-8">
+                                        <h2 class="c-dark w-600">Ruhyana</h2>
+                                        <p class="c-gray f-16"><strong>No KK :</strong><br> 3204060102080014</p>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-t-0 p-b-0">
+                                    <div class="row">
+                                      <div class="col-xs-6 bg-green p-20">
+                                          <div class="text-center m-b-10">
+                                              <i class="f-24 fa fa-group"></i>
+                                          </div>
+                                          <div class="text-center f-16">
+                                              Alamat : <br><strong>KP. BABAKAN</strong>
+                                          </div>
+                                      </div>
+                                      <div class="col-xs-6 bg-red p-20">
+                                          <div class="text-center m-b-10">
+                                              <i class="f-24 fa fa-heart"></i>
+                                          </div>
+                                          <div class="text-center f-16">
+                                              Anggota Keluarga <strong>3</strong>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 m-b-30">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="text-center col-xs-4">
+                                    <img src="assets/img/avatars/avatar4_big.png" class="img-responsive" alt="avatar 4">
+                                </div>
+                                <div class="clearfix col-xs-8">
+                                    <h2 class="c-dark w-600">Tarma</h2>
+                                    <p class="c-gray f-16"><strong>No KK :</strong><br> 3204060102080018</p>
+                                </div>
+                            </div>
+                            <div class="panel-footer p-t-0 p-b-0">
+                                <div class="row">
+                                  <div class="col-xs-6 bg-green p-20">
+                                      <div class="text-center m-b-10">
+                                          <i class="f-24 fa fa-group"></i>
+                                      </div>
+                                      <div class="text-center f-16">
+                                          Alamat : <br><strong>KP. BARIBIS</strong>
+                                      </div>
+                                  </div>
+                                  <div class="col-xs-6 bg-red p-20">
+                                      <div class="text-center m-b-10">
+                                          <i class="f-24 fa fa-heart"></i>
+                                      </div>
+                                      <div class="text-center f-16">
+                                          Anggota Keluarga <strong>5</strong>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 m-b-30">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="text-center col-xs-4">
+                                        <img src="assets/img/avatars/avatar4_big.png" class="img-responsive" alt="avatar 4">
+                                    </div>
+                                    <div class="clearfix col-xs-8">
+                                        <h2 class="c-dark w-600">Soep</h2>
+                                        <p class="c-gray f-16"><strong>No KK :</strong><br> 3204060102080017</p>
+                                    </div>
+                                </div>
+                                <div class="panel-footer p-t-0 p-b-0">
+                                    <div class="row">
+                                      <div class="col-xs-6 bg-green p-20">
+                                          <div class="text-center m-b-10">
+                                              <i class="f-24 fa fa-group"></i>
+                                          </div>
+                                          <div class="text-center f-16">
+                                              Alamat : <br><strong>KP. BARIBIS</strong>
+                                          </div>
+                                      </div>
+                                      <div class="col-xs-6 bg-red p-20">
+                                          <div class="text-center m-b-10">
+                                              <i class="f-24 fa fa-heart"></i>
+                                          </div>
+                                          <div class="text-center f-16">
+                                              Anggota Keluarga <strong>4</strong>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 m-b-30">
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <div class="text-center col-xs-4">
+                                            <img src="assets/img/avatars/avatar4_big.png" class="img-responsive" alt="avatar 4">
+                                        </div>
+                                        <div class="clearfix col-xs-8">
+                                            <h2 class="c-dark w-600">Pradna</h2>
+                                            <p class="c-gray f-16"><strong>No KK :</strong><br> 3204060102080018</p>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer p-t-0 p-b-0">
+                                        <div class="row">
+                                          <div class="col-xs-6 bg-green p-20">
+                                              <div class="text-center m-b-10">
+                                                  <i class="f-24 fa fa-group"></i>
+                                              </div>
+                                              <div class="text-center f-16">
+                                                  Alamat : <br><strong>KP. BABAKAN</strong>
+                                              </div>
+                                          </div>
+                                          <div class="col-xs-6 bg-red p-20">
+                                              <div class="text-center m-b-10">
+                                                  <i class="f-24 fa fa-heart"></i>
+                                              </div>
+                                              <div class="text-center f-16">
+                                                  Anggota Keluarga <strong>4</strong>
+                                              </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
         </div>
     </div>
+  </div>
 </div>
 @endsection
