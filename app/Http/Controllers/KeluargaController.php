@@ -23,4 +23,9 @@ class KeluargaController extends Controller
     {
       return view('dashboard.keluarga.dua');
     }
+
+    public function dua()
+    {
+      return view('dashboard.keluarga.bepergian');
+    }
 }

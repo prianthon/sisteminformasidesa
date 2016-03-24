@@ -15,6 +15,7 @@ $router->group([
       get('keluarga','KeluargaController@index');
       get('keluarga/1','KeluargaController@satu');
       get('keluarga/1/2','KeluargaController@dua');
+      get('keluarga/1/2/bepergian','KeluargaController@bepergian');
       ////menu penduduk////
       get('penduduk','PendudukController@index');
       ////menu pelayanan////
