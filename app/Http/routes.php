@@ -13,6 +13,8 @@ $router->group([
       ////////menu sidebar
       ////menu keluarga////
       get('keluarga','KeluargaController@index');
+      get('keluarga/1','KeluargaController@satu');
+      get('keluarga/1/2','KeluargaController@dua');
       ////menu penduduk////
       get('penduduk','PendudukController@index');
       ////menu pelayanan////

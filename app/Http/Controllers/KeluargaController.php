@@ -13,4 +13,14 @@ class KeluargaController extends Controller
     {
       return view('dashboard.keluarga.index');
     }
+
+    public function satu()
+    {
+      return view('dashboard.keluarga.satu');
+    }
+
+    public function dua()
+    {
+      return view('dashboard.keluarga.dua');
+    }
 }
